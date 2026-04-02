@@ -512,6 +512,22 @@ export async function POST(request: Request) {
         break;
       }
 
+      case "REAL_GREEN": {
+        const apiKey = val("apiKey");
+        const companyId = val("companyId");
+        if (!apiKey) { result = { ok: false, latencyMs: 0, error: "API key not configured" }; break; }
+        result = { ok: true, configCheckOnly: true, latencyMs: Date.now() - start, detail: `Company: ${companyId || "configured"} (Real Green API key set)` };
+        break;
+      }
+
+      case "PAYZERWARE": {
+        const apiKey = val("apiKey");
+        const accountId = val("accountId");
+        if (!apiKey) { result = { ok: false, latencyMs: 0, error: "API key not configured" }; break; }
+        result = { ok: true, configCheckOnly: true, latencyMs: Date.now() - start, detail: `Account: ${accountId || "configured"} (Payzerware API key set)` };
+        break;
+      }
+
       default:
         result = { ok: false, latencyMs: 0, error: `Test not implemented for ${type}` };
     }

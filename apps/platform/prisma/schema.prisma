@@ -96,6 +96,9 @@ enum IntegrationType {
   // HR / Payroll
   GUSTO
   ADP_1099
+  // Industry-Specific
+  REAL_GREEN
+  PAYZERWARE
   // Observability
   POSTHOG
   SENTRY

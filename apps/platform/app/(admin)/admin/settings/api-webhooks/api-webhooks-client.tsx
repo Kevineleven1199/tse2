@@ -215,6 +215,21 @@ const PROVIDERS: ProviderDef[] = [
       { key: "enabled", label: "Enabled", type: "toggle" },
       { key: "accessToken", label: "Access Token", type: "secret" },
     ]},
+  { type: "REAL_GREEN", label: "Real Green (Service Assistant)", category: "ops", wired: true, description: "Landscaping CRM, routing, scheduling, and chemical tracking",
+    fields: [
+      { key: "enabled", label: "Enabled", type: "toggle" },
+      { key: "apiKey", label: "API Key", type: "secret" },
+      { key: "companyId", label: "Company ID", type: "text" },
+      { key: "baseUrl", label: "API Base URL", type: "text" },
+    ]},
+  { type: "PAYZERWARE", label: "Payzerware", category: "ops", wired: true, description: "HVAC service management, dispatch, invoicing, and payment processing",
+    fields: [
+      { key: "enabled", label: "Enabled", type: "toggle" },
+      { key: "apiKey", label: "API Key", type: "secret" },
+      { key: "accountId", label: "Account ID", type: "text" },
+      { key: "webhookSecret", label: "Webhook Secret", type: "secret" },
+    ]},
+
   // Payments
   { type: "STRIPE", label: "Stripe", category: "payments", wired: true, description: "Payment processing, Connect payouts, and webhooks",
     fields: [
