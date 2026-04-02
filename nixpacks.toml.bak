@@ -1,0 +1,26 @@
+# GoGreenOS Railway/Nixpacks Configuration
+# This file tells Railway how to build and deploy the Next.js standalone app
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "openssl"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = [
+  "npm run prisma:generate",
+  "npm run build",
+  "cp -r apps/platform/.next/static apps/platform/.next/standalone/apps/platform/.next/static",
+  "cp -r apps/platform/public apps/platform/.next/standalone/apps/platform/public"
+]
+
+[start]
+cmd = "node apps/platform/.next/standalone/apps/platform/server.js"
+
+# Environment variables for build
+[variables]
+NODE_ENV = "production"
+NEXT_TELEMETRY_DISABLED = "1"
+PORT = "3000"
+HOSTNAME = "0.0.0.0"

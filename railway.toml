@@ -1,0 +1,13 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm run prisma:generate && npm run build && cp -r apps/platform/.next/static apps/platform/.next/standalone/apps/platform/.next/static && cp -r apps/platform/public apps/platform/.next/standalone/apps/platform/public"
+
+[deploy]
+# SAFETY: prisma db push WITHOUT --accept-data-loss will refuse destructive changes
+# (column drops, type changes) and fail the deploy. This is intentional.
+# If a schema change requires destructive operations, apply it manually with explicit review.
+# The app will NOT start if db push fails — this prevents running on an inconsistent schema.
+startCommand = "cd apps/platform && npx prisma db push 2>&1 && cd ../.. && node apps/platform/.next/standalone/apps/platform/server.js"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 5
+numReplicas = 1

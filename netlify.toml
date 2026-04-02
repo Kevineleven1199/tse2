@@ -1,0 +1,20 @@
+# Netlify Configuration for GoGreenOS
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  base = "apps/platform"
+  command = "npm install && npx prisma generate && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

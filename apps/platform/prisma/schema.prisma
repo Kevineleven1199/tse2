@@ -1,0 +1,1824 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  HQ
+  MANAGER
+  CLEANER
+  CUSTOM_PROJECTER
+}
+
+enum ServiceType {
+  RESIDENTIAL_SERVICE
+  SITE_WORK
+  HVAC_SERVICE
+  CUSTOM_PROJECT
+}
+
+enum RequestStatus {
+  NEW
+  QUOTED
+  ACCEPTED
+  SCHEDULED
+  COMPLETED
+  CANCELED
+}
+
+enum JobStatus {
+  PENDING
+  CLAIMED
+  SCHEDULED
+  COMPLETED
+  CANCELED
+}
+
+enum SchedulingStatus {
+  PENDING
+  SELECTED
+  DECLINED
+  EXPIRED
+}
+
+enum PaymentProvider {
+  STRIPE
+  PAYPAL
+  MANUAL
+}
+
+enum PaymentStatus {
+  PENDING
+  AUTHORIZED
+  CAPTURED
+  REFUNDED
+  FAILED
+}
+
+enum PayoutStatus {
+  QUEUED
+  PROCESSING
+  SENT
+  FAILED
+}
+
+enum IntegrationType {
+  // Communications
+  OPENPHONE
+  SENDGRID
+  SLACK
+  GMAIL
+  TELEGRAM
+  WHATSAPP
+  // AI Providers
+  OPENAI
+  ANTHROPIC
+  XAI
+  OPENROUTER
+  // Payments
+  STRIPE
+  PAYPAL
+  WISE
+  ZELLE
+  // Operations
+  JOBBER
+  GOOGLE_CALENDAR
+  GOOGLE_DRIVE
+  GOOGLE_SHEETS
+  GOOGLE_MAPS
+  APPLE_CALENDAR
+  PABBLY
+  BOOKINGKOALA
+  // HR / Payroll
+  GUSTO
+  ADP_1099
+  // Observability
+  POSTHOG
+  SENTRY
+  // Social Media
+  FACEBOOK
+  INSTAGRAM
+  TWITTER_X
+  TIKTOK
+}
+
+enum CommunityAudience {
+  PUBLIC
+  TEAM
+}
+
+enum CommunityCategory {
+  CLEANING_TIP
+  ECO_TIP
+  RECOMMENDATION
+  QUESTION
+  CLEANER_SPOTLIGHT
+  PROMOTION
+  ANNOUNCEMENT
+  BEFORE_AFTER
+}
+
+enum CommunityAuthorRole {
+  CLIENT
+  CLEANER
+  ADMIN
+  GOGREEN
+}
+
+enum CommunityReactionType {
+  LIKE
+  HELPFUL
+  LOVE
+  CELEBRATE
+}
+
+model Tenant {
+  id              String              @id @default(cuid())
+  name            String
+  slug            String              @unique
+  plan            String              @default("launch")
+  logoUrl         String?
+  primaryColor    String?             @default("#0fb77a")
+  timezone        String              @default("America/New_York")
+  customDomain    String?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  users           User[]
+  services        Service[]
+  requests        ServiceRequest[]
+  jobs            Job[]
+  communityFeed   CommunityPost[]
+  integrations    Integration[]
+  notifications   Notification[]
+  calendarSyncs   CalendarSync[]
+  auditLogs       AuditLog[]
+  automations     Automation[]
+  nextdoorLeads   NextdoorLead[]
+  cleanerLocations CleanerLocation[]
+  newsletterSends NewsletterSend[]
+}
+
+model User {
+  id        String          @id @default(cuid())
+  tenant    Tenant          @relation(fields: [tenantId], references: [id])
+  tenantId  String
+  email     String          @unique
+  phone     String?
+  firstName String
+  lastName  String
+  role      Role
+  avatarUrl String?
+  status    String          @default("active")
+  blocked   Boolean         @default(false)
+  blockedAt DateTime?
+  blockedReason String?
+  xp        Int             @default(0)
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  cleaner   CleanerProfile?
+  communityPosts CommunityPost[] @relation("CommunityAuthor")
+
+  @@index([tenantId, role])
+}
+
+model CleanerProfile {
+  id            String              @id @default(cuid())
+  user          User                @relation(fields: [userId], references: [id])
+  userId        String              @unique
+  rating        Float               @default(5.0)
+  completedJobs Int                 @default(0)
+  serviceRadius Int                 @default(15)
+  active        Boolean             @default(true)
+  payoutMethod    String              @default("WISE")
+  stripeAccountId String?
+  hourlyRate      Float               @default(25.0)
+  // Tax & payroll classification
+  taxClassification    String        @default("1099") // "W2" | "1099"
+  federalFilingStatus  String?       // "single" | "married_filing_jointly" | "head_of_household"
+  federalAllowances    Int           @default(0)
+  availability  AvailabilitySlot[]
+  assignments   JobAssignment[]
+  skills        CleanerSkill[]
+  payouts       CleanerPayout[]
+  timesheets    Timesheet[]
+  adjustments   PayrollAdjustment[]
+  paystubs      Paystub[]
+}
+
+model CleanerSkill {
+  id        String         @id @default(cuid())
+  cleaner   CleanerProfile @relation(fields: [cleanerId], references: [id])
+  cleanerId String
+  label     String
+}
+
+model AvailabilitySlot {
+  id        String         @id @default(cuid())
+  cleaner   CleanerProfile @relation(fields: [cleanerId], references: [id])
+  cleanerId String
+  weekday   Int
+  startTime String
+  endTime   String
+}
+
+model Service {
+  id          String      @id @default(cuid())
+  tenant      Tenant      @relation(fields: [tenantId], references: [id])
+  tenantId    String
+  name        String
+  type        ServiceType
+  description String?
+  baseRate    Float
+  unit        String      @default("flat")
+  durationMin Int         @default(120)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model ServiceRequest {
+  id                String                 @id @default(cuid())
+  tenant            Tenant                 @relation(fields: [tenantId], references: [id])
+  tenantId          String
+  customerName      String
+  customerEmail     String
+  customerPhone     String
+  addressLine1      String
+  addressLine2      String?
+  city              String
+  state             String
+  postalCode        String
+  lat               Float?
+  lng               Float?
+  serviceType       ServiceType
+  squareFootage     Int?
+  surfaces          String[]
+  preferredStart    DateTime?
+  preferredEnd      DateTime?
+  preferredWindows  Json?
+  notes             String?
+  status            RequestStatus          @default(NEW)
+  driveFolderUrl    String?
+  driveFolderId     String?
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+  quote             Quote?
+  job               Job?
+  schedulingOptions SchedulingPreference[]
+  payments          PaymentRecord[]
+
+  @@index([tenantId, status])
+  @@index([tenantId, createdAt])
+  @@index([customerEmail])
+}
+
+model Quote {
+  id         String         @id @default(cuid())
+  request    ServiceRequest @relation(fields: [requestId], references: [id])
+  requestId  String         @unique
+  subtotal   Float
+  fees       Float
+  taxes      Float
+  total      Float
+  currency   String         @default("USD")
+  aiVersion  String         @default("v1")
+  smartNotes String?
+  expiresAt  DateTime?
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+}
+
+model Job {
+  id             String          @id @default(cuid())
+  tenant         Tenant          @relation(fields: [tenantId], references: [id])
+  tenantId       String
+  request        ServiceRequest  @relation(fields: [requestId], references: [id])
+  requestId      String          @unique
+  status         JobStatus       @default(PENDING)
+  scheduledStart DateTime?
+  scheduledEnd   DateTime?
+  crewSize       Int             @default(2)
+  payoutAmount   Float?
+  estimatedHours Float?
+  currency       String          @default("USD")
+  confirmationId     String?
+  jobberQuoteId      String?         @unique
+  liveStreamUrl      String?         // YouTube Live or other stream URL for remote viewing
+  cleanerConfirmed   Boolean         @default(false)
+  cleanerConfirmedAt DateTime?
+  customerConfirmed  Boolean         @default(false)
+  customerConfirmedAt DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  assignments    JobAssignment[]
+  notifications  Notification[]
+  payouts        CleanerPayout[]
+  calendarEvent  CalendarEvent?
+  timesheets     Timesheet[]
+  ticket         JobTicket?
+
+  @@index([tenantId, status])
+  @@index([tenantId, scheduledStart])
+}
+
+model JobAssignment {
+  id         String         @id @default(cuid())
+  job        Job            @relation(fields: [jobId], references: [id])
+  jobId      String
+  cleaner    CleanerProfile @relation(fields: [cleanerId], references: [id])
+  cleanerId  String
+  claimedAt  DateTime       @default(now())
+  status     String         @default("CLAIMED")
+  enRouteAt  DateTime?
+  clockInAt  DateTime?
+  clockOutAt DateTime?
+
+  @@unique([jobId, cleanerId])
+}
+
+model SchedulingPreference {
+  id          String           @id @default(cuid())
+  request     ServiceRequest   @relation(fields: [requestId], references: [id])
+  requestId   String
+  windowStart DateTime
+  windowEnd   DateTime
+  priority    Int              @default(1)
+  status      SchedulingStatus @default(PENDING)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+}
+
+model PaymentRecord {
+  id               String          @id @default(cuid())
+  request          ServiceRequest  @relation(fields: [requestId], references: [id])
+  requestId        String
+  quoteId          String?
+  provider         PaymentProvider
+  providerIntentId String?
+  amount           Float
+  currency         String          @default("USD")
+  status           PaymentStatus   @default(PENDING)
+  deposit          Boolean         @default(false)
+  metadata         Json?
+  postedAt         DateTime?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@index([requestId, status])
+  @@index([createdAt])
+}
+
+model CleanerPayout {
+  id               String          @id @default(cuid())
+  job              Job             @relation(fields: [jobId], references: [id])
+  jobId            String
+  cleaner          CleanerProfile  @relation(fields: [cleanerId], references: [id])
+  cleanerId        String
+  provider         PaymentProvider
+  providerPayoutId String?
+  amount           Float
+  currency         String          @default("USD")
+  status           PayoutStatus    @default(QUEUED)
+  initiatedAt      DateTime?       @default(now())
+  completedAt      DateTime?
+  failureReason    String?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+}
+
+model CalendarEvent {
+  id         String   @id @default(cuid())
+  job        Job      @relation(fields: [jobId], references: [id])
+  jobId      String   @unique
+  provider   String   @default("google")
+  externalId String
+  status     String   @default("tentative")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  job       Job?     @relation(fields: [jobId], references: [id])
+  jobId     String?
+  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+  tenantId  String
+  channel   String
+  payload   Json
+  delivered Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model CalendarSync {
+  id           String   @id @default(cuid())
+  tenant       Tenant   @relation(fields: [tenantId], references: [id])
+  tenantId     String
+  provider     String
+  accountEmail String
+  externalId   String
+  createdAt    DateTime @default(now())
+}
+
+model Integration {
+  id        String          @id @default(cuid())
+  tenant    Tenant          @relation(fields: [tenantId], references: [id])
+  tenantId  String
+  type      IntegrationType
+  status    String          @default("connected")
+  config    Json
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+
+  @@unique([tenantId, type])
+}
+
+model CommunityPost {
+  id           String               @id @default(cuid())
+  tenant       Tenant               @relation(fields: [tenantId], references: [id])
+  tenantId     String
+  title        String
+  body         String               @db.Text
+  category     CommunityCategory    @default(ANNOUNCEMENT)
+  audience     CommunityAudience    @default(PUBLIC)
+  mediaUrl     String?
+  mediaUrls    String[]             @default([])
+  authorName   String
+  authorRole   CommunityAuthorRole  @default(GOGREEN)
+  authorBadge  String?
+  authorUserId String?
+  authorUser   User?                @relation("CommunityAuthor", fields: [authorUserId], references: [id])
+  neighborhood String               @default("Community")
+  city         String?
+  isPinned     Boolean              @default(false)
+  isVerified   Boolean              @default(false)
+  comments     CommunityComment[]
+  reactions    CommunityReaction[]
+  views        CommunityView[]
+  publishedAt  DateTime             @default(now())
+  updatedAt    DateTime             @updatedAt
+
+  @@index([tenantId, audience, publishedAt])
+  @@index([tenantId, category, publishedAt])
+}
+
+model CommunityComment {
+  id         String              @id @default(cuid())
+  post       CommunityPost       @relation(fields: [postId], references: [id])
+  postId     String
+  authorName String
+  authorRole CommunityAuthorRole @default(CLIENT)
+  authorBadge String?
+  authorUserId String?
+  body       String              @db.Text
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+
+  @@index([postId, createdAt])
+}
+
+model CommunityReaction {
+  id         String                @id @default(cuid())
+  post       CommunityPost         @relation(fields: [postId], references: [id])
+  postId     String
+  actorKey   String
+  actorName  String?
+  authorUserId String?
+  reaction   CommunityReactionType
+  createdAt  DateTime              @default(now())
+
+  @@unique([postId, actorKey, reaction])
+  @@index([postId, createdAt])
+}
+
+model CommunityView {
+  id        String        @id @default(cuid())
+  post      CommunityPost @relation(fields: [postId], references: [id])
+  postId    String
+  actorKey  String
+  createdAt DateTime      @default(now())
+
+  @@unique([postId, actorKey])
+  @@index([postId, createdAt])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+  tenantId  String
+  actorId   String?
+  action    String
+  metadata  Json
+  createdAt DateTime @default(now())
+
+  @@index([tenantId, createdAt])
+  @@index([actorId])
+}
+
+model Automation {
+  id         String   @id @default(cuid())
+  tenant     Tenant   @relation(fields: [tenantId], references: [id])
+  tenantId   String   @default("ten_gogreen")
+  name       String
+  trigger    String
+  status     String   @default("active")
+  definition Json
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model CallTranscript {
+  id                String    @id @default(cuid())
+  tenantId          String?
+  callId            String    @unique // OpenPhone call ID
+  direction         String    @default("inbound") // "inbound" or "outbound"
+  phoneNumber       String? // caller phone (webhook field)
+  fromNumber        String? // normalized from number
+  toNumber          String? // normalized to number
+  duration          Float     @default(0) // seconds
+  transcript        String? // plain text transcript
+  dialogue          Json? // array of { start, end, content, identifier, userId }
+  summary           String? // AI-generated summary
+  status            String    @default("new") // new, processed, etc.
+  metadata          Json? // raw webhook payload
+  estimatedService  String? // detected service type
+  serviceType       String? // AI-detected service type (webhook field)
+  estimatedTotal    Float? // AI-estimated quote total
+  estimatedCost     Float? // AI-estimated cost (webhook field)
+  estimateBreakdown Json? // full pricing breakdown
+  customerName      String? // extracted from conversation
+  customerEmail     String? // extracted/matched email
+  customerPhone     String? // normalized caller phone
+  address           String? // extracted address (webhook field)
+  propertyAddress   String? // extracted from conversation
+  sqft              Int? // extracted from conversation
+  bedrooms          Int? // extracted from conversation
+  bathrooms         Float? // extracted from conversation
+  sentiment         String? // positive, neutral, negative
+  followUpNeeded    Boolean   @default(true)
+  followUpNotes     String? // details about follow-up
+  requestId         String? // linked service request
+  processedAt       DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@index([tenantId, createdAt])
+  @@index([followUpNeeded])
+}
+
+model Timesheet {
+  id                String         @id @default(cuid())
+  cleaner           CleanerProfile @relation(fields: [cleanerId], references: [id])
+  cleanerId         String
+  job               Job?           @relation(fields: [jobId], references: [id])
+  jobId             String?
+  date              DateTime
+  clockIn           DateTime
+  clockOut          DateTime?
+  hoursWorked       Float?
+  source            String         @default("jobber") // "jobber" | "manual"
+  jobberTimesheetId String?        @unique
+  notes             String?
+  approved          Boolean        @default(false)
+  approvedBy        String?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+
+  @@index([cleanerId, date])
+}
+
+model PayrollAdjustment {
+  id             String         @id @default(cuid())
+  cleaner        CleanerProfile @relation(fields: [cleanerId], references: [id])
+  cleanerId      String
+  type           String // "deduction" | "reimbursement" | "bonus"
+  amount         Float
+  description    String
+  payPeriodStart DateTime
+  payPeriodEnd   DateTime
+  createdBy      String
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@index([cleanerId, payPeriodStart])
+}
+
+// ── Restored models (CRM, approvals, leads, todos, notes, analytics, newsletter) ──
+
+model AdminApproval {
+  id               String    @id @default(cuid())
+  type             String
+  status           String    @default("pending")
+  customerName     String?
+  customerPhone    String?
+  customerEmail    String?
+  address          String?
+  serviceType      String?
+  estimatedHours   Float?
+  requestedDay     String?
+  requestedTime    String?
+  aiSummary        String?   @db.Text
+  cleanerBroadcast String?   @db.Text
+  notes            String?   @db.Text
+  metadata         Json?
+  source           String?
+  callTranscriptId String?
+  jobberJobId      String?
+  jobberVisitId    String?
+  createdAt        DateTime  @default(now())
+  resolvedAt       DateTime?
+  updatedAt        DateTime  @updatedAt
+
+  @@index([status])
+  @@index([type])
+  @@index([createdAt])
+}
+
+model NextdoorLead {
+  id            String   @id @default(cuid())
+  tenantId      String
+  tenant        Tenant   @relation(fields: [tenantId], references: [id])
+  leadId        String?  @unique
+  customerName  String?
+  customerEmail String?
+  customerPhone String?
+  address       String?
+  zipCode       String?
+  message       String?  @db.Text
+  source        String   @default("nextdoor")
+  status        String   @default("new")
+  autoReplied   Boolean  @default(false)
+  autoReplyAt   DateTime?
+  metadata      Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([tenantId])
+}
+
+model CrmLead {
+  id                    String                    @id @default(cuid())
+  tenantId              String
+  businessName          String
+  contactName           String?
+  contactEmail          String?
+  contactPhone          String?
+  address               String?
+  city                  String?
+  state                 String?
+  postalCode            String?
+  website               String?
+  industry              String?
+  sqft                  Int?
+  source                String                    @default("ai_discovery")
+  status                String                    @default("new")
+  priority              Int                       @default(3)
+  score                 Int                       @default(0)
+  lastContactedAt       DateTime?
+  nextFollowUpAt        DateTime?
+  callCount             Int                       @default(0)
+  notes                 String?                   @db.Text
+  tags                  String[]                  @default([])
+  assignedTo            String?
+  aiInsights            String?                   @db.Text
+  metadata              Json?
+  openphoneContactId    String?
+  openphoneSyncedAt     DateTime?
+  lifecycleStage        CustomerLifecycleStage    @default(COLD_LEAD)
+  leadTemperature       String                    @default("cold")
+  conversionDate        DateTime?
+  referralSource        String?
+  lifetimeValue         Float                     @default(0.0)
+  totalBookings         Int                       @default(0)
+  lastBookingDate       DateTime?
+  communicationPreference String                  @default("email")
+  createdAt             DateTime                  @default(now())
+  updatedAt             DateTime                  @updatedAt
+
+  @@index([tenantId])
+  @@index([status])
+  @@index([priority])
+  @@index([score])
+  @@index([nextFollowUpAt])
+  @@index([assignedTo])
+  @@index([lifecycleStage])
+  @@index([leadTemperature])
+}
+
+model TodoItem {
+  id          String    @id @default(cuid())
+  tenantId    String
+  userId      String
+  title       String
+  description String?   @db.Text
+  completed   Boolean   @default(false)
+  completedAt DateTime?
+  priority    Int       @default(2)
+  dueDate     DateTime?
+  isShared    Boolean   @default(false)
+  assignedTo  String?
+  category    String?
+  relatedId   String?
+  relatedType String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([userId])
+  @@index([assignedTo])
+  @@index([isShared])
+  @@index([completed])
+  @@index([dueDate])
+}
+
+model Note {
+  id          String   @id @default(cuid())
+  tenantId    String
+  userId      String
+  content     String   @db.Text
+  pinned      Boolean  @default(false)
+  isShared    Boolean  @default(false)
+  relatedId   String?
+  relatedType String?
+  checklist   Json?
+  tags        String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([userId])
+  @@index([isShared])
+  @@index([relatedId])
+  @@index([pinned])
+}
+
+model AnalyticsEvent {
+  id          String   @id @default(cuid())
+  type        String
+  page        String
+  event       String?
+  label       String?
+  value       String?
+  metadata    Json?
+  visitorId   String
+  sessionId   String
+  device      String
+  referrer    String?
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  tenantId    String?
+  createdAt   DateTime @default(now())
+
+  @@index([tenantId])
+  @@index([type])
+  @@index([page])
+  @@index([createdAt])
+}
+
+model NewsletterSubscriber {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  firstName      String?
+  neighborhood   String?
+  status         String    @default("active")
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+}
+
+model NewsletterSend {
+  id         String   @id @default(cuid())
+  tenantId   String   @default("ten_gogreen")
+  tenant     Tenant   @relation(fields: [tenantId], references: [id])
+  subject    String
+  preview    String?
+  source     String
+  recipients Int      @default(0)
+  provider   String?
+  status     String   @default("sent")
+  sentAt     DateTime @default(now())
+
+  @@index([tenantId])
+}
+
+// ── Expense Tracking for P&L ──
+
+model Expense {
+  id          String   @id @default(cuid())
+  tenantId    String
+  category    String // "labor" | "supplies" | "marketing" | "software" | "insurance" | "fuel" | "equipment" | "other"
+  vendor      String?
+  description String
+  amount      Float
+  date        DateTime
+  recurring   Boolean  @default(false)
+  receiptUrl  String?
+  createdBy   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([tenantId, date])
+  @@index([tenantId, category])
+}
+
+// ── Accounting (QuickBooks Replacement) ──
+
+model Account {
+  id          String   @id @default(cuid())
+  tenantId    String
+  code        String   // e.g. "1000", "4000", "5100"
+  name        String   // e.g. "Cash", "Service Revenue", "Labor"
+  type        String   // "asset" | "liability" | "equity" | "revenue" | "expense"
+  subtype     String?  // "current_asset", "fixed_asset", "current_liability", etc.
+  parentId    String?  // For sub-accounts
+  balance     Float    @default(0)
+  isSystem    Boolean  @default(false) // System accounts can't be deleted
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  entries JournalEntry[]
+
+  @@unique([tenantId, code])
+  @@index([tenantId, type])
+}
+
+model JournalEntry {
+  id          String   @id @default(cuid())
+  tenantId    String
+  accountId   String
+  account     Account  @relation(fields: [accountId], references: [id])
+  date        DateTime
+  description String
+  debit       Float    @default(0)
+  credit      Float    @default(0)
+  reference   String?  // e.g. "INV-20260323-1234", "EXP-supplies"
+  referenceId String?  // Link to invoice, expense, paystub ID
+  createdBy   String?
+  createdAt   DateTime @default(now())
+
+  @@index([tenantId, date])
+  @@index([tenantId, accountId])
+  @@index([referenceId])
+}
+
+model Bill {
+  id          String    @id @default(cuid())
+  tenantId    String
+  vendorName  String
+  vendorEmail String?
+  billNumber  String?
+  description String
+  amount      Float
+  dueDate     DateTime
+  status      String    @default("unpaid") // "unpaid" | "paid" | "overdue" | "void"
+  paidAt      DateTime?
+  paidAmount  Float?
+  category    String    @default("other")
+  receiptUrl  String?
+  createdBy   String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([tenantId, status])
+  @@index([tenantId, dueDate])
+}
+
+// ── Paystub Records ──
+
+model Paystub {
+  id             String         @id @default(cuid())
+  cleaner        CleanerProfile @relation(fields: [cleanerId], references: [id])
+  cleanerId      String
+  periodStart    DateTime
+  periodEnd      DateTime
+  periodLabel    String
+  totalHours     Float
+  regularHours   Float?
+  overtimeHours  Float          @default(0)
+  hourlyRate     Float
+  grossPay       Float
+  overtimePay    Float          @default(0)
+  // Tax withholding (W-2 employees only)
+  federalWithholding Float      @default(0)
+  socialSecurity     Float      @default(0)
+  medicare           Float      @default(0)
+  totalTaxWithholding Float     @default(0)
+  taxClassification  String     @default("1099") // "W2" | "1099"
+  deductions     Float          @default(0)
+  reimbursements Float          @default(0)
+  bonuses        Float          @default(0)
+  netPay         Float
+  timesheetIds   String[]       @default([])
+  adjustmentIds  String[]       @default([])
+  status         String         @default("draft") // "draft" | "finalized"
+  finalizedAt    DateTime?
+  finalizedBy    String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@unique([cleanerId, periodStart, periodEnd])
+  @@index([cleanerId, periodStart])
+}
+
+// ── Inventory & Supply Tracking ──
+
+model InventoryItem {
+  id            String        @id @default(cuid())
+  tenantId      String
+  name          String
+  description   String?
+  category      String // "cleaner" | "equipment" | "supplies" | "other"
+  sku           String?
+  amazonAsin    String? // Amazon product ASIN for auto-reorder
+  amazonUrl     String? // Direct Amazon product URL
+  unit          String        @default("each") // "each" | "bottle" | "pack" | "case" | "gallon"
+  currentStock  Float         @default(0)
+  minStock      Float         @default(5) // Reorder threshold
+  reorderQty    Float         @default(10) // Default quantity to reorder
+  unitCost      Float         @default(0)
+  autoReorder   Boolean       @default(false)
+  active        Boolean       @default(true)
+  lastOrderedAt DateTime?
+  notes         String?
+  imageUrl      String?
+  orders        SupplyOrder[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@unique([tenantId, sku])
+  @@index([tenantId])
+  @@index([tenantId, category])
+  @@index([amazonAsin])
+}
+
+model SupplyOrder {
+  id             String        @id @default(cuid())
+  tenantId       String
+  item           InventoryItem @relation(fields: [itemId], references: [id])
+  itemId         String
+  quantity       Float
+  unitCost       Float
+  totalCost      Float
+  source         String        @default("amazon") // "amazon" | "manual" | "auto"
+  amazonOrderId  String? // Amazon order reference
+  status         String        @default("pending") // "pending" | "ordered" | "shipped" | "delivered" | "cancelled"
+  trackingNumber String?
+  expectedDate   DateTime?
+  deliveredAt    DateTime?
+  orderedBy      String? // userId who placed order
+  autoTriggered  Boolean       @default(false)
+  notes          String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([tenantId])
+  @@index([tenantId, status])
+  @@index([itemId])
+  @@index([amazonOrderId])
+}
+
+model Achievement {
+  id               String            @id @default(cuid())
+  tenantId         String
+  key              String
+  title            String
+  description      String
+  icon             String // emoji
+  xpReward         Int               @default(10)
+  roleFilter       String // "HQ" | "MANAGER" | "CLEANER" | "CUSTOM_PROJECTER" | "ALL"
+  category         String            @default("general")
+  displayOrder     Int               @default(0)
+  active           Boolean           @default(true)
+  userAchievements UserAchievement[]
+  createdAt        DateTime          @default(now())
+
+  @@unique([tenantId, key])
+  @@index([roleFilter])
+  @@index([tenantId])
+}
+
+model UserAchievement {
+  id            String      @id @default(cuid())
+  userId        String
+  achievement   Achievement @relation(fields: [achievementId], references: [id])
+  achievementId String
+  unlockedAt    DateTime    @default(now())
+  progress      Int         @default(0)
+  target        Int         @default(1)
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+}
+
+model XpEvent {
+  id          String   @id @default(cuid())
+  userId      String
+  eventType   String
+  amount      Int
+  relatedId   String?
+  relatedType String?
+  createdAt   DateTime @default(now())
+
+  @@index([userId])
+  @@index([eventType])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Sprint 1 — Invoices, Recurring Jobs, Tips, Refunds
+// ══════════════════════════════════════════════════════════════
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  VIEWED
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+model Invoice {
+  id               String        @id @default(cuid())
+  tenantId         String
+  invoiceNumber    String
+  customerName     String
+  customerEmail    String
+  customerPhone    String?
+  serviceRequestId String?
+  jobId            String?
+  lineItems        Json // Array of { description, quantity, unitPrice, total }
+  subtotal         Float
+  taxRate          Float         @default(0)
+  taxAmount        Float         @default(0)
+  discountAmount   Float         @default(0)
+  total            Float
+  amountPaid       Float         @default(0)
+  status           InvoiceStatus @default(DRAFT)
+  dueDate          DateTime?
+  sentAt           DateTime?
+  paidAt           DateTime?
+  notes            String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@unique([tenantId, invoiceNumber])
+  @@index([tenantId, status])
+  @@index([customerEmail])
+  @@index([dueDate])
+}
+
+enum RecurringFrequency {
+  WEEKLY
+  BIWEEKLY
+  MONTHLY
+  QUARTERLY
+}
+
+model RecurringSchedule {
+  id            String             @id @default(cuid())
+  tenantId      String
+  customerName  String
+  customerEmail String
+  customerPhone String?
+  address       String
+  serviceType   String
+  frequency     RecurringFrequency
+  dayOfWeek     Int? // 0-6 for weekly
+  dayOfMonth    Int? // 1-31 for monthly
+  startDate     DateTime
+  nextRunDate   DateTime
+  lastRunDate   DateTime?
+  endDate       DateTime?
+  basePrice     Float
+  notes         String?
+  active        Boolean            @default(true)
+  pausedAt      DateTime?
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+
+  @@index([tenantId, active])
+  @@index([nextRunDate])
+}
+
+model Tip {
+  id              String   @id @default(cuid())
+  tenantId        String
+  jobId           String
+  cleanerId       String
+  customerEmail   String
+  amount          Float
+  paymentMethod   String   @default("stripe")
+  stripePaymentId String?
+  createdAt       DateTime @default(now())
+
+  @@index([tenantId])
+  @@index([cleanerId])
+  @@index([jobId])
+}
+
+enum RefundStatus {
+  PENDING
+  APPROVED
+  PROCESSED
+  DENIED
+}
+
+model Refund {
+  id             String       @id @default(cuid())
+  tenantId       String
+  jobId          String?
+  invoiceId      String?
+  customerName   String
+  customerEmail  String
+  amount         Float
+  reason         String
+  status         RefundStatus @default(PENDING)
+  processedBy    String?
+  processedAt    DateTime?
+  stripeRefundId String?
+  notes          String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@index([tenantId, status])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Sprint 2 — Coupons, Review Requests, Cancellation Policies
+// ══════════════════════════════════════════════════════════════
+
+enum DiscountType {
+  PERCENTAGE
+  FIXED
+}
+
+model Coupon {
+  id             String       @id @default(cuid())
+  tenantId       String
+  code           String
+  description    String?
+  discountType   DiscountType
+  discountValue  Float
+  minOrderAmount Float?
+  maxUses        Int?
+  usedCount      Int          @default(0)
+  validFrom      DateTime     @default(now())
+  validUntil     DateTime?
+  active         Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  usages CouponUsage[]
+
+  @@unique([tenantId, code])
+  @@index([tenantId])
+  @@index([code])
+}
+
+model CouponUsage {
+  id              String   @id @default(cuid())
+  coupon          Coupon   @relation(fields: [couponId], references: [id])
+  couponId        String
+  customerEmail   String
+  orderId         String?
+  discountApplied Float
+  usedAt          DateTime @default(now())
+
+  @@index([couponId])
+  @@index([customerEmail])
+}
+
+enum ReviewRequestStatus {
+  PENDING
+  SENT
+  CLICKED
+  REVIEWED
+  EXPIRED
+}
+
+model ReviewRequest {
+  id            String              @id @default(cuid())
+  tenantId      String
+  jobId         String
+  customerName  String
+  customerEmail String
+  customerPhone String?
+  status        ReviewRequestStatus @default(PENDING)
+  sentAt        DateTime?
+  clickedAt     DateTime?
+  reviewUrl     String?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+
+  @@index([tenantId, status])
+  @@index([jobId])
+}
+
+enum CancellationFeeType {
+  FLAT
+  PERCENTAGE
+}
+
+model CancellationPolicy {
+  id             String              @id @default(cuid())
+  tenantId       String
+  name           String
+  hoursBeforeJob Int // cancel within X hours = fee
+  feeType        CancellationFeeType
+  feeValue       Float
+  active         Boolean             @default(true)
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+
+  @@index([tenantId])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Sprint 3 — Job Costing, Teams, Customer Addresses, Insights
+// ══════════════════════════════════════════════════════════════
+
+model JobCost {
+  id          String   @id @default(cuid())
+  tenantId    String
+  jobId       String
+  category    String // "labor" | "supplies" | "travel" | "equipment" | "other"
+  description String
+  amount      Float
+  createdBy   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([jobId])
+}
+
+model CleanerTeam {
+  id          String              @id @default(cuid())
+  tenantId    String
+  name        String
+  description String?
+  leaderId    String?
+  active      Boolean             @default(true)
+  members     CleanerTeamMember[]
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  @@index([tenantId])
+}
+
+model CleanerTeamMember {
+  id        String      @id @default(cuid())
+  team      CleanerTeam @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  teamId    String
+  cleanerId String
+  joinedAt  DateTime    @default(now())
+
+  @@unique([teamId, cleanerId])
+}
+
+model CustomerAddress {
+  id            String   @id @default(cuid())
+  tenantId      String
+  customerEmail String
+  label         String   @default("Home")
+  addressLine1  String
+  addressLine2  String?
+  city          String
+  state         String
+  postalCode    String
+  lat           Float?
+  lng           Float?
+  isPrimary     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([tenantId, customerEmail])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Sprint 4 — Email Campaigns, Google Reviews
+// ══════════════════════════════════════════════════════════════
+
+enum CampaignStatus {
+  DRAFT
+  SCHEDULED
+  SENDING
+  SENT
+  FAILED
+}
+
+model EmailCampaign {
+  id              String                   @id @default(cuid())
+  tenantId        String
+  name            String
+  subject         String
+  htmlContent     String                   @db.Text
+  audienceType    String // "all_customers" | "recent" | "inactive" | "custom"
+  audienceFilter  Json?
+  status          CampaignStatus           @default(DRAFT)
+  scheduledAt     DateTime?
+  sentAt          DateTime?
+  totalRecipients Int                      @default(0)
+  openCount       Int                      @default(0)
+  clickCount      Int                      @default(0)
+  recipients      EmailCampaignRecipient[]
+  createdAt       DateTime                 @default(now())
+  updatedAt       DateTime                 @updatedAt
+
+  @@index([tenantId, status])
+}
+
+model EmailCampaignRecipient {
+  id         String        @id @default(cuid())
+  campaign   EmailCampaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId String
+  email      String
+  status     String        @default("pending") // "pending" | "sent" | "opened" | "clicked" | "bounced"
+  sentAt     DateTime?
+  openedAt   DateTime?
+  clickedAt  DateTime?
+
+  @@index([campaignId])
+  @@index([email])
+}
+
+model GoogleReview {
+  id            String    @id @default(cuid())
+  tenantId      String
+  reviewId      String    @unique
+  authorName    String
+  rating        Int
+  text          String?   @db.Text
+  publishedAt   DateTime
+  replyText     String?   @db.Text
+  repliedAt     DateTime?
+  customerEmail String?
+  sentiment     String? // "positive" | "neutral" | "negative"
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([rating])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Sprint 5 — GPS Tracking, Gift Cards, Signatures, Messaging
+// ══════════════════════════════════════════════════════════════
+
+model CleanerLocation {
+  id         String   @id @default(cuid())
+  tenantId   String   @default("ten_gogreen")
+  tenant     Tenant   @relation(fields: [tenantId], references: [id])
+  cleanerId  String
+  lat        Float
+  lng        Float
+  accuracy   Float?
+  heading    Float?
+  speed      Float?
+  recordedAt DateTime @default(now())
+
+  @@index([tenantId])
+  @@index([cleanerId, recordedAt])
+}
+
+model CustomFieldDefinition {
+  id           String             @id @default(cuid())
+  tenantId     String
+  entityType   String // "customer" | "job" | "lead"
+  fieldName    String
+  fieldType    String // "text" | "number" | "date" | "select" | "boolean"
+  options      Json? // for select type
+  required     Boolean            @default(false)
+  displayOrder Int                @default(0)
+  active       Boolean            @default(true)
+  values       CustomFieldValue[]
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  @@unique([tenantId, entityType, fieldName])
+}
+
+model CustomFieldValue {
+  id           String                @id @default(cuid())
+  definition   CustomFieldDefinition @relation(fields: [definitionId], references: [id], onDelete: Cascade)
+  definitionId String
+  entityId     String
+  value        String
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+
+  @@unique([definitionId, entityId])
+  @@index([entityId])
+}
+
+model GiftCard {
+  id             String          @id @default(cuid())
+  tenantId       String
+  code           String
+  initialBalance Float
+  currentBalance Float
+  purchaserEmail String
+  purchaserName  String?
+  recipientEmail String?
+  recipientName  String?
+  message        String?
+  expiresAt      DateTime?
+  active         Boolean         @default(true)
+  usages         GiftCardUsage[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  @@unique([tenantId, code])
+  @@index([tenantId])
+  @@index([code])
+}
+
+model GiftCardUsage {
+  id         String   @id @default(cuid())
+  giftCard   GiftCard @relation(fields: [giftCardId], references: [id])
+  giftCardId String
+  amount     Float
+  orderId    String?
+  usedAt     DateTime @default(now())
+
+  @@index([giftCardId])
+}
+
+model JobSignature {
+  id            String   @id @default(cuid())
+  tenantId      String
+  jobId         String
+  cleanerId     String
+  customerName  String
+  signatureData String   @db.Text // base64 PNG
+  signedAt      DateTime @default(now())
+
+  @@index([jobId])
+}
+
+model SmsMessage {
+  id         String   @id @default(cuid())
+  tenantId   String   @default("ten_gogreen")
+  direction  String // "inbound" | "outbound"
+  fromNumber String
+  toNumber   String
+  content    String   @db.Text
+  status     String   @default("delivered")
+  externalId String?
+  createdAt  DateTime @default(now())
+
+  @@index([tenantId, createdAt])
+  @@index([fromNumber])
+  @@index([toNumber])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Customer Communication Tracking — Email Intake & Activity
+// ══════════════════════════════════════════════════════════════
+
+model CustomerEmail {
+  id              String   @id @default(cuid())
+  tenantId        String   @default("ten_gogreen")
+  direction       String   @default("inbound") // "inbound" | "outbound"
+  fromEmail       String
+  fromName        String?
+  toEmail         String
+  subject         String
+  bodyText        String?  @db.Text
+  bodyHtml        String?  @db.Text
+  threadId        String?  // Gmail thread ID or conversation grouping
+  messageId       String?  @unique // Gmail message ID for dedup
+  inReplyTo       String?  // parent message ID
+  category        String   @default("general") // reschedule, cancellation, question, complaint, feedback, quote_request, payment, general
+  priority        String   @default("normal") // urgent, high, normal, low
+  aiSummary       String?  @db.Text
+  aiActionItems   Json?    // Array of extracted action items
+  status          String   @default("unread") // unread, read, actioned, archived
+  customerId      String?  // linked User ID if matched
+  customerName    String?
+  jobId           String?  // linked Job ID if identified
+  requestId       String?  // linked ServiceRequest ID
+  todoCreated     Boolean  @default(false)
+  processedAt     DateTime?
+  metadata        Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([tenantId, createdAt])
+  @@index([tenantId, status])
+  @@index([fromEmail])
+  @@index([customerId])
+  @@index([jobId])
+  @@index([category])
+  @@index([messageId])
+}
+
+// ══════════════════════════════════════════════════════════════
+// Photo Upload System — Job Photos & Estimate Request Photos
+// ══════════════════════════════════════════════════════════════
+
+model JobPhoto {
+  id            String   @id @default(cuid())
+  tenantId      String
+  jobId         String
+  type          String   // "BEFORE" | "AFTER" | "ESTIMATE"
+  imageData     String?  @db.Text // base64 fallback (nullable — prefer Drive)
+  driveFileId   String?  // Google Drive file ID
+  driveFileUrl  String?  // Google Drive direct view URL
+  thumbnailData String?  @db.Text // small 200px base64 thumbnail
+  caption       String?
+  uploadedBy    String   // userId
+  uploadedAt    DateTime @default(now())
+
+  @@index([tenantId, jobId])
+  @@index([jobId, type])
+}
+
+model JobTicket {
+  id          String   @id @default(cuid())
+  tenantId    String
+  jobId       String   @unique
+  accessToken String   @unique @default(uuid())
+  createdAt   DateTime @default(now())
+
+  job Job @relation(fields: [jobId], references: [id])
+
+  @@index([tenantId])
+  @@index([accessToken])
+}
+
+model DraftEstimate {
+  id                String    @id @default(cuid())
+  tenantId          String
+  callTranscriptId  String?
+  accessToken       String    @unique @default(uuid())
+  customerName      String
+  customerEmail     String?
+  customerPhone     String
+  address           String?
+  serviceType       String?
+  estimatedCost     Float?
+  estimateBreakdown Json?
+  cleanerBroadcast  String?   @db.Text
+  customerEmailHtml String?   @db.Text
+  customerEmailSent Boolean   @default(false)
+  cleanerBlastSent  Boolean   @default(false)
+  customerConfirmed Boolean   @default(false)
+  cleanerConfirmed  Boolean   @default(false)
+  confirmedCleanerId String?
+  confirmedAt       DateTime?
+  jobId             String?
+  status            String    @default("draft")
+  expiresAt         DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@index([tenantId, status])
+  @@index([customerPhone])
+  @@index([accessToken])
+  @@index([jobId])
+}
+
+model EstimatePhoto {
+  id          String   @id @default(cuid())
+  tenantId    String
+  requestId   String?  // links to ServiceRequest once created
+  sessionId   String   // temporary session ID for pre-request uploads
+  imageData   String   @db.Text
+  caption     String?
+  uploadedBy  String?
+  uploadedAt  DateTime @default(now())
+
+  @@index([requestId])
+  @@index([sessionId])
+}
+
+// ─── Referral System ─────────────────────────────
+enum ReferralStatus {
+  PENDING
+  QUALIFIED
+  REWARDED
+  EXPIRED
+}
+
+enum CustomerLifecycleStage {
+  COLD_LEAD
+  WARM_LEAD
+  PROSPECT
+  FIRST_TIME_CUSTOM_PROJECTER
+  REPEAT_CUSTOM_PROJECTER
+  LOYAL_CUSTOM_PROJECTER
+  REFERRER
+  CHAMPION
+}
+
+model Referral {
+  id              String         @id @default(cuid())
+  tenantId        String
+  referrerName    String
+  referrerEmail   String
+  referrerPhone   String?
+  referralCode    String         @unique
+  referreeName    String?
+  referreeEmail   String?
+  referreePhone   String?
+  status          ReferralStatus @default(PENDING)
+  rewardType      String         @default("credit")  // credit, gift_card, discount
+  rewardAmount    Float          @default(25.0)
+  referreeDiscount Float         @default(15.0)       // % off first clean
+  qualifiedAt     DateTime?
+  rewardedAt      DateTime?
+  jobId           String?        // the qualifying job
+  notes           String?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([tenantId, status])
+  @@index([referralCode])
+  @@index([referrerEmail])
+}
+
+// ══════════════════════════════════════════════════════════════
+// ── Enhanced Gamification System ──
+// ══════════════════════════════════════════════════════════════
+
+model UserLevel {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  level       Int      @default(1)
+  currentStreak Int    @default(0)
+  longestStreak Int    @default(0)
+  lastActivityDate DateTime?
+  levelUpDates LevelUpEvent[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model LevelUpEvent {
+  id        String   @id @default(cuid())
+  userId    String
+  userLevel UserLevel @relation(fields: [userId], references: [userId])
+  previousLevel Int
+  newLevel  Int
+  xpGained  Int
+  achievementId String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model AchievementProgress {
+  id            String   @id @default(cuid())
+  userId        String
+  achievementId String
+  progress      Int      @default(0)
+  target        Int      @default(1)
+  completed     Boolean  @default(false)
+  completedAt   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+  @@index([completed])
+}
+
+model StreakEvent {
+  id        String   @id @default(cuid())
+  userId    String
+  eventType String // "booking", "job_completed", "review", "login"
+  eventDate DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  @@index([userId, eventDate])
+  @@index([eventType])
+}
+
+// ── Password Reset ──
+
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  userId    String
+  token     String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+  @@index([token])
+}
+
+// ── Client Messaging ──
+
+model Message {
+  id            String    @id @default(cuid())
+  tenantId      String
+  threadId      String?
+  senderUserId  String
+  recipientUserId String?
+  content       String    @db.Text
+  readAt        DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([tenantId, senderUserId])
+  @@index([tenantId, recipientUserId])
+  @@index([threadId])
+}
+
+// ── Blog Posts (AI-generated, SEO-optimized) ──
+model BlogPost {
+  id          String    @id @default(cuid())
+  tenantId    String
+  slug        String    @unique
+  title       String
+  excerpt     String
+  content     String    // Markdown
+  category    String
+  author      String    @default("Go Green Organic Clean")
+  coverImage  String?
+  published   Boolean   @default(false)
+  publishedAt DateTime?
+  readTime    Int       @default(5)
+  aiProvider  String?
+  wordCount   Int       @default(0)
+  metaDescription String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([tenantId, published])
+  @@index([slug])
+}
+
+// ── Customer Preferences (cleaning notes, access instructions, scheduling) ──
+// Visible to admins, managers, AND cleaners for every job
+model CustomerPreference {
+  id                  String   @id @default(cuid())
+  tenantId            String
+  customerEmail       String
+  // Scheduling
+  preferredDays       String[] // ["Monday", "Wednesday", "Friday"]
+  preferredTimeWindow String?  // "Morning 8-11 AM"
+  preferredFrequency  String?  // "Biweekly"
+  // Access
+  entryInstructions   String?  // "Code 1234, leave door unlocked"
+  parkingNotes        String?  // "Park in driveway, not street"
+  alarmCode           String?  // "Alarm: 5678, disarm at front panel"
+  keyLocation         String?  // "Under mat" or "Lockbox code 9012"
+  // Cleaning
+  cleaningNotes       String?  // "Extra attention to kitchen, skip guest room"
+  allergies           String?  // "Allergic to lavender"
+  petInfo             String?  // "2 dogs, friendly, keep gate closed"
+  doNotTouch          String?  // "Home office desk, top shelf in closet"
+  focusAreas          String?  // "Master bath, kitchen floors, baseboards"
+  productPreferences  String?  // "No scented products" or "Prefer eucalyptus"
+  // Communication
+  communicationPref   String   @default("text") // "text" | "email" | "call"
+  notifyBefore        Boolean  @default(true)   // Send reminder before service
+  notifyAfter         Boolean  @default(true)   // Send completion notice
+  // Meta
+  lastUpdatedBy       String?  // userId who last updated
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([tenantId, customerEmail])
+  @@index([tenantId])
+}
+
+// ── Job Checklists (dynamic per service type, persisted per job) ──
+model JobChecklistItem {
+  id          String   @id @default(cuid())
+  jobId       String
+  room        String   // "Kitchen", "Bathrooms", "Bedrooms", etc.
+  task        String   // "Wipe counters", "Scrub toilet", etc.
+  completed   Boolean  @default(false)
+  completedAt DateTime?
+  notes       String?
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([jobId])
+  @@unique([jobId, room, task])
+}
+
+// ── Outbound Webhook Endpoints ──
+// Tenant-configured endpoints that receive event notifications
+model WebhookEndpoint {
+  id              String    @id @default(cuid())
+  tenantId        String
+  label           String
+  targetUrl       String
+  signingSecret   String?
+  events          String[]  // ["job.completed", "invoice.paid", ...]
+  enabled         Boolean   @default(true)
+  lastStatus      Int?      // Last HTTP response status code
+  lastError       String?
+  lastDeliveredAt DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([tenantId])
+}

@@ -1,0 +1,54 @@
+# Git
+.git
+.gitignore
+
+# Legacy WordPress (causes UTF-8 issues)
+legacy-wordpress/
+mysqleditor/
+
+# Node modules (will be installed fresh)
+node_modules
+**/node_modules
+
+# Build outputs
+.next
+**/.next
+dist
+build
+
+# IDE
+.vscode
+.idea
+*.iml
+
+# Environment files (secrets injected at runtime)
+.env
+.env.*
+*.local
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docs
+*.md
+docs/
+
+# Test files
+coverage/
+**/*.test.ts
+**/*.spec.ts
+__tests__/
+
+# Cache
+.cache
+.npm
+.sass-cache
+
+# SSL/Private
+ssl_certificates/
+private/

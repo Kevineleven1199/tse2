@@ -1,0 +1,81 @@
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Legacy WordPress - exclude from Railway builds (contains non-UTF-8 files)
+legacy-wordpress/
+mysqleditor/
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Composer (root only)
+/vendor/
+
+# Logs
+*.log
+logs/
+legacy-wordpress/wp-content/debug.log
+
+# Env / secrets
+.env
+.env.*
+*.local
+legacy-wordpress/wp-config.php
+legacy-wordpress/.htaccess
+legacy-wordpress/.user.ini
+ssl_certificates/
+private/
+
+# SSH keys — NEVER commit private keys
+.ssh/
+*.pem
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# Shell history / DB history
+.bash_history
+.mariadb_history*
+.mysql_history*
+
+# WordPress plugin cache
+.wp-cli/
+
+# WordPress content (generated)
+legacy-wordpress/wp-content/cache/
+legacy-wordpress/wp-content/backups/
+legacy-wordpress/wp-content/upgrade/
+legacy-wordpress/wp-content/uploads/
+legacy-wordpress/wp-content/uploads-wpforms/
+legacy-wordpress/wp-content/wflogs/
+legacy-wordpress/wp-content/ai1wm-backups/
+legacy-wordpress/wp-content/updraft/
+legacy-wordpress/wp-content/advanced-cache.php
+legacy-wordpress/wp-content/wp-cache-config.php
+
+# Build artifacts
+/dist/
+/build/
+.tmp/
+apps/platform/.next/
+apps/platform/tsconfig.tsbuildinfo
+
+# SASS
+.sass-cache/
+
+# Misc caches/coverage
+coverage/
+.cache/

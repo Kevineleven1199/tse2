@@ -1,0 +1,46 @@
+{
+  "name": "Tri State Enterprise",
+  "short_name": "TSE",
+  "description": "One Call Does It All - KY OH WV — Book, Track, and Manage Your Clean",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#008D0A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/cropped-Mobile-Logo-164x76.png",
+      "sizes": "164x76",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle", "productivity"],
+  "scope": "/",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Get a Quote",
+      "short_name": "Quote",
+      "url": "/get-a-quote",
+      "description": "Get an instant cleaning estimate"
+    },
+    {
+      "name": "My Portal",
+      "short_name": "Portal",
+      "url": "/client",
+      "description": "Access your client dashboard"
+    },
+    {
+      "name": "Call Us",
+      "short_name": "Call",
+      "url": "tel:+19412717948",
+      "description": "Call Go Green directly"
+    }
+  ]
+}

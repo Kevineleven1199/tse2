@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /cleaner
+Disallow: /client
+Disallow: /employee-hub
+Disallow: /manager
+
+Sitemap: https://tsenow.com/sitemap.xml

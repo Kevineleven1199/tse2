@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-feature-settings: "liga", "kern";
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html,
+body {
+  font-size: 100%;
+  line-height: 1.65;
+  font-family: var(--font-body), sans-serif;
+  @apply bg-surface text-foreground antialiased;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+a {
+  @apply text-foreground transition-colors duration-200 ease-out;
+}
+
+a:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
+
+/* Section Wrapper */
+.section-wrapper {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Card Styles */
+.card {
+  @apply rounded-xl border border-brand-100 bg-white shadow-sm transition-all duration-200 hover:border-brand-200 hover:shadow-md;
+}
+
+/* Input Focus Styles */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent ring-0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none;
+}
+
+/* Table Styling */
+table {
+  @apply w-full text-sm;
+}
+
+table thead tr {
+  @apply border-b border-brand-100;
+}
+
+table tbody tr {
+  @apply border-b border-brand-50 transition-colors duration-200;
+}
+
+table tbody tr:hover {
+  @apply bg-brand-50/30;
+}
+
+table td {
+  @apply py-3;
+}
+
+table th {
+  @apply py-3 text-left font-semibold text-foreground;
+}
+
+/* Status Badges */
+.status-badge {
+  @apply inline-flex rounded-full px-2.5 py-1 text-xs font-medium;
+}
+
+.status-badge.connected {
+  @apply bg-green-100 text-green-700;
+}
+
+.status-badge.pending {
+  @apply bg-amber-100 text-amber-700;
+}
+
+.status-badge.disconnected {
+  @apply bg-gray-100 text-gray-600;
+}
+
+.status-badge.error {
+  @apply bg-red-100 text-red-700;
+}
+
+/* Button Transitions */
+button {
+  @apply transition-all duration-200;
+}
+
+button:active {
+  @apply scale-95;
+}
+
+button:disabled {
+  @apply cursor-not-allowed;
+}
+
+/* Form Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  @apply rounded-lg border border-brand-100 bg-white px-3 py-2 text-sm text-foreground placeholder-muted-foreground transition-all duration-200 hover:border-brand-200;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  @apply border-accent ring-2 ring-accent/20;
+}
+
+/* Glass Effect */
+.glass {
+  background: linear-gradient(135deg, rgba(30, 81, 48, 0.92), rgba(40, 120, 70, 0.85));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Gradient Overlay */
+.gradient-overlay {
+  background: linear-gradient(135deg, rgba(30, 81, 48, 0.82), rgba(60, 168, 106, 0.6));
+}
+
+/* Utility Classes */
+.fade-up {
+  @apply opacity-0 translate-y-10;
+}
+
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-pt {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Smooth Transitions on Interactive Elements */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Focus Ring for Accessibility */
+.focus-ring {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
+
+/* Line Clamping Utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Scrollbar hiding for sidebar */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Card hover effect */
+.card-hover { transition: all 0.2s ease; }
+.card-hover:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-1px); }
+
+/* Table improvements */
+table th { font-weight: 600; letter-spacing: 0.05em; }
+
+/* Focus ring brand */
+.focus-brand:focus { outline: none; box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3); }
+
+/* Smooth page transitions */
+main { animation: fadeIn 0.15s ease-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── iOS-native mobile polish ── */
+
+/* Prevent double-tap zoom on interactive elements */
+button, a, [role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent overscroll bounce in Chrome (native app feel) */
+html { overscroll-behavior-y: contain; }
+
+/* PhotoGate slide-up animation */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Scrollbar hiding for horizontal scrollable chips */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

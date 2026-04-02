@@ -1,0 +1,80 @@
+# GoGreenOS Production Dockerfile
+# Multi-stage build for reliable Railway deployment
+#
+# NOTE: Railway currently uses the Nixpacks builder (configured in railway.toml).
+# This Dockerfile is kept as a backup deployment option. To switch to Docker builds,
+# update railway.toml or add a railway.json with:
+#   { "build": { "builder": "DOCKERFILE", "dockerfilePath": "Dockerfile.prod" } }
+
+# ============ DEPENDENCIES STAGE ============
+FROM node:20-alpine AS deps
+WORKDIR /app
+
+# Install OpenSSL for Prisma
+RUN apk add --no-cache openssl libc6-compat
+
+# Copy package files only (for caching)
+COPY package.json package-lock.json ./
+
+# Install ALL dependencies (including devDependencies for build)
+RUN npm ci
+
+# ============ BUILD STAGE ============
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+# Install OpenSSL for Prisma
+RUN apk add --no-cache openssl libc6-compat
+
+# Copy node_modules from deps stage
+COPY --from=deps /app/node_modules ./node_modules
+
+# Copy all source code
+COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate --schema=apps/platform/prisma/schema.prisma
+
+# Build arguments for Next.js (public env vars needed at build time)
+ARG NEXT_PUBLIC_STRIPE_KEY
+ARG NEXT_PUBLIC_PAYPAL_CLIENT_ID
+ARG NEXT_PUBLIC_SITE_URL
+
+ENV NEXT_PUBLIC_STRIPE_KEY=$NEXT_PUBLIC_STRIPE_KEY
+ENV NEXT_PUBLIC_PAYPAL_CLIENT_ID=$NEXT_PUBLIC_PAYPAL_CLIENT_ID
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
+
+# Build the Next.js app
+RUN npm run build
+
+# Copy static assets to standalone output
+RUN cp -r apps/platform/.next/static apps/platform/.next/standalone/apps/platform/.next/static
+RUN cp -r apps/platform/public apps/platform/.next/standalone/apps/platform/public
+
+# ============ PRODUCTION STAGE ============
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+# Install OpenSSL for Prisma runtime
+RUN apk add --no-cache openssl libc6-compat
+
+# Don't run as root
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy the standalone build at the same path used by Railway Nixpacks starts
+COPY --from=builder --chown=nextjs:nodejs /app/apps/platform/.next/standalone /app/apps/platform/.next/standalone
+
+USER nextjs
+
+# Expose port
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+ENV NODE_ENV=production
+
+# Start the server
+CMD ["node", "apps/platform/.next/standalone/apps/platform/server.js"]

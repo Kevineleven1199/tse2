@@ -1,0 +1,14 @@
+# Ignore legacy WordPress folder - contains non-UTF-8 files that break Nixpacks
+legacy-wordpress/
+
+# Other files to ignore during Railway build
+*.md
+*.txt
+!package.json
+!README.md
+docs/
+.git/
+.github/
+.vscode/
+.idea/
+# Trigger redeploy 1770014528
