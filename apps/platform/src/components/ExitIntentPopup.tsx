@@ -86,7 +86,7 @@ export const ExitIntentPopup = () => {
         const data = await response.json().catch(() => ({}));
         setErrorMsg(
           (data as { error?: string }).error ||
-            "Something went wrong. Please try again or email us at info@tsenow.com"
+            "Something went wrong. Please try again or email us at tse@tristateenterprise.com"
         );
       }
     } catch {
@@ -197,7 +197,7 @@ export const ExitIntentPopup = () => {
                       Your 15% discount code <span className="font-bold text-accent">GREEN15</span> is on its way.
                     </p>
                     <p className="mt-2 text-xs text-muted-foreground">
-                      Don&apos;t see it? Check your spam folder or email us at info@tsenow.com
+                      Don&apos;t see it? Check your spam folder or email us at tse@tristateenterprise.com
                     </p>
                   </div>
                 )}

@@ -80,8 +80,8 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
             <Link href="/get-a-quote" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-accent transition hover:bg-brand-50">
               Get a Free Quote <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href="tel:+16065550100" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white/10">
-              Call (606) 555-0100
+            <a href="tel:+16068362534" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white/10">
+              Call (606) 836-2534
             </a>
           </div>
         </div>

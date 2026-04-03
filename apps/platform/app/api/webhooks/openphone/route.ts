@@ -136,7 +136,7 @@ async function lookupClientByPhone(phone: string): Promise<ExistingClient | null
 async function handleCallCompleted(event: OpenPhoneEvent) {
   const call = event.data.object;
   const callId = call.id || event.id;
-  // OpenPhone sends participants as array of phone number strings e.g. ["+16065550100"]
+  // OpenPhone sends participants as array of phone number strings e.g. ["+16068362534"]
   const phoneNumber =
     call.from ||
     (Array.isArray(call.participants) && typeof call.participants[0] === "string"

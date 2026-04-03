@@ -1,29 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Leaf, Shield, Droplets, HeartPulse } from "lucide-react";
+import { Award, Shield, Clock, Wrench } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/src/lib/animations";
 
 const CREDENTIALS = [
   {
-    title: "Certified Green Products",
-    description: "We exclusively use EPA Safer Choice, Green Seal, and EWG Verified cleaners with full ingredient transparency.",
-    icon: Leaf
+    title: "30+ Years Experience",
+    description: "Established in 1992, Tri State Enterprise brings over three decades of hands-on expertise to every project across the KY-OH-WV Tri-State area.",
+    icon: Clock
   },
   {
-    title: "Indoor Air Quality Focus",
-    description: "HEPA-filter vacuuming and low-VOC processes protect respiratory health and reduce allergens with every visit.",
-    icon: HeartPulse
+    title: "Full-Service Contractor",
+    description: "Construction, HVAC, lawn care, landscaping, site work, and paving — all under one roof. One call truly does it all.",
+    icon: Wrench
   },
   {
     title: "Licensed, Bonded & Insured",
-    description: "Fully insured professionals with background checks, ongoing training, and a satisfaction guarantee on every clean.",
+    description: "Fully licensed professionals with comprehensive insurance coverage. Every project is backed by our commitment to quality and your peace of mind.",
     icon: Shield
   },
   {
-    title: "Water & Waste Conscious",
-    description: "Microfiber systems, refillable glass bottles, and biodegradable disposables minimize waste sent to Kentucky landfills.",
-    icon: Droplets
+    title: "Quality Guaranteed",
+    description: "We stand behind every job we do. From small residential repairs to large commercial projects, our work meets the highest standards of craftsmanship.",
+    icon: Award
   }
 ];
 
@@ -38,13 +38,13 @@ export const CredentialsSection = () => (
         className="mx-auto max-w-3xl text-center"
       >
         <motion.span variants={fadeUp} className="text-sm font-semibold uppercase tracking-[0.3em] text-accent/70">
-          Health & Sustainability First
+          Why Choose Us
         </motion.span>
         <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-semibold leading-tight text-accent md:text-4xl">
-          Credentials that keep your clean honest—and truly green
+          Reliable service you can count on
         </motion.h2>
         <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-          Greenwashing isn’t in our vocabulary. Every product, process, and person on our team is vetted to deliver health-forward results you can trust.
+          When you hire Tri State Enterprise, you get a trusted local team with the experience, equipment, and commitment to get the job done right.
         </motion.p>
       </motion.div>
 

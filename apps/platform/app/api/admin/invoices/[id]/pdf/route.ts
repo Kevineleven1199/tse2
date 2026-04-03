@@ -57,7 +57,7 @@ async function generateInvoicePDF(invoice: any): Promise<Buffer> {
       // Header
       doc.rect(0, 0, 612, 80).fill(G);
       doc.font("Helvetica-Bold").fontSize(20).fillColor("#FFFFFF").text("Tri State Enterprise", 50, 22);
-      doc.font("Helvetica").fontSize(9).text("Flatwoods, KY  |  (606) 555-0100  |  info@tsenow.com", 50, 48);
+      doc.font("Helvetica").fontSize(9).text("Flatwoods, KY  |  (606) 836-2534  |  tse@tristateenterprise.com", 50, 48);
 
       // Invoice title
       doc.font("Helvetica-Bold").fontSize(24).fillColor(G).text("INVOICE", 50, 100);

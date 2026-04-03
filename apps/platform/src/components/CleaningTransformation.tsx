@@ -58,7 +58,7 @@ export const CleaningTransformation = () => {
             Drag to Reveal the Transformation
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Slide left and right to see the before and after of a real Tri State clean.
+            Slide left and right to see the before and after of a real Tri State project.
           </p>
         </motion.div>
 

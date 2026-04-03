@@ -8,8 +8,8 @@
  *
  * Environment variables (set in Railway):
  *   OPENPHONE_API_KEY    — your OpenPhone workspace API key
- *   OPENPHONE_FROM       — your OpenPhone number in E.164 format (e.g. +16065550100)
- *   OPENPHONE_HQ_NUMBERS — comma-separated HQ numbers to notify (e.g. +16065550100,+15551234567)
+ *   OPENPHONE_FROM       — your OpenPhone number in E.164 format (e.g. +16068362534)
+ *   OPENPHONE_HQ_NUMBERS — comma-separated HQ numbers to notify (e.g. +16068362534,+15551234567)
  */
 
 const API_BASE = "https://api.openphone.com/v1";
@@ -65,7 +65,7 @@ export async function sendSms(opts: SmsOpts): Promise<boolean> {
 
 /**
  * Format a phone number to E.164 (US numbers)
- * Handles: (606) 555-0100, 941-271-7948, 6065550100, +16065550100
+ * Handles: (606) 836-2534, 941-271-7948, 6065550100, +16068362534
  */
 export function toE164(phone: string): string {
   const digits = phone.replace(/\D/g, "");
@@ -133,7 +133,7 @@ export async function smsQuoteConfirmationToCustomer(data: {
     ``,
     `A cleaner in your area will claim your job shortly. We'll text you when they're confirmed!`,
     ``,
-    `Questions? Reply here or call (606) 555-0100`,
+    `Questions? Reply here or call (606) 836-2534`,
     `— Tri State Enterprise`,
   ].join("\n");
 
@@ -155,7 +155,7 @@ export async function smsCleanerClaimedToCustomer(data: {
     `Great news — ${data.cleanerName} has been assigned to your clean!`,
     `We'll reach out to confirm your preferred day and time.`,
     ``,
-    `Questions? Reply here or call (606) 555-0100`,
+    `Questions? Reply here or call (606) 836-2534`,
     `— Tri State Enterprise`,
   ].join("\n");
 

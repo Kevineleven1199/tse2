@@ -8,18 +8,18 @@ import {
 const HERO_FEATURES = [
   {
     icon: Camera,
-    title: "Before & After Photo Proof",
-    tagline: "See your home transform — every single visit.",
-    description: "Your cleaner photographs every room before they touch it and after they finish. Timestamped, uploaded to your private Google Drive folder, and visible in your portal. No other cleaning company does this.",
+    title: "Before & After Photo Documentation",
+    tagline: "See your project transform at every stage.",
+    description: "Our crew photographs every project before they start and after completion. Timestamped, uploaded to your private folder, and visible in your client portal. Full transparency on every job.",
     image: "/images/service-basic-clean.jpg",
     stat: "100%",
-    statLabel: "of visits documented",
+    statLabel: "of jobs documented",
   },
   {
     icon: Clock,
     title: "Live Clock In & Clock Out",
-    tagline: "Know exactly when your cleaner is in your home.",
-    description: "GPS-verified arrival and departure timestamps. The moment your cleaner enters your home, you get an instant notification. When they leave, you get a completion alert with hours worked and a link to your before/after photos.",
+    tagline: "Know exactly when our crew is on your property.",
+    description: "GPS-verified arrival and departure timestamps. The moment our team arrives at your job site, you get an instant notification. When they leave, you get a completion alert with hours worked and a link to your project photos.",
     image: "/images/why-choose-us.jpg",
     stat: "Instant",
     statLabel: "real-time alerts",
@@ -28,7 +28,7 @@ const HERO_FEATURES = [
     icon: Smartphone,
     title: "Your Own Client Portal",
     tagline: "Every job, every photo, every invoice — in your hands.",
-    description: "Log in to your personal dashboard to see your complete cleaning history, upcoming visits, before/after photos for every job, invoices, payment history, and your assigned cleaner's profile and rating. This is YOUR data.",
+    description: "Log in to your personal dashboard to see your complete project history, upcoming appointments, before/after photos for every job, invoices, payment history, and your assigned crew details. This is YOUR data.",
     image: "/images/about-team.jpg",
     stat: "24/7",
     statLabel: "portal access",
@@ -44,32 +44,32 @@ const GRID_FEATURES = [
   },
   {
     icon: CheckCircle2,
-    title: "Room-by-Room Checklists",
-    description: "Every room has a digital checklist your cleaner follows and checks off in real-time. Kitchen: 6 tasks. Bathrooms: 6 tasks. Nothing gets missed.",
+    title: "Job-by-Job Checklists",
+    description: "Every job has a digital checklist our crew follows and checks off in real-time. Nothing gets missed, nothing gets overlooked.",
     color: "from-emerald-500 to-emerald-600",
   },
   {
     icon: Eye,
-    title: "Live Stream for Snowbirds",
-    description: "Away from your Kentucky home? Watch your clean live via YouTube stream. Perfect for snowbirds, vacation rental owners, and property managers.",
+    title: "Remote Property Monitoring",
+    description: "Own property in the Tri-State area but live elsewhere? Monitor your projects remotely through the portal. Perfect for property managers and investors.",
     color: "from-purple-500 to-purple-600",
   },
   {
     icon: Shield,
     title: "AI Quality Assurance",
-    description: "Our AI learns your preferences — products you like, areas to focus on, things to avoid. Every clean gets better because the system remembers.",
+    description: "Our system learns your preferences — service details, scheduling, areas to focus on. Every job gets better because the system remembers.",
     color: "from-amber-500 to-amber-600",
   },
   {
     icon: Repeat,
     title: "Fully Automated Lifecycle",
-    description: "Book once. We handle scheduling, reminders, cleaners, photos, invoices, payments, and payroll. The entire operation runs on AI.",
+    description: "Book once. We handle scheduling, reminders, crews, photos, invoices, payments, and follow-ups. The entire operation runs seamlessly.",
     color: "from-pink-500 to-pink-600",
   },
 ];
 
 export const TriStateSystemSection = () => (
-  <section id="go-green-system">
+  <section id="tri-state-system">
     {/* Dark hero intro */}
     <div className="bg-gradient-to-br from-brand-900 via-brand-800 to-emerald-800 py-16 md:py-20">
       <div className="section-wrapper text-center">
@@ -80,14 +80,14 @@ export const TriStateSystemSection = () => (
           The Tri State AI System
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base sm:text-xl text-brand-100/80">
-          The most transparent cleaning service in Kentucky. See everything. Know everything. Trust everything.
+          The most transparent contractor in the Tri-State area. See everything. Know everything. Trust everything.
         </p>
         <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
           {[
             { icon: Camera, label: "Photo-documented" },
             { icon: Clock, label: "GPS-verified" },
             { icon: Shield, label: "AI-powered" },
-            { icon: Star, label: "4.9★ rated" },
+            { icon: Star, label: "Top-rated" },
           ].map((item) => (
             <span key={item.label} className="flex items-center gap-2 text-brand-100/70">
               <item.icon className="h-4 w-4 text-brand-300" /> {item.label}
@@ -97,16 +97,14 @@ export const TriStateSystemSection = () => (
       </div>
     </div>
 
-    {/* Feature showcases with images — alternating layout */}
+    {/* Feature showcases with images */}
     <div className="bg-white">
       {HERO_FEATURES.map((feature, i) => (
         <div key={feature.title} className={`py-16 ${i % 2 === 1 ? "bg-brand-50/30" : ""}`}>
           <div className={`section-wrapper flex flex-col gap-6 sm:gap-10 md:flex-row md:items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
-            {/* Image */}
             <div className="flex-1">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <Image src={feature.image} alt={feature.title} width={600} height={400} className="w-full object-cover" />
-                {/* Stat overlay */}
                 <div className="absolute bottom-4 left-4 rounded-2xl bg-white/95 backdrop-blur-sm px-5 py-3 shadow-lg">
                   <p className="text-2xl font-bold text-accent">{feature.stat}</p>
                   <p className="text-xs text-muted-foreground">{feature.statLabel}</p>
@@ -114,7 +112,6 @@ export const TriStateSystemSection = () => (
               </div>
             </div>
 
-            {/* Content */}
             <div className="flex-1 space-y-4">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
                 <feature.icon className="h-7 w-7" />
@@ -152,7 +149,7 @@ export const TriStateSystemSection = () => (
             Experience The Difference <ArrowRight className="h-4 w-4" />
           </Link>
           <p className="mt-4 text-sm text-brand-100/50">
-            Every customer gets the full Tri State AI System — portal, photos, alerts, checklists — included free with every clean.
+            Every customer gets the full Tri State AI System — portal, photos, alerts, checklists — included with every job.
           </p>
         </div>
       </div>

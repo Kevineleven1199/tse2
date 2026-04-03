@@ -112,7 +112,7 @@ export async function renderEstimateEmail(opts: {
 <!-- HEADER -->
 <tr><td style="background:linear-gradient(135deg,#0d5e3b 0%,#16a34a 100%);padding:32px 40px;">
   <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:700;">Tri State Enterprise</h1>
-  <p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:13px;letter-spacing:1px;">ECO-FRIENDLY · SARASOTA · (606) 555-0100</p>
+  <p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:13px;letter-spacing:1px;">ECO-FRIENDLY · SARASOTA · (606) 836-2534</p>
 </td></tr>
 
 <!-- GREETING -->
@@ -148,7 +148,7 @@ export async function renderEstimateEmail(opts: {
   <a href="${confirmUrl}" style="display:inline-block;background:#0d5e3b;color:#ffffff;text-decoration:none;padding:16px 48px;border-radius:50px;font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">
     Confirm My Cleaning
   </a>
-  <p style="margin:12px 0 0;color:#9ca3af;font-size:12px;">or call us at (606) 555-0100</p>
+  <p style="margin:12px 0 0;color:#9ca3af;font-size:12px;">or call us at (606) 836-2534</p>
 </td></tr>
 
 <!-- DIVIDER -->
@@ -195,8 +195,8 @@ ${reviewsHtml ? `
 <!-- FOOTER -->
 <tr><td style="background:#f9fafb;padding:24px 40px;border-top:1px solid #e5e7eb;">
   <p style="margin:0;color:#6b7280;font-size:12px;text-align:center;">
-    Tri State Enterprise · Flatwoods, KY · (606) 555-0100<br>
-    <a href="mailto:info@tsenow.com" style="color:#0d5e3b;">info@tsenow.com</a> ·
+    Tri State Enterprise · Flatwoods, KY · (606) 836-2534<br>
+    <a href="mailto:tse@tristateenterprise.com" style="color:#0d5e3b;">tse@tristateenterprise.com</a> ·
     <a href="https://tsenow.com" style="color:#0d5e3b;">tsenow.com</a>
   </p>
   <p style="margin:10px 0 0;color:#9ca3af;font-size:11px;text-align:center;">

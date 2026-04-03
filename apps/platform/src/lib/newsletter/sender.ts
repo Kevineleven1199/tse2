@@ -20,8 +20,8 @@ export type SendResult = {
 };
 
 const FROM_NAME = "Tri State Enterprise";
-const FROM_EMAIL = process.env.NEWSLETTER_FROM_EMAIL || process.env.SENDGRID_FROM_EMAIL || "info@tsenow.com";
-const REPLY_TO = "info@tsenow.com";
+const FROM_EMAIL = process.env.NEWSLETTER_FROM_EMAIL || process.env.SENDGRID_FROM_EMAIL || "tse@tristateenterprise.com";
+const REPLY_TO = "tse@tristateenterprise.com";
 
 /**
  * Auto-detect the best available email provider

@@ -225,7 +225,7 @@ export default async function JobTicketPage({
 
         {/* Footer */}
         <div className="text-center text-xs text-gray-400 pt-4">
-          <p>Tri State Enterprise · Flatwoods, KY · (606) 555-0100</p>
+          <p>Tri State Enterprise · Flatwoods, KY · (606) 836-2534</p>
           <p className="mt-1">Viewing as: {viewerLabel}</p>
         </div>
       </div>

@@ -625,7 +625,7 @@ export const QuoteForm = () => {
                     {scheduleStatus === "saving" ? "Saving availability..." : "Send Availability"}
                   </button>
                   <a
-                    href={quoteResult.schedulingUrl || "tel:+16065550100"}
+                    href={quoteResult.schedulingUrl || "tel:+16068362534"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex min-h-[40px] flex-1 items-center justify-center rounded-full border border-accent bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent transition hover:bg-brand-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-200"
@@ -640,7 +640,7 @@ export const QuoteForm = () => {
               ) : null}
               {scheduleStatus === "error" ? (
                 <p className="text-xs font-semibold text-red-600">
-                  We couldn’t save your availability. Please try again or text us at (606) 555-0100.
+                  We couldn’t save your availability. Please try again or text us at (606) 836-2534.
                 </p>
               ) : null}
             </div>

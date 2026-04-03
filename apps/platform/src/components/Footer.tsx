@@ -3,28 +3,28 @@ import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Commercial", href: "/commercial" },
-  { label: "Why Green", href: "/#why-green" },
-  { label: "Blog", href: "/blog" },
-  { label: "Community", href: "/community" },
   { label: "About", href: "/#about" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Get a Quote", href: "/get-a-quote" }
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/#contact" },
+  { label: "Blogs", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Recent Projects", href: "/reviews" },
+  { label: "Get a Quote", href: "/get-a-quote" },
+  { label: "Pay Your Bill", href: "/how-to-pay" }
 ];
 
 const SERVICE_AREAS = [
-  "Flatwoods • Russell • Catlettsburg",
-  "Ashland • South Shore",
-  "St. Petersburg • Clearwater",
-  "Huntington • Brandon • Riverview",
-  "Land O’ Lakes • Wesley Chapel"
+  "Flatwoods \u2022 Russell \u2022 Catlettsburg",
+  "Ashland \u2022 South Shore \u2022 Grayson",
+  "Huntington, WV \u2022 Ironton, OH",
+  "Greenup \u2022 Boyd \u2022 Carter Counties",
+  "KY \u2022 OH \u2022 WV Tri-State Area"
 ];
 
 const SOCIAL_LINKS = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/tseorganicclean",
+    href: "https://www.facebook.com/tristateenterprise",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -35,32 +35,8 @@ const SOCIAL_LINKS = [
     )
   },
   {
-    label: "TikTok",
-    href: "https://www.tiktok.com/@go.green.organic",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 32 32" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="currentColor"
-          d="M16.708.027c1.745-.027 3.48-.011 5.213-.027.105 2.041.839 4.12 2.333 5.563 1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-.063-3.855-.463-5.6-1.291-.76-.344-1.468-.787-2.161-1.24-.009 3.896.016 7.787-.025 11.667-.104 1.864-.719 3.719-1.803 5.255-1.744 2.557-4.771 4.224-7.88 4.276-1.907.109-3.812-.411-5.437-1.369-2.693-1.588-4.588-4.495-4.864-7.615-.032-.667-.043-1.333-.016-1.984.24-2.537 1.495-4.964 3.443-6.615 2.208-1.923 5.301-2.839 8.197-2.297.027 1.975-.052 3.948-.052 5.923-1.323-.428-2.869-.308-4.025.495-.844.547-1.485 1.385-1.819 2.333-.276.676-.197 1.427-.181 2.145.317 2.188 2.421 4.027 4.667 3.828 1.489-.016 2.916-.88 3.692-2.145.251-.443.532-.896.547-1.417.131-2.385.079-4.76.095-7.145.011-5.375-.016-10.735.025-16.093z"
-        />
-      </svg>
-    )
-  },
-  {
-    label: "X",
-    href: "https://x.com/ggorganicclean",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="currentColor"
-          d="M13.982 10.622 20.54 3h-1.554l-5.693 6.618L8.745 3H3.5l6.876 10.007L3.5 21h1.554l6.012-6.989L15.868 21h5.245l-7.131-10.378Zm-2.128 2.474-.697-.997-5.543-7.93H8l4.474 6.4.697.996 5.815 8.318h-2.387l-4.745-6.787Z"
-        />
-      </svg>
-    )
-  },
-  {
     label: "Instagram",
-    href: "https://www.instagram.com/tseorganicclean/",
+    href: "https://www.instagram.com/tristateenterprise/",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -98,10 +74,10 @@ export const Footer = () => (
           />
         </Link>
         <p className="text-base leading-relaxed text-white/90">
-          Tri State Enterprise delivers meticulously detailed cleaning with products that honor your health and Kentucky&apos;s environment. Licensed, insured, and serving local families and businesses across Flatwoods.
+          Serving the Kentucky-Ohio-West Virginia Tri-State area since 1992. From home improvements to large commercial projects, we provide reliable, local expertise backed by decades of experience in Construction, HVAC, Lawn Care, Landscaping, Site Work, and Paving.
         </p>
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-          Satisfaction guaranteed • Safe for kids & pets
+          &ldquo;One Call Does It All&rdquo; &bull; Licensed &amp; Insured
         </p>
         <div className="flex items-center gap-3">
           {SOCIAL_LINKS.map((link) => (
@@ -135,17 +111,17 @@ export const Footer = () => (
       <div>
         <h4 className="text-lg font-semibold text-white">Contact</h4>
         <div className="mt-5 space-y-4 text-base leading-relaxed text-white">
-          <Link href="tel:+16065550100" className="block text-lg font-semibold text-white">
-            (606) 555-0100
+          <Link href="tel:+16068362534" className="block text-lg font-semibold text-white">
+            (606) 836-2534
           </Link>
-          <Link href="mailto:info@tsenow.com" className="block transition hover:text-brand-100">
-            info@tsenow.com
+          <Link href="mailto:tse@tristateenterprise.com" className="block transition hover:text-brand-100">
+            tse@tristateenterprise.com
           </Link>
           <p>
-            Mon – Fri: 8:00 AM – 4:00 PM<br />
-            Sat – Sun: By appointment
+            Mon &ndash; Fri: 8:00 AM &ndash; 4:30 PM<br />
+            Weekends: Closed
           </p>
-          <p className="text-sm uppercase tracking-[0.25em] text-white/75">Licensed & Insured • Satisfaction Guaranteed</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-white/75">Licensed &amp; Insured &bull; Since 1992</p>
         </div>
       </div>
 
@@ -161,17 +137,13 @@ export const Footer = () => (
 
     <div className="border-t border-white/10 bg-accent/95">
       <div className="section-wrapper flex flex-col items-center justify-between gap-4 py-6 text-center text-base text-white sm:flex-row sm:text-left">
-        <p className="font-medium">© {new Date().getFullYear()} Tri State Enterprise. All rights reserved. v21.0.0</p>
+        <p className="font-medium">&copy; {new Date().getFullYear()} Tri State Enterprise. All rights reserved.</p>
         <span className="flex items-center gap-3">
           <Link href="/privacy" className="transition hover:text-brand-200">Privacy Policy</Link>
-          <span className="text-white/40">•</span>
+          <span className="text-white/40">&bull;</span>
           <Link href="/terms" className="transition hover:text-brand-200">Terms of Service</Link>
         </span>
-        <span className="font-medium">Licensed &amp; Insured • EPA Safer Choice Products</span>
-        <span className="flex items-center gap-2">
-          <Image src="/images/en_US.png" alt="English" width={20} height={14} />
-          English
-        </span>
+        <span className="font-medium">Licensed &amp; Insured &bull; Since 1992</span>
       </div>
     </div>
   </footer>

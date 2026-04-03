@@ -2,19 +2,18 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Shield, Leaf, Star, MapPin, Users, Clock } from "lucide-react";
+import { Shield, Wrench, Star, MapPin, Users, Clock } from "lucide-react";
 
 const METRICS = [
-  { value: "5.0", suffix: "★", label: "Google Rating", sublabel: "106 verified reviews", icon: Star, color: "text-amber-500" },
-  { value: "100", suffix: "%", label: "Organic Products", sublabel: "EPA Safer Choice certified", icon: Leaf, color: "text-green-500" },
-  { value: "500", suffix: "+", label: "Jobs Completed", sublabel: "Homes & businesses served", icon: Users, color: "text-blue-500" },
-  { value: "3", suffix: "+", label: "Years in Business", sublabel: "Licensed & insured", icon: Shield, color: "text-purple-500" },
-  { value: "Same", suffix: "", label: "Week Availability", sublabel: "Often next-day scheduling", icon: Clock, color: "text-teal-500" },
-  { value: "SW", suffix: " FL", label: "Service Area", sublabel: "Flatwoods to Tri-State Area", icon: MapPin, color: "text-pink-500" },
+  { value: "5.0", suffix: "\u2605", label: "Google Rating", sublabel: "Verified reviews", icon: Star, color: "text-amber-500" },
+  { value: "30", suffix: "+", label: "Years in Business", sublabel: "Established 1992", icon: Shield, color: "text-green-500" },
+  { value: "1000", suffix: "+", label: "Projects Completed", sublabel: "Residential & commercial", icon: Users, color: "text-blue-500" },
+  { value: "6", suffix: "", label: "Service Lines", sublabel: "One call does it all", icon: Wrench, color: "text-purple-500" },
+  { value: "Same", suffix: "", label: "Week Availability", sublabel: "Fast response times", icon: Clock, color: "text-teal-500" },
+  { value: "KY-OH", suffix: "-WV", label: "Service Area", sublabel: "Tri-State coverage", icon: MapPin, color: "text-pink-500" },
 ];
 
 function AnimatedNumber({ value, suffix }: { value: string; suffix: string }) {
-  // For numeric values, animate the count
   const num = parseInt(value);
   if (isNaN(num)) {
     return <>{value}{suffix}</>;

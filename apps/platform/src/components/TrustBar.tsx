@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-// Only verifiable claims — no specific review counts or home counts
 const TRUST_SIGNALS = [
-  "🌿 100% Organic & Eco-Friendly Cleaning Products",
-  "✓ Licensed, Insured & Background-Checked • Flatwoods, KY",
-  "🏠 Safe for Kids, Pets & the Environment",
+  "Construction \u2022 HVAC \u2022 Lawn Care \u2022 Landscaping \u2022 Site Work \u2022 Paving",
+  "\u2713 Licensed, Bonded & Insured \u2022 Serving the KY-OH-WV Tri-State Area Since 1992",
+  "\u260E (606) 836-2534 \u2022 One Call Does It All",
 ];
 
 export const TrustBar = () => {
@@ -16,7 +15,6 @@ export const TrustBar = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Check if hidden in session
     const isHidden = sessionStorage.getItem("trustBarHidden");
     if (isHidden) {
       setIsVisible(false);
@@ -58,7 +56,6 @@ export const TrustBar = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Close button */}
             <button
               onClick={handleClose}
               className="ml-auto flex-shrink-0 p-1 opacity-70 transition-opacity hover:opacity-100"

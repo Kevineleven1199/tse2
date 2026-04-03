@@ -93,7 +93,7 @@ export async function finalizeBooking(draftEstimateId: string) {
   if (draft.customerPhone) {
     sendSms({
       to: [draft.customerPhone],
-      content: `✅ Your cleaning is confirmed! ${cleanerName} will arrive on ${scheduledDate} at ${scheduledTime}.\n\n📍 ${address}\n\nView your portal: ${siteUrl}/client\n\nTri State Enterprise\n(606) 555-0100`,
+      content: `✅ Your cleaning is confirmed! ${cleanerName} will arrive on ${scheduledDate} at ${scheduledTime}.\n\n📍 ${address}\n\nView your portal: ${siteUrl}/client\n\nTri State Enterprise\n(606) 836-2534`,
     }).catch((e) => console.warn("[finalizeBooking] Customer SMS failed:", e));
   }
 
@@ -120,7 +120,7 @@ export async function finalizeBooking(draftEstimateId: string) {
             <div style="text-align:center;margin:24px 0;">
               <a href="${siteUrl}/client" style="display:inline-block;background:#0d5e3b;color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:700;">View Your Portal</a>
             </div>
-            <p style="color:#9ca3af;font-size:12px;text-align:center;">Tri State Enterprise · (606) 555-0100 · info@tsenow.com</p>
+            <p style="color:#9ca3af;font-size:12px;text-align:center;">Tri State Enterprise · (606) 836-2534 · tse@tristateenterprise.com</p>
           </div>
         </div>
       `,

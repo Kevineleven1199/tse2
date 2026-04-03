@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
     if (draft.customerPhone) {
       await sendSms({
         to: [draft.customerPhone],
-        content: `Hi ${draft.customerName.split(" ")[0]}! 🌿 Your personalized cleaning estimate from Tri State is ready.\n\n${draft.estimatedCost ? `Estimate: $${draft.estimatedCost.toFixed(0)}` : ""}\n\nView & confirm: ${confirmUrl}\n\nQuestions? Call us: (606) 555-0100`,
+        content: `Hi ${draft.customerName.split(" ")[0]}! 🌿 Your personalized cleaning estimate from Tri State is ready.\n\n${draft.estimatedCost ? `Estimate: $${draft.estimatedCost.toFixed(0)}` : ""}\n\nView & confirm: ${confirmUrl}\n\nQuestions? Call us: (606) 836-2534`,
       });
     }
 

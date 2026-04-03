@@ -5,24 +5,24 @@ import { fadeUp, staggerContainer } from "@/src/lib/animations";
 
 const FAQS = [
   {
-    question: "What makes your cleaning organic or green?",
+    question: "What services does Tri State Enterprise offer?",
     answer:
-      "We only use third-party certified products from EPA Safer Choice and Green Seal partners. No chlorine, ammonia, synthetic fragrances, or petroleum-derived surfactants. Every ingredient list is available on request."
+      "We offer a full range of services including Construction, HVAC (heating & air conditioning), Lawn Care, Landscaping, Site Work, and Paving. Whether it's a small home repair or a large commercial project, one call does it all."
   },
   {
-    question: "Are your products safe for children and pets?",
+    question: "What areas do you serve?",
     answer:
-      "Absolutely. Our plant-powered formulas are non-toxic, biodegradable, and hypoallergenic. We also avoid aerosol sprays to protect sensitive lungs and paw pads."
+      "We serve the entire Kentucky-Ohio-West Virginia Tri-State area including Flatwoods, Ashland, Russell, Catlettsburg, South Shore, Grayson, Huntington (WV), Ironton (OH), and surrounding communities in Greenup, Boyd, Carter, Lawrence, and Cabell counties."
   },
   {
-    question: "Do I need to be home or prepare before you arrive?",
+    question: "Are you licensed and insured?",
     answer:
-      "We simply ask that surfaces are tidy so we can focus on detailed cleaning. You’re welcome to be home, leave us access instructions, or let our bonded crew lock up when finished."
+      "Yes. Tri State Enterprise is fully licensed, bonded, and insured. We've been in business since 1992 with over 30 years of experience serving the Tri-State area. Your protection and peace of mind are our priority."
   },
   {
-    question: "What if I’m not satisfied with the clean?",
+    question: "How do I get a free estimate?",
     answer:
-      "Your satisfaction is guaranteed. If something feels off, contact us within 24 hours and we’ll revisit promptly to make it right—no additional charge."
+      "Call us at (606) 836-2534 or use our online quote form. We provide free estimates for all services and can typically schedule a site visit within the same week. No obligation, no pressure."
   }
 ];
 
@@ -40,14 +40,17 @@ export const FAQSection = () => (
           FAQ
         </motion.span>
         <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-semibold leading-tight text-accent md:text-4xl">
-          Answers to your top questions about going green
+          Frequently Asked Questions
         </motion.h2>
         <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-          Don’t see what you’re looking for? Reach out at{" "}
-          <a href="mailto:info@tsenow.com" className="font-semibold text-accent underline underline-offset-4">
-            info@tsenow.com
+          Don&apos;t see what you&apos;re looking for? Call us at{" "}
+          <a href="tel:+16068362534" className="font-semibold text-accent underline underline-offset-4">
+            (606) 836-2534
           </a>{" "}
-          and we’ll help.
+          or email{" "}
+          <a href="mailto:tse@tristateenterprise.com" className="font-semibold text-accent underline underline-offset-4">
+            tse@tristateenterprise.com
+          </a>
         </motion.p>
       </motion.div>
 

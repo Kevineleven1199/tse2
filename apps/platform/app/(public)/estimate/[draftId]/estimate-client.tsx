@@ -276,10 +276,10 @@ export function EstimateClient({
           <h2 className="font-display text-3xl font-bold text-white">Ready to experience the TriState difference?</h2>
           <p className="mt-3 text-lg text-brand-100/80">Accept your estimate above to get started. Questions? Call us anytime.</p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <a href="tel:+16065550100" className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/20">
-              <Phone className="h-4 w-4" /> (606) 555-0100
+            <a href="tel:+16068362534" className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/20">
+              <Phone className="h-4 w-4" /> (606) 836-2534
             </a>
-            <a href="mailto:info@tsenow.com" className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/20">
+            <a href="mailto:tse@tristateenterprise.com" className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/20">
               <Mail className="h-4 w-4" /> Email Us
             </a>
           </div>

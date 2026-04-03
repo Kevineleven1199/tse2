@@ -149,13 +149,13 @@ const ConfirmationClient = () => {
               </ol>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href={quote.schedulingUrl || `tel:+16065550100`}
+                  href={quote.schedulingUrl || `tel:+16068362534`}
                   className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-brand-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-200"
                 >
                   Reserve my visit
                 </Link>
                 <a
-                  href="tel:+16065550100"
+                  href="tel:+16068362534"
                   className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-full border border-accent bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent transition hover:bg-brand-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-200"
                 >
                   Talk with HQ

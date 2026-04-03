@@ -1,5 +1,5 @@
 /**
- * Email Failsafe — ensures every quote is emailed to info@tsenow.com
+ * Email Failsafe — ensures every quote is emailed to tse@tristateenterprise.com
  * regardless of whether SendGrid / OpenPhone are configured.
  *
  * Priority:
@@ -9,8 +9,8 @@
  */
 import nodemailer from "nodemailer";
 
-const FAILSAFE_EMAIL = "info@tsenow.com";
-const FROM_EMAIL = process.env.SMTP_FROM_EMAIL ?? process.env.SENDGRID_FROM_EMAIL ?? "info@tsenow.com";
+const FAILSAFE_EMAIL = "tse@tristateenterprise.com";
+const FROM_EMAIL = process.env.SMTP_FROM_EMAIL ?? process.env.SENDGRID_FROM_EMAIL ?? "tse@tristateenterprise.com";
 const FROM_NAME = "Tri State Enterprise";
 
 const SENDGRID_BASE_URL = "https://api.sendgrid.com/v3/mail/send";
@@ -201,7 +201,7 @@ export async function emailQuoteToCustomer(data: {
         </div>
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;" />
         <p style="font-size: 13px; color: #9ca3af; text-align: center;">
-          Questions? Reply to this email, call, or text us at (606) 555-0100<br/>
+          Questions? Reply to this email, call, or text us at (606) 836-2534<br/>
           100% organic. 100% satisfaction guaranteed.
         </p>
       </div>
@@ -241,7 +241,7 @@ export async function emailDiscountCode(email: string): Promise<void> {
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;" />
         <p style="font-size: 12px; color: #9ca3af;">
           Tri State Enterprise — Flatwoods's #1 Organic Cleaning Service<br/>
-          (606) 555-0100 | info@tsenow.com
+          (606) 836-2534 | tse@tristateenterprise.com
         </p>
       </div>
     </div>

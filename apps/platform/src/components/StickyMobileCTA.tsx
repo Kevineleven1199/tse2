@@ -83,7 +83,7 @@ export const StickyMobileCTA = () => {
 
               {/* Phone button */}
               <Link
-                href="tel:+16065550100"
+                href="tel:+16068362534"
                 onClick={handlePhoneClick}
                 className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full border-2 border-brand-200 bg-white text-accent transition-all hover:border-brand-300 hover:bg-brand-50"
                 aria-label="Call us"

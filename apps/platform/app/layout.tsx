@@ -16,20 +16,20 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tri State Enterprise | Flatwoods's Premier Organic Cleaning Service",
+  title: "Tri State Enterprise | Construction, HVAC & Landscaping — One Call Does It All",
   description:
-    "Experience all-organic residential and commercial cleaning in Flatwoods, KY. Non-toxic, pet-safe, and eco-conscious service with customizable packages.",
+    "Serving the Kentucky-Ohio-West Virginia Tri-State area since 1992. Tri State Enterprise delivers trusted services in Construction, HVAC, Lawn Care, Landscaping, Site Work, and Paving.",
   keywords: [
-    "construction, HVAC, lawn care Flatwoods",
-    "eco friendly cleaning service",
-    "Flatwoods cleaning service",
-    "green cleaning company Kentucky",
-    "non toxic house cleaning",
-    "pet safe cleaning Flatwoods",
-    "EPA Safer Choice cleaning",
-    "Ashland cleaning service",
-    "Tri-State Area green cleaning",
-    "South Shore house cleaning",
+    "construction company Kentucky",
+    "HVAC services Tri-State area",
+    "landscaping Ashland KY",
+    "lawn care Flatwoods KY",
+    "site work contractor Kentucky",
+    "paving company Ohio West Virginia",
+    "Tri State Enterprise",
+    "commercial construction KY OH WV",
+    "heating and air conditioning Kentucky",
+    "residential contractor Tri-State",
   ],
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover",
   alternates: {
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://tsenow.com"),
   openGraph: {
-    title: "Tri State Enterprise | Flatwoods's Premier Organic Cleaning Service",
+    title: "Tri State Enterprise | Construction, HVAC & Landscaping",
     description:
-      "Experience all-organic residential and commercial cleaning in Flatwoods, KY. Non-toxic, pet-safe, and eco-conscious service with customizable packages.",
+      "Serving the KY-OH-WV Tri-State area since 1992. Construction, HVAC, Lawn Care, Landscaping, Site Work, and Paving. One Call Does It All.",
     url: "https://tsenow.com",
     siteName: "Tri State Enterprise",
     locale: "en_US",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: "/images/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Tri State Enterprise crew in a pristine home"
+        alt: "Tri State Enterprise crew on a job site"
       }
     ]
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tri State Enterprise",
     description:
-      "Premium construction, HVAC, lawn care services in Flatwoods and surrounding counties.",
+      "Construction, HVAC, lawn care, landscaping, site work & paving in the KY-OH-WV Tri-State area since 1992.",
     images: ["/images/og-cover.jpg"]
   },
   icons: {
@@ -88,44 +88,47 @@ const jsonLd = {
   "@id": "https://tsenow.com",
   name: "Tri State Enterprise",
   description:
-    "Premium organic and eco-friendly residential and commercial cleaning services in Flatwoods, KY. EPA Safer Choice and Green Seal certified products. Non-toxic, pet-safe, family-safe.",
+    "Serving the Kentucky-Ohio-West Virginia Tri-State area since 1992, Tri State Enterprise delivers trusted services in Construction, HVAC, Lawn Care, Landscaping, Site Work, and Paving. Licensed, bonded, and insured.",
   url: "https://tsenow.com",
-  telephone: "+16065550100",
-  email: "info@tsenow.com",
+  telephone: "+16068362534",
+  email: "tse@tristateenterprise.com",
   image: "https://tsenow.com/images/og-cover.jpg",
   logo: "https://tsenow.com/images/cropped-Mobile-Logo-164x76.png",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "701 3rd Street",
     addressLocality: "Flatwoods",
-    addressRegion: "FL",
+    addressRegion: "KY",
+    postalCode: "41139",
     addressCountry: "US",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 27.3364,
-    longitude: -82.5307,
+    latitude: 38.5218,
+    longitude: -82.7179,
   },
   areaServed: [
-    { "@type": "County", name: "Flatwoods County, KY" },
-    { "@type": "County", name: "Manatee County, KY" },
-    { "@type": "County", name: "Pinellas County, KY" },
-    { "@type": "County", name: "Hillsborough County, KY" },
-    { "@type": "County", name: "Pasco County, KY" },
+    { "@type": "State", name: "Kentucky" },
+    { "@type": "State", name: "Ohio" },
+    { "@type": "State", name: "West Virginia" },
+    { "@type": "County", name: "Greenup County, KY" },
+    { "@type": "County", name: "Boyd County, KY" },
+    { "@type": "County", name: "Carter County, KY" },
+    { "@type": "County", name: "Lawrence County, OH" },
+    { "@type": "County", name: "Cabell County, WV" },
   ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "08:00",
-      closes: "16:00",
+      closes: "16:30",
     },
   ],
   sameAs: [
-    "https://www.facebook.com/tseorganicclean",
-    "https://www.instagram.com/tseorganicclean/",
-    "https://www.tiktok.com/@go.green.organic",
-    "https://x.com/ggorganicclean",
+    "https://www.facebook.com/tristateenterprise",
+    "https://www.instagram.com/tristateenterprise/",
   ],
 };
 
@@ -135,34 +138,34 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What makes your cleaning organic or green?",
+      name: "What services does Tri State Enterprise offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We only use third-party certified products from EPA Safer Choice and Green Seal partners. No chlorine, ammonia, synthetic fragrances, or petroleum-derived surfactants. Every ingredient list is available on request.",
+        text: "We offer a full range of services including Construction, HVAC (heating & air conditioning), Lawn Care, Landscaping, Site Work, and Paving. From home improvements to large commercial projects, one call does it all.",
       },
     },
     {
       "@type": "Question",
-      name: "Are your products safe for children and pets?",
+      name: "What areas do you serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Our plant-powered formulas are non-toxic, biodegradable, and hypoallergenic. We also avoid aerosol sprays to protect sensitive lungs and paw pads.",
+        text: "We serve the entire Kentucky-Ohio-West Virginia Tri-State area including Flatwoods, Ashland, Russell, Catlettsburg, South Shore, Huntington, and surrounding communities.",
       },
     },
     {
       "@type": "Question",
-      name: "Do I need to be home or prepare before you arrive?",
+      name: "Are you licensed and insured?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We simply ask that surfaces are tidy so we can focus on detailed cleaning. You're welcome to be home, leave us access instructions, or let our bonded crew lock up when finished.",
+        text: "Yes. Tri State Enterprise is fully licensed, bonded, and insured. We have been in business since 1992, with over 30 years of experience serving the Tri-State area.",
       },
     },
     {
       "@type": "Question",
-      name: "What if I'm not satisfied with the clean?",
+      name: "How do I get a free estimate?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your satisfaction is guaranteed. If something feels off, contact us within 24 hours and we'll revisit promptly to make it right—no additional charge.",
+        text: "Call us at (606) 836-2534 or use our online quote form. We provide free estimates for all services and can typically schedule a site visit within the same week.",
       },
     },
   ],
@@ -181,7 +184,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* Google Analytics 4 — free via Google Workspace */}
+      {/* Google Analytics 4 */}
       {GA_ID && (
         <>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />

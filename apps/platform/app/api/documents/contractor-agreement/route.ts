@@ -77,7 +77,7 @@ async function generateContractorAgreementPDF(name: string, email: string, phone
       };
 
       body(`This Independent Contractor Agreement ("Agreement") is entered into as of ${today}, by and between:`);
-      body(`Company: Tri State Enterprise LLC ("Company")\nFlatwoods, KY | (606) 555-0100 | info@tsenow.com`);
+      body(`Company: Tri State Enterprise LLC ("Company")\nFlatwoods, KY | (606) 836-2534 | tse@tristateenterprise.com`);
       body(`Contractor: ${name}\nEmail: ${email}${phone ? ` | Phone: ${phone}` : ""}`);
 
       heading("1. ENGAGEMENT & RELATIONSHIP");

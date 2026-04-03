@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (draft.status === "expired") {
-      return NextResponse.json({ error: "This estimate has expired. Please call (606) 555-0100 for a new one." }, { status: 410 });
+      return NextResponse.json({ error: "This estimate has expired. Please call (606) 836-2534 for a new one." }, { status: 410 });
     }
 
     // Create ServiceRequest + Quote + Job

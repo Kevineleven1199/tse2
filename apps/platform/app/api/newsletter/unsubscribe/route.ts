@@ -45,7 +45,7 @@ export const GET = async (request: Request) => {
   } catch (error) {
     console.error("[newsletter-unsubscribe] Error:", error);
     return new Response(
-      unsubscribeHTML("Something went wrong. Please try again or email info@tsenow.com."),
+      unsubscribeHTML("Something went wrong. Please try again or email tse@tristateenterprise.com."),
       { headers: { "Content-Type": "text/html" }, status: 500 }
     );
   }

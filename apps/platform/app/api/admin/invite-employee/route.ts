@@ -269,7 +269,7 @@ function generateInviteEmailHtml({
 
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;" />
         <p style="font-size: 13px; color: #9ca3af; text-align: center; margin: 0;">
-          Questions? Reply to this email or contact us at (606) 555-0100<br/>
+          Questions? Reply to this email or contact us at (606) 836-2534<br/>
           100% organic. 100% satisfaction guaranteed.
         </p>
       </div>

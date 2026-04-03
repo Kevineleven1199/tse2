@@ -205,7 +205,7 @@ export const renderNewsletterHTML = (
                 Flatwoods, Ashland & Tri-State Area
               </p>
               <p style="margin: 0 0 16px; font-size: 13px; color: ${MUTED_COLOR};">
-                (606) 555-0100 • info@tsenow.com
+                (606) 836-2534 • tse@tristateenterprise.com
               </p>
               <p style="margin: 0; font-size: 12px; color: #9ca3af;">
                 You're receiving this because you subscribed to our daily newsletter.

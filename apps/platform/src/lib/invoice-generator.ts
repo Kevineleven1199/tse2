@@ -239,7 +239,7 @@ export async function sendInvoiceEmail(invoice: Invoice): Promise<void> {
             <tr>
               <td style="background:#f0fdf4;padding:24px;text-align:center;font-size:13px;color:#6b7280;border-top:1px solid #e5e7eb;">
                 <p style="margin:0 0 8px;">Tri State Enterprise</p>
-                <p style="margin:0;">(606) 555-0100 | info@tsenow.com</p>
+                <p style="margin:0;">(606) 836-2534 | tse@tristateenterprise.com</p>
                 <p style="margin:8px 0 0;font-size:12px;">Flatwoods's #1 Eco-Friendly Cleaning Service</p>
               </td>
             </tr>
@@ -346,7 +346,7 @@ export async function sendPaymentReminder(invoice: Invoice): Promise<void> {
             <tr>
               <td style="background:#f9fafb;padding:24px;text-align:center;font-size:13px;color:#6b7280;border-top:1px solid #e5e7eb;">
                 <p style="margin:0 0 8px;">Tri State Enterprise</p>
-                <p style="margin:0;">(606) 555-0100 | info@tsenow.com</p>
+                <p style="margin:0;">(606) 836-2534 | tse@tristateenterprise.com</p>
               </td>
             </tr>
           </table>

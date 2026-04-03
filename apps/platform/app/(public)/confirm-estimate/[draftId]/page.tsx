@@ -105,10 +105,10 @@ export default function ConfirmEstimatePage({
             </ol>
           </div>
           <a
-            href="tel:+16065550100"
+            href="tel:+16068362534"
             className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-900"
           >
-            <Phone className="h-4 w-4" /> Questions? Call (606) 555-0100
+            <Phone className="h-4 w-4" /> Questions? Call (606) 836-2534
           </a>
         </div>
       </div>
@@ -121,8 +121,8 @@ export default function ConfirmEstimatePage({
         <div className="mx-auto max-w-md text-center">
           <h1 className="text-2xl font-bold text-gray-900">Estimate Unavailable</h1>
           <p className="mt-3 text-gray-600">{error}</p>
-          <a href="tel:+16065550100" className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-white">
-            <Phone className="h-4 w-4" /> Call (606) 555-0100
+          <a href="tel:+16068362534" className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold text-white">
+            <Phone className="h-4 w-4" /> Call (606) 836-2534
           </a>
         </div>
       </div>
@@ -177,7 +177,7 @@ export default function ConfirmEstimatePage({
         )}
 
         <p className="text-center text-xs text-gray-400">
-          or call us at <a href="tel:+16065550100" className="font-semibold text-brand-700">(606) 555-0100</a>
+          or call us at <a href="tel:+16068362534" className="font-semibold text-brand-700">(606) 836-2534</a>
         </p>
 
         {/* Footer */}

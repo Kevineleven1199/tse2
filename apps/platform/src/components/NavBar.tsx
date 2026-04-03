@@ -25,24 +25,23 @@ type NavBarProps = {
 
 const SERVICES: NavItem[] = [
   { label: "All Services", href: "/services" },
-  { label: "Home Cleaning", href: "/services#healthy-home" },
-  { label: "Deep Refresh & Detox", href: "/services#deep-refresh" },
-  { label: "Move-In / Move-Out", href: "/services#move-clean" },
-  { label: "Pressure Washing", href: "/services#pressure-wash" },
-  { label: "Auto Detailing", href: "/services#auto-detail" },
-  { label: "Home Watch", href: "/services#home-watch" },
-  { label: "Airbnb Turnover", href: "/services#airbnb-turnover" },
-  { label: "Carpet & Steam", href: "/services#carpet-steam" },
-  { label: "Commercial Solutions", href: "/commercial" },
+  { label: "Construction", href: "/services#construction" },
+  { label: "HVAC / Heating & Air", href: "/services#hvac" },
+  { label: "Lawn Care", href: "/services#lawn-care" },
+  { label: "Landscaping", href: "/services#landscaping" },
+  { label: "Site Work", href: "/services#site-work" },
+  { label: "Paving", href: "/services#paving" },
+  { label: "Commercial Projects", href: "/commercial" },
 ];
 
 const NAV_ITEMS: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
   { label: "Services", href: "/services", children: SERVICES },
-  { label: "Commercial", href: "/commercial" },
-  { label: "Why Organic?", href: "/#why-green" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Blog", href: "/blog" }
+  { label: "Contact", href: "/#contact" },
+  { label: "Blogs", href: "/blog" },
+  { label: "Careers", href: "/careers" },
+  { label: "Recent Projects", href: "/reviews" },
 ];
 
 const PORTAL_LINK: Record<NavBarSession["role"], string> = {
@@ -205,19 +204,29 @@ export const NavBar = ({ session }: NavBarProps) => {
 
   return (
     <>
-      {/* Top utility bar — phone + login */}
+      {/* Top utility bar — contact info + login */}
       <div className="hidden border-b border-brand-50 bg-brand-50/60 md:block">
         <div className="section-wrapper flex h-9 items-center justify-between text-xs">
-          <Link
-            href="tel:+16065550100"
-            className="flex items-center gap-1.5 font-medium text-accent transition hover:text-brand-700"
-          >
-            <Phone className="h-3 w-3" />
-            (606) 555-0100
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="tel:+16068362534"
+              className="flex items-center gap-1.5 font-medium text-accent transition hover:text-brand-700"
+            >
+              <Phone className="h-3 w-3" />
+              (606) 836-2534
+            </Link>
+            <span className="text-brand-200">|</span>
+            <span className="text-[11px] tracking-wide text-muted-foreground">
+              Mon &ndash; Fri: 8:00 AM &ndash; 4:30 PM
+            </span>
+            <span className="text-brand-200">|</span>
+            <Link href="mailto:tse@tristateenterprise.com" className="text-muted-foreground hover:text-accent">
+              tse@tristateenterprise.com
+            </Link>
+          </div>
           <div className="flex items-center gap-4 text-muted-foreground">
             <span className="text-[11px] tracking-wide">
-              Serving Flatwoods, Ashland &amp; Tri-State Area
+              Serving the OH, WV, KY Tri-State Area &mdash; &ldquo;One Call Does It All&rdquo;
             </span>
             <span className="text-brand-200">|</span>
             {session ? (
@@ -265,12 +274,18 @@ export const NavBar = ({ session }: NavBarProps) => {
             {NAV_ITEMS.map((item) => (
               <DesktopNavItem key={item.label} item={item} close={close} />
             ))}
-            <div className="ml-2 pl-2 border-l border-brand-100">
+            <div className="ml-2 flex items-center gap-2 pl-2 border-l border-brand-100">
+              <Link
+                href="/how-to-pay"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-full border-2 border-accent px-5 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white"
+              >
+                Pay Your Bill
+              </Link>
               <Link
                 href="/get-a-quote"
                 className="inline-flex min-h-[40px] items-center justify-center rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white shadow-brand transition hover:bg-brand-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-200"
               >
-                Get a Free Quote
+                Get A Quote
               </Link>
             </div>
           </nav>
@@ -278,7 +293,7 @@ export const NavBar = ({ session }: NavBarProps) => {
           {/* Mobile: phone + hamburger */}
           <div className="flex items-center gap-3 md:hidden">
             <Link
-              href="tel:+16065550100"
+              href="tel:+16068362534"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-accent"
               aria-label="Call us"
             >
@@ -314,11 +329,18 @@ export const NavBar = ({ session }: NavBarProps) => {
 
                 <div className="mt-3 flex flex-col gap-2 border-t border-brand-50 pt-4">
                   <Link
+                    href="/how-to-pay"
+                    onClick={close}
+                    className="inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-accent px-6 py-3 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white"
+                  >
+                    Pay Your Bill
+                  </Link>
+                  <Link
                     href="/get-a-quote"
                     onClick={close}
                     className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-brand transition hover:bg-brand-700"
                   >
-                    Get a Free Quote
+                    Get A Quote
                   </Link>
                   {session ? (
                     <>

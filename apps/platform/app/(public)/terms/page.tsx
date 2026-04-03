@@ -112,10 +112,10 @@ export default function TermsOfServicePage() {
             </a>{" "}
             or call{" "}
             <a
-              href="tel:+16065550100"
+              href="tel:+16068362534"
               className="text-green-700 underline hover:text-green-900"
             >
-              (606) 555-0100
+              (606) 836-2534
             </a>
             .
           </p>
@@ -296,10 +296,10 @@ export default function TermsOfServicePage() {
             <p>
               Phone:{" "}
               <a
-                href="tel:+16065550100"
+                href="tel:+16068362534"
                 className="text-green-700 underline hover:text-green-900"
               >
-                (606) 555-0100
+                (606) 836-2534
               </a>
             </p>
           </div>

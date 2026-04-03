@@ -514,7 +514,7 @@ export const POST = async (request: Request) => {
             action === "accept"
               ? `<p>Hi ${payload.name},</p><p>Thanks for choosing Tri State Enterprise! We're lining up the perfect cleaner for you. Please choose up to three preferred time windows so we can lock in your visit.</p><p>Total per visit: <strong>$${breakdown.total.toFixed(2)}</strong><br>Deposit to reserve: <strong>$${breakdown.recommendedDeposit.toFixed(2)}</strong></p><p>We'll text you updates as soon as your cleaning pro claims the job.</p>`
               : action === "decline"
-              ? `<p>Hi ${payload.name},</p><p>Thanks for considering Tri State Enterprise. If you'd like a revised estimate or have questions about our process, just reply to this email or text us at ${process.env.OPENPHONE_DEFAULT_NUMBER ?? "(606) 555-0100"}.</p>`
+              ? `<p>Hi ${payload.name},</p><p>Thanks for considering Tri State Enterprise. If you'd like a revised estimate or have questions about our process, just reply to this email or text us at ${process.env.OPENPHONE_DEFAULT_NUMBER ?? "(606) 836-2534"}.</p>`
               : `<p>Hi ${payload.name},</p><p>Here's your personalized quote for ${SERVICE_LABELS[serviceType]}.</p><p>Total per visit: <strong>$${breakdown.total.toFixed(2)}</strong><br>Recurring value ≈ <strong>$${monthlyValue.toFixed(2)}/month</strong></p><p><a href="${schedulingUrl}" target="_blank">Accept & reserve your clean</a> when you're ready!</p>`
         });
       } catch (err) { console.error("[quotes] sendEmail failed:", err); }

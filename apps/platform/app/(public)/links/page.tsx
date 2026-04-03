@@ -30,14 +30,14 @@ const LINKS: { category: string; items: LinkItem[] }[] = [
       },
       {
         label: "Call Us Now",
-        description: "(606) 555-0100",
-        href: "tel:+16065550100",
+        description: "(606) 836-2534",
+        href: "tel:+16068362534",
         icon: "phone"
       },
       {
         label: "Email Us",
-        description: "info@tsenow.com",
-        href: "mailto:info@tsenow.com",
+        description: "tse@tristateenterprise.com",
+        href: "mailto:tse@tristateenterprise.com",
         icon: "mail"
       },
       {

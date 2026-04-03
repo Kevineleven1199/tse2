@@ -121,8 +121,8 @@ async function generatePaystubPDF(
       // ─── Header Banner ───
       doc.rect(0, 0, 612, 88).fill(G);
       doc.font("Helvetica-Bold").fontSize(22).fillColor("#FFFFFF").text("Tri State Enterprise", 40, 20);
-      doc.font("Helvetica").fontSize(10).fillColor("#FFFFFF").text("Eco-Friendly Cleaning Services  |  Flatwoods, KY  |  (606) 555-0100", 40, 50);
-      doc.fontSize(9).text("info@tsenow.com  |  tsenow.com", 40, 65);
+      doc.font("Helvetica").fontSize(10).fillColor("#FFFFFF").text("Eco-Friendly Cleaning Services  |  Flatwoods, KY  |  (606) 836-2534", 40, 50);
+      doc.fontSize(9).text("tse@tristateenterprise.com  |  tsenow.com", 40, 65);
 
       // ─── Paystub Title ───
       doc.font("Helvetica-Bold").fontSize(14).fillColor(G).text("EARNINGS STATEMENT", 40, 105);
@@ -274,7 +274,7 @@ async function generatePaystubPDF(
       // ─── Footer ───
       doc.moveTo(40, 720).lineTo(572, 720).lineWidth(0.5).stroke("#e5e7eb");
       doc.font("Helvetica").fontSize(7).fillColor(GRAY);
-      doc.text("Tri State Enterprise  |  Flatwoods, KY  |  (606) 555-0100  |  info@tsenow.com", 40, 728, { align: "center", width: 532 });
+      doc.text("Tri State Enterprise  |  Flatwoods, KY  |  (606) 836-2534  |  tse@tristateenterprise.com", 40, 728, { align: "center", width: 532 });
       doc.text("This is a computer-generated document. Keep for your records.", 40, 740, { align: "center", width: 532 });
       doc.text(`Generated: ${new Date().toLocaleString("en-US", { timeZone: "America/New_York" })} ET`, 40, 750, { align: "center", width: 532 });
 

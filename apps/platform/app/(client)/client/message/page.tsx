@@ -36,8 +36,8 @@ export default async function MessagesPage() {
 
       <div className="rounded-2xl border border-brand-100 bg-brand-50/30 p-4 text-center text-sm text-muted-foreground">
         Need immediate help? Call{" "}
-        <a href="tel:+16065550100" className="font-semibold text-accent hover:underline">
-          (606) 555-0100
+        <a href="tel:+16068362534" className="font-semibold text-accent hover:underline">
+          (606) 836-2534
         </a>{" "}
         or text us anytime.
       </div>

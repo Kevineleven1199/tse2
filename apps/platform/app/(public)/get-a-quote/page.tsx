@@ -374,7 +374,7 @@ export default function GetAQuotePage() {
               </div>
             </div>
             <p className="mt-6 text-xs text-white/50">
-              Questions? Call or text us at (606) 555-0100
+              Questions? Call or text us at (606) 836-2534
             </p>
           </motion.div>
         </div>

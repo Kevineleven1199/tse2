@@ -197,7 +197,7 @@ function buildAutoReplyEmail(name?: string | null): string {
         </div>
         <p style="font-size: 13px; color: #6b7280;">
           Serving Flatwoods County &amp; surrounding areas<br>
-          <a href="https://tsenow.com" style="color: #166534;">tsenow.com</a> | (606) 555-0100
+          <a href="https://tsenow.com" style="color: #166534;">tsenow.com</a> | (606) 836-2534
         </p>
       </div>
     </div>

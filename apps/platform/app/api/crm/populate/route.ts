@@ -19,7 +19,7 @@ export const POST = async () => {
       orderBy: { createdAt: "desc" },
     });
 
-    const goGreenNumbers = new Set(["+16065550100", "+18132805468"]); // TriState main + secondary lines
+    const goGreenNumbers = new Set(["+16068362534", "+18132805468"]); // TriState main + secondary lines
 
     // 2. Aggregate by phone number
     type ContactData = {

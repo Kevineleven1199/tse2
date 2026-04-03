@@ -49,7 +49,7 @@ export const POST = async (request: Request) => {
         </div>
         <div style="background: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px; text-align: center;">
           <p style="font-size: 11px; color: #9ca3af; margin: 0;">
-            Tri State Enterprise — Flatwoods, KY — (606) 555-0100
+            Tri State Enterprise — Flatwoods, KY — (606) 836-2534
           </p>
         </div>
       </div>
