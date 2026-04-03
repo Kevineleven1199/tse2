@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm run prisma:generate && npm run build && cp -r apps/platform/.next/static apps/platform/.next/standalone/apps/platform/.next/static && cp -r apps/platform/public apps/platform/.next/standalone/apps/platform/public"
+buildCommand = "npm install && npm run prisma:generate && npm run build && cp -r apps/platform/.next/static apps/platform/.next/standalone/apps/platform/.next/static && cp -r apps/platform/public apps/platform/.next/standalone/apps/platform/public"
 
 [deploy]
 # SAFETY: prisma db push WITHOUT --accept-data-loss will refuse destructive changes
