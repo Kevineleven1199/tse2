@@ -205,47 +205,47 @@ export const NavBar = ({ session }: NavBarProps) => {
   return (
     <>
       {/* Top utility bar — contact info + login */}
-      <div className="hidden border-b border-brand-50 bg-brand-50/60 md:block">
+      <div className="hidden border-b border-brand-700 bg-accent md:block">
         <div className="section-wrapper flex h-9 items-center justify-between text-xs">
           <div className="flex items-center gap-4">
             <Link
               href="tel:+16068362534"
-              className="flex items-center gap-1.5 font-medium text-accent transition hover:text-brand-700"
+              className="flex items-center gap-1.5 font-medium text-white transition hover:text-brand-200"
             >
               <Phone className="h-3 w-3" />
               (606) 836-2534
             </Link>
-            <span className="text-brand-200">|</span>
-            <span className="text-[11px] tracking-wide text-muted-foreground">
+            <span className="text-white/30">|</span>
+            <span className="text-[11px] tracking-wide text-white/80">
               Mon &ndash; Fri: 8:00 AM &ndash; 4:30 PM
             </span>
-            <span className="text-brand-200">|</span>
-            <Link href="mailto:tse@tristateenterprise.com" className="text-muted-foreground hover:text-accent">
+            <span className="text-white/30">|</span>
+            <Link href="mailto:tse@tristateenterprise.com" className="text-white/80 hover:text-white">
               tse@tristateenterprise.com
             </Link>
           </div>
-          <div className="flex items-center gap-4 text-muted-foreground">
+          <div className="flex items-center gap-4 text-white/80">
             <span className="text-[11px] tracking-wide">
               Serving the OH, WV, KY Tri-State Area &mdash; &ldquo;One Call Does It All&rdquo;
             </span>
-            <span className="text-brand-200">|</span>
+            <span className="text-white/30">|</span>
             {session ? (
               <div className="flex items-center gap-3">
-                <span className="font-semibold text-brand-700">{portalLabel}</span>
+                <span className="font-semibold text-white">{portalLabel}</span>
                 <Link
                   href={portalHref ?? "/login"}
-                  className="font-semibold text-accent underline-offset-2 hover:underline"
+                  className="font-semibold text-white underline-offset-2 hover:underline"
                 >
                   Open Portal
                 </Link>
-                <LogoutButton className="text-muted-foreground hover:text-accent" />
+                <LogoutButton className="text-white/70 hover:text-white" />
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <Link href="/login" className="font-medium text-muted-foreground hover:text-accent">
+                <Link href="/login" className="font-medium text-white/80 hover:text-white">
                   Login
                 </Link>
-                <Link href="/register" className="font-medium text-accent hover:text-brand-700">
+                <Link href="/register" className="font-medium text-white hover:text-brand-200">
                   Register
                 </Link>
               </div>

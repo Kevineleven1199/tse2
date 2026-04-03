@@ -1,7 +1,7 @@
 {
   "name": "Tri State Enterprise",
   "short_name": "TSE",
-  "description": "One Call Does It All - KY OH WV — Book, Track, and Manage Your Clean",
+  "description": "One Call Does It All — Construction, HVAC, Lawn Care, Landscaping, Site Work & Paving in the KY-OH-WV Tri-State Area",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
@@ -9,18 +9,18 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/images/cropped-Mobile-Logo-164x76.png",
-      "sizes": "164x76",
+      "src": "/images/tse-logo.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/favicon.png",
-      "sizes": "192x192",
+      "src": "/images/tse-logo.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["business", "lifestyle", "productivity"],
+  "categories": ["business", "construction", "productivity"],
   "scope": "/",
   "prefer_related_applications": false,
   "shortcuts": [
@@ -28,7 +28,7 @@
       "name": "Get a Quote",
       "short_name": "Quote",
       "url": "/get-a-quote",
-      "description": "Get an instant cleaning estimate"
+      "description": "Get a free estimate for your project"
     },
     {
       "name": "My Portal",
@@ -39,8 +39,8 @@
     {
       "name": "Call Us",
       "short_name": "Call",
-      "url": "tel:+19412717948",
-      "description": "Call Go Green directly"
+      "url": "tel:+16068362534",
+      "description": "Call Tri State Enterprise"
     }
   ]
 }
