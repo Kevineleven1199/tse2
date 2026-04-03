@@ -22,7 +22,7 @@ const features = [
   {
     title: "Neighborhood social",
     description:
-      "A GoGreen-branded community wall boosts referrals with before/after reels, tips, and loyalty perks.",
+      "A Tri State-branded community wall boosts referrals with before/after reels, tips, and loyalty perks.",
     metric: "+34% referrals"
   },
   {
@@ -43,7 +43,7 @@ const FeatureGrid = () => (
   <section id="features" className="space-y-10">
     <div className="space-y-3">
       <p className="text-sm font-semibold uppercase tracking-widest text-brand-300">
-        Why GoGreenOS
+        Why TriStateOS
       </p>
       <h2 className="font-display text-3xl text-white md:text-4xl">
         Designed to feel like the most gorgeous app in the service industry.

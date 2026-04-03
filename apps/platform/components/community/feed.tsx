@@ -16,7 +16,7 @@ const CommunityFeed = () => (
       <p className="font-semibold text-white">Share with your neighbors</p>
       <p className="mt-2">
         Post cleaning tips, eco-friendly recommendations, and connect
-        with your local GoGreen community.
+        with your local Tri State community.
       </p>
       <button className="mt-4 rounded-full border border-white/30 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white/70 hover:border-white hover:text-white">
         Coming Soon

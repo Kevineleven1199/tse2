@@ -16,7 +16,7 @@ const Logo = ({ className }: LogoProps) => (
     <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-500 font-display text-lg text-white">
       G
     </span>
-    <span className="font-display text-white">GoGreenOS</span>
+    <span className="font-display text-white">TriStateOS</span>
   </div>
 );
 

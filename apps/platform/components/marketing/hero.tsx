@@ -13,7 +13,7 @@ const Hero = () => {
           </p>
           <h1 className="text-balance font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
             Go beyond Jobber. Run{" "}
-            <span className="text-brand-100">GoGreenOS</span> and scale on full
+            <span className="text-brand-100">TriStateOS</span> and scale on full
             autopilot.
           </h1>
           <p className="max-w-xl text-lg text-white/80">

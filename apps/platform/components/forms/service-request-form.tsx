@@ -458,7 +458,7 @@ const ServiceRequestForm = ({ tenantSlug = "tse" }: ServiceRequestFormProps) => 
         disabled={!isValid || isPending}
         className="inline-flex w-full items-center justify-center rounded-full bg-brand-500 px-6 py-4 font-semibold text-white shadow-brand transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:bg-white/20"
       >
-        {isPending ? "Submitting..." : "Request my GoGreen quote"}
+        {isPending ? "Submitting..." : "Request my Tri State quote"}
       </button>
 
       {status !== "idle" && (

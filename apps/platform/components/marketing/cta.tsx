@@ -6,7 +6,7 @@ const CTA = () => (
   <section className="glass flex flex-col gap-6 rounded-3xl p-10 text-white md:flex-row md:items-center md:justify-between">
     <div>
       <h2 className="font-display text-3xl text-white">
-        Launch GoGreenOS on Railway in days, not months.
+        Launch TriStateOS on Railway in days, not months.
       </h2>
       <p className="mt-2 max-w-xl text-white/75">
         Bring your WordPress site into read-only mode while the new SaaS
