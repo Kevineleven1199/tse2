@@ -3,11 +3,11 @@ import { ArrowRight, BookOpen, Leaf, Users } from "lucide-react";
 
 const BLOG_HIGHLIGHTS = [
   {
-    title: "Why Organic Cleaning is Safer for Your Kids and Pets",
-    excerpt: "Traditional cleaning products contain 62+ chemicals linked to hormonal disruption. Learn why switching to organic makes your home genuinely safe.",
+    title: "5 Signs Your HVAC System Needs Replacement",
+    excerpt: "Is your heating or cooling system struggling? Learn the warning signs that indicate it's time for a new HVAC unit.",
     category: "Health & Safety",
     readTime: "4 min",
-    href: "/blog/why-organic-cleaning-safer-kids-pets",
+    href: "/blog/hvac-replacement-signs",
   },
   {
     title: "5 Things Your Cleaning Company Won't Tell You About Chemicals",
@@ -34,7 +34,7 @@ export const BlogPreviewSection = () => (
             <BookOpen className="h-3 w-3" /> Blog & Tips
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold text-accent">Eco Cleaning Insights</h2>
-          <p className="mt-2 text-muted-foreground">Expert advice on organic home care and healthy living.</p>
+          <p className="mt-2 text-muted-foreground">Expert home improvement and maintenance tips from the Tri-State area.</p>
         </div>
         <Link href="/blog" className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-600 hover:text-brand-700">
           View All Articles <ArrowRight className="h-3 w-3" />
@@ -62,7 +62,7 @@ export const BlogPreviewSection = () => (
           <h3 className="font-display text-xl font-bold text-accent">Join Our Community</h3>
         </div>
         <p className="text-muted-foreground max-w-lg mx-auto">
-          Share green tips, get cleaning advice, and connect with eco-conscious neighbors in Flatwoods, Ashland, and Tri-State Area.
+          Share tips, get project advice, and connect with neighbors in Flatwoods, Ashland, and the Tri-State Area.
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <Link href="/community" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wider text-white shadow transition hover:bg-brand-700">

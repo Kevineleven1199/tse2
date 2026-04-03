@@ -120,7 +120,7 @@ export async function renderEstimateEmail(opts: {
   <h2 style="margin:0;color:#1f2937;font-size:22px;font-weight:600;">Hi ${firstName},</h2>
   <p style="margin:12px 0 0;color:#4b5563;font-size:15px;line-height:1.6;">
     Thank you for reaching out! Based on our conversation, we've put together a personalized estimate for your home.
-    Every clean uses <strong>100% organic, EPA Safer Choice certified products</strong> — safe for your family, pets, and the planet.
+    Every project is backed by <strong>30+ years of experience</strong> — licensed, bonded, and insured across the Tri-State area.
   </p>
 </td></tr>
 
@@ -164,7 +164,7 @@ export async function renderEstimateEmail(opts: {
     </tr>
     <tr>
       <td style="padding:8px 0;vertical-align:top;width:32px;"><span style="font-size:20px;">🌿</span></td>
-      <td style="padding:8px 0 8px 10px;"><strong style="color:#1f2937;">EPA Safer Choice Certified Products</strong><br><span style="color:#6b7280;font-size:13px;">Zero harsh chemicals — safe for kids, pets, and the environment</span></td>
+      <td style="padding:8px 0 8px 10px;"><strong style="color:#1f2937;">Licensed, Bonded & Insured</strong><br><span style="color:#6b7280;font-size:13px;">Trusted contractor serving KY-OH-WV since 1992</span></td>
     </tr>
     <tr>
       <td style="padding:8px 0;vertical-align:top;width:32px;"><span style="font-size:20px;">📸</span></td>
@@ -188,7 +188,7 @@ ${reviewsHtml ? `
   <h3 style="margin:0 0 4px;color:#0d5e3b;font-size:16px;font-weight:700;">What Our Customers Say</h3>
   <p style="margin:0 0 16px;color:#6b7280;font-size:12px;">From our Google Reviews — 5.0 ★ average</p>
   ${reviewsHtml}
-  <a href="https://g.page/r/tseorganicclean/review" style="color:#0d5e3b;font-size:13px;font-weight:600;text-decoration:none;">Read all reviews on Google →</a>
+  <a href="https://www.google.com/maps/place/Tri+State+Enterprise" style="color:#0d5e3b;font-size:13px;font-weight:600;text-decoration:none;">Read all reviews on Google →</a>
 </td></tr>
 ` : ""}
 

@@ -33,7 +33,7 @@ export const SEASONAL_CONTENT: Record<string, NewsletterContent[]> = {
       heading: "Stay Healthy This Winter",
       body: `When temperatures drop, we spend more time indoors — which means indoor air quality matters more than ever. Dust, allergens, and germs can build up quickly in closed-up homes.
 
-Our organic cleaning approach is specifically designed to improve your indoor environment. HEPA-filtered vacuuming captures microscopic allergens, and our plant-based sanitizers eliminate germs without adding chemicals to your air.
+Our professional approach is specifically designed to improve your indoor environment. Our experienced crew uses professional-grade equipment and techniques to deliver quality results on every project.
 
 This winter, breathe easier knowing your home is professionally cleaned with products that are as gentle on your lungs as they are tough on dirt.`,
       tip: {
@@ -99,11 +99,11 @@ Add some fresh flowers, light a few natural soy candles, and let your beautifull
   spring: [
     {
       subject: "Spring Cleaning Season Is Here — Go Organic This Year!",
-      preview: "The ultimate guide to a natural spring clean for your home.",
+      preview: "Get your property ready for spring with maintenance tips from the pros.",
       heading: "Spring Clean the Green Way",
       body: `Spring cleaning is a tradition for good reason — after months of closed windows and indoor living, your home needs a thorough refresh. But traditional spring cleaning products can leave behind harsh chemical residues that linger long after the cleaning is done.
 
-This year, go green with your spring clean. Our team uses only EPA Safer Choice certified products that cut through winter grime just as effectively as chemical alternatives — without the toxic trade-offs.
+This year, go green with your spring clean. Our team uses only professional-grade equipment that cut through winter grime just as effectively as chemical alternatives — without the toxic trade-offs.
 
 Open the windows, let the Kentucky breeze in, and enjoy a home that's deeply clean and naturally fresh.`,
       tip: {
@@ -115,7 +115,7 @@ Open the windows, let the Kentucky breeze in, and enjoy a home that's deeply cle
     },
     {
       subject: "Allergy Season? Here's How a Clean Home Helps",
-      preview: "Reduce allergy symptoms with proper organic cleaning techniques.",
+      preview: "Reduce allergy symptoms with proper professional maintenance techniques.",
       heading: "Fight Allergies Naturally",
       body: `Spring in Kentucky means beautiful weather — and for many of us, allergy season. Pollen, dust mites, and mold spores can make your home feel anything but comfortable.
 
@@ -300,7 +300,7 @@ Fall is the perfect time for a whole-home recovery clean. Think of it as a reset
 
 Our back-to-school deep clean targets the areas that took the biggest hit during summer: kitchen surfaces get degreased and sanitized, bathrooms get a thorough scrub, bedrooms are refreshed for the new routine, and common areas are restored to their pre-summer glory.
 
-We also pay special attention to kids' rooms and play areas, using only non-toxic products that are safe for little ones. No chemical residues on the surfaces where your children do homework, play, and sleep.
+We also pay special attention to kids' rooms and play areas, using only quality materials and professional workmanship. No shortcuts on the surfaces where your children do homework, play, and sleep.
 
 Start the school year with a clean slate — literally. Your future self will thank you.`,
       tip: {
@@ -344,7 +344,7 @@ export const WEEKDAY_CONTENT: Record<number, NewsletterContent[]> = {
       heading: "Fresh Start Monday",
       body: `Happy Monday! Start your week with a home that feels as fresh as your motivation.
 
-Here's a simple organic cleaning hack you can do in 10 minutes: Mix equal parts white vinegar and water in a spray bottle, add a few drops of lemon essential oil, and use it to wipe down kitchen counters and bathroom surfaces. It's naturally antibacterial and leaves a fresh citrus scent — no chemicals needed.
+Here's a simple professional maintenance hack you can do in 10 minutes: Mix equal parts white vinegar and water in a spray bottle, add a few drops of lemon essential oil, and use it to wipe down kitchen counters and bathroom surfaces. It's naturally antibacterial and leaves a fresh citrus scent — no chemicals needed.
 
 For a deeper clean that you don't have to do yourself, our team is just a click away. We use professional-grade organic products for results that last all week long.`,
       tip: {
@@ -406,7 +406,7 @@ At Tri State, we've already made all these swaps and more. Every product in our 
 
 Conventional cleaning products contain phosphates, synthetic fragrances, and antimicrobial agents that wastewater treatment plants can't fully remove. These chemicals end up in Flatwoods Bay, the Gulf of Mexico, and our local waterways, harming marine life and coral ecosystems.
 
-When you choose organic cleaning — whether DIY or professional — you're protecting more than your family. You're protecting the Kentucky coastline, the mangroves, and the marine life that make Flatwoods special.
+When you choose professional maintenance — whether DIY or professional — you're protecting more than your family. You're protecting the Kentucky coastline, the mangroves, and the marine life that make Flatwoods special.
 
 Every drain in your home leads to our shared environment. At Tri State, every product we use is biodegradable and aquatic-safe, so your clean home never comes at the cost of our beautiful Gulf waters.`,
       tip: {
@@ -796,7 +796,7 @@ Our team understands these uniquely Kentucky challenges because we live here too
     heading: "Kid-Safe Cleaning",
     body: `If you have young children, you know the struggle: the house needs to be clean, but you worry about the products you're using around little hands that touch everything and go straight to mouths.
 
-This is exactly why organic cleaning matters most for families with kids:
+This is exactly why professional maintenance matters most for families with kids:
 
 Floors: Babies and toddlers spend hours on the floor. Our plant-based floor cleaners leave zero toxic residue — safe for crawling, rolling, and inevitable taste-testing.
 
@@ -847,7 +847,7 @@ When you refer a friend to Tri State Enterprise:
 You get: A credit toward your next cleaning service
 They get: A special discount on their first booking
 
-It's our way of saying thank you for being part of the Tri State community. Word of mouth from happy clients is how we've grown to become Flatwoods's top-rated organic cleaning service.
+It's our way of saying thank you for being part of the Tri State community. Word of mouth from happy clients is how we've grown to become Flatwoods's top-rated professional maintenance service.
 
 Simply share your experience with friends, family, or neighbors, and have them mention your name when they book. We'll take care of the rest!`,
     cta: { text: "Share Tri State", url: "/get-a-quote" },
@@ -858,7 +858,7 @@ Simply share your experience with friends, family, or neighbors, and have them m
     subject: "What Makes Organic Cleaning Different? (Honest Answer)",
     preview: "The real differences between organic and conventional cleaning.",
     heading: "Organic vs. Conventional",
-    body: `You might wonder: does organic cleaning actually work as well as conventional cleaning? Let us give you the honest answer.
+    body: `You might wonder: does professional maintenance actually work as well as conventional cleaning? Let us give you the honest answer.
 
 Same effectiveness: Modern plant-based cleaning products are formulated to match or exceed the cleaning power of conventional chemicals. The technology has come a long way.
 
@@ -871,7 +871,7 @@ Safer for everyone: Kids, pets, allergy sufferers, and anyone with chemical sens
 The homes we clean are just as spotless — they're just healthier too.`,
     tip: {
       title: "Product Tip",
-      text: "If you want to test organic cleaning yourself, start with one swap: replace your all-purpose cleaner with a simple mix of castile soap, water, and a few drops of essential oil."
+      text: "If you want to test professional maintenance yourself, start with one swap: replace your all-purpose cleaner with a simple mix of castile soap, water, and a few drops of essential oil."
     },
     cta: { text: "Try the Difference", url: "/get-a-quote" },
     category: "eco",
@@ -1240,7 +1240,7 @@ Clean appliances work more efficiently, use less energy, and produce better resu
     subject: "DIY Green Cleaning Recipes: Make Your Own Organic Products",
     preview: "Simple recipes for effective, all-natural cleaning products using pantry staples.",
     heading: "Make Your Own Green Cleaners",
-    body: `You don't need a chemistry degree to make effective, safe cleaning products. Most of the best organic cleaning solutions use ingredients you probably already have in your kitchen.
+    body: `You don't need a chemistry degree to make effective, safe cleaning products. Most of the best professional maintenance solutions use ingredients you probably already have in your kitchen.
 
 All-Purpose Cleaner: Mix 1 cup water, 1 cup white vinegar, and 15 drops of tea tree essential oil in a spray bottle. Shake well before each use. Works on counters, sinks, and most surfaces (not marble or granite — use the pH-neutral version below).
 
@@ -1287,7 +1287,7 @@ Our recurring clients tell us the same thing: they can't imagine going back to t
   },
   {
     subject: "First-Time Customer? Here's What to Expect from Tri State",
-    preview: "Everything you need to know before your first organic cleaning appointment.",
+    preview: "Everything you need to know before your first professional maintenance appointment.",
     heading: "Your First Tri State Experience",
     body: `Booking your first professional cleaning can feel like a big step, especially if you've never used a service before. We want you to feel completely comfortable, so here's exactly what to expect.
 
@@ -1646,7 +1646,7 @@ Deep clean the kitchen and guest areas, wash all holiday linens, and do a thorou
     heading: "Green Gifts They'll Love",
     body: `Looking for a gift that's thoughtful, practical, and environmentally responsible? Here are our favorite eco-friendly gifts for the clean home enthusiast in your life.
 
-A professional organic cleaning session. Seriously — this is one of the most appreciated gifts anyone can receive. It's not just a service; it's the gift of time, health, and a beautiful home.
+A professional professional maintenance session. Seriously — this is one of the most appreciated gifts anyone can receive. It's not just a service; it's the gift of time, health, and a beautiful home.
 
 Reusable Swedish dishcloths. These biodegradable cloths replace up to 17 rolls of paper towels and can be washed hundreds of times. They come in beautiful designs and make a perfect stocking stuffer.
 
@@ -1789,7 +1789,7 @@ We believe a clean home is a form of self-care. Whether you maintain it yourself
     heading: "Our Community Impact",
     body: `Tri State Enterprise is more than a cleaning service — we're part of the Flatwoods community, and our mission extends beyond individual homes.
 
-Every time you choose organic cleaning, you're voting with your dollars for a healthier local environment. The products we use don't pollute Flatwoods Bay. The practices we follow don't contribute to indoor air pollution. And the standards we maintain raise the bar for the entire local cleaning industry.
+Every time you choose professional maintenance, you're voting with your dollars for a healthier local environment. The products we use don't pollute Flatwoods Bay. The practices we follow don't contribute to indoor air pollution. And the standards we maintain raise the bar for the entire local cleaning industry.
 
 We're proud to support local Flatwoods organizations that align with our mission. From beach cleanups on Russell to partnerships with local environmental education programs, we believe in giving back to the community that supports us.
 
@@ -1813,7 +1813,7 @@ Thank you for being part of the Tri State family. Every home we clean makes Flat
 
 For a limited time, new clients can enjoy a special discount on their first cleaning session. It's our way of removing any barrier to experiencing the Tri State difference firsthand.
 
-Here's what you can expect from your first visit: a thorough deep clean using exclusively organic, EPA Safer Choice certified products. A professional, uniformed team that arrives on time with all supplies and equipment. Attention to detail in every room, including those hidden spots most services overlook.
+Here's what you can expect from your first visit: a thorough deep clean using exclusively organic, professional-grade equipment. A professional, uniformed team that arrives on time with all supplies and equipment. Attention to detail in every room, including those hidden spots most services overlook.
 
 After your first clean, there's absolutely no obligation to continue — but we think you'll want to. Over 90% of our first-time clients become recurring customers. Once you experience a truly clean, chemical-free home, it's hard to go back.
 
@@ -1944,7 +1944,7 @@ Our lanai cleaning service covers screens, tracks, floors, and furniture — tra
     subject: "Green Cleaning on a Budget: Affordable Organic Options",
     preview: "You don't need to break the bank to clean your home the natural way.",
     heading: "Tri State on Any Budget",
-    body: `One of the biggest myths about organic cleaning is that it's expensive. In reality, many of the most effective natural cleaning products cost a fraction of their conventional counterparts. Your pantry is practically a cleaning supply store.
+    body: `One of the biggest myths about professional maintenance is that it's expensive. In reality, many of the most effective natural cleaning products cost a fraction of their conventional counterparts. Your pantry is practically a cleaning supply store.
 
 White vinegar costs about $3 per gallon and handles glass, counters, bathroom surfaces, and deodorizing. Baking soda is under $1 per box and serves as a scrubbing agent, deodorizer, and stain remover. Castile soap runs about $12 for a large bottle that lasts months when diluted. That's your entire basic cleaning kit for under $20.
 
@@ -1952,7 +1952,7 @@ Compare that to buying separate specialty products for every surface — glass c
 
 Essential oils are the one "luxury" ingredient, but they're optional and a single small bottle lasts for months since you only use drops at a time. Lemon and tea tree are the two most versatile for cleaning purposes.
 
-For professional organic cleaning, our services are competitively priced with conventional cleaning companies. The organic premium is minimal because plant-based products have become mainstream and cost-efficient. You're not paying extra for green — you're just paying for a smarter, safer clean.
+For professional professional maintenance, our services are competitively priced with conventional cleaning companies. The organic premium is minimal because plant-based products have become mainstream and cost-efficient. You're not paying extra for green — you're just paying for a smarter, safer clean.
 
 Going green is a budget-friendly choice that saves money while protecting your family's health.`,
     tip: {
@@ -1980,7 +1980,7 @@ Living areas: Open windows daily for fresh air exchange. Replace synthetic air f
 
 Laundry: Switch to a plant-based, fragrance-free detergent. Replace dryer sheets with wool dryer balls. Skip fabric softener — it coats fibers with synthetic chemicals.
 
-Our organic cleaning service is a key part of the home detox process. Every visit replaces potential chemical exposure with proven-safe, plant-based alternatives.`,
+Our professional maintenance service is a key part of the home detox process. Every visit replaces potential chemical exposure with proven-safe, plant-based alternatives.`,
     tip: {
       title: "Home Detox Tip",
       text: "Start your detox by replacing one product per week as you run out of the old ones. Trying to switch everything at once is overwhelming and expensive. Gradual change is sustainable change.",
@@ -2014,9 +2014,9 @@ Our standard cleaning service always includes ceiling fan blade cleaning — bec
   },
   {
     subject: "The Professional Difference: What Sets Tri State Apart",
-    preview: "Why professional organic cleaning delivers results you can't replicate at home.",
+    preview: "Why professional professional maintenance delivers results you can't replicate at home.",
     heading: "The Tri State Difference",
-    body: `You might wonder — if organic cleaning products are available to everyone, why hire a professional? The truth is, professional cleaning delivers results that go far beyond the products themselves.
+    body: `You might wonder — if professional maintenance products are available to everyone, why hire a professional? The truth is, professional cleaning delivers results that go far beyond the products themselves.
 
 Equipment matters. Our commercial-grade HEPA vacuums capture 99.97% of particles down to 0.3 microns — that's microscopic allergens, dust mite waste, and mold spores that consumer vacuums miss entirely. Our microfiber systems are professional-grade, designed for maximum dirt capture with minimum water usage.
 

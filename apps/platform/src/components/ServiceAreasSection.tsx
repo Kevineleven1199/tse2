@@ -28,7 +28,7 @@ export const ServiceAreasSection = () => (
           Proudly serving Flatwoods and the Greater Tri-State Area area
         </motion.h2>
         <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-          From coastal condos to downtown offices, we bring eco-conscious cleaning to homes and businesses across Kentucky-Ohio-West Virginia. Not sure if you’re in range? Reach out and we’ll confirm availability within one business day.
+          From residential homes to commercial properties, we provide trusted construction, HVAC, lawn care, landscaping, site work, and paving services across the Kentucky-Ohio-West Virginia Tri-State area. Not sure if you’re in range? Reach out and we’ll confirm availability within one business day.
         </motion.p>
       </motion.div>
 

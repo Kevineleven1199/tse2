@@ -908,11 +908,11 @@ export default function GetAQuotePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Sparkles className="h-3.5 w-3.5 text-green-600" />
-                  <span>100% Organic EPA-Certified Products</span>
+                  <span>Licensed, Bonded &amp; Insured Since 1992</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-3.5 w-3.5 text-green-600" />
-                  <span>Satisfaction Guarantee or Re-Clean Free</span>
+                  <span>100% Satisfaction Guarantee</span>
                 </div>
               </div>
             </div>

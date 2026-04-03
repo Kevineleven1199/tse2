@@ -64,7 +64,7 @@ export interface JobMatchResult {
 }
 
 // System prompt for AI classification
-const SYSTEM_PROMPT = `You are an expert email classifier for Tri State Enterprise, an eco-friendly cleaning service company.
+const SYSTEM_PROMPT = `You are an expert email classifier for Tri State Enterprise, a construction, HVAC, and landscaping company.
 Your role is to analyze customer emails and extract actionable information.
 
 Classify emails into these categories:

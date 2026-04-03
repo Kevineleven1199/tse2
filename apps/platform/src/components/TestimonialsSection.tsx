@@ -32,7 +32,7 @@ export const TestimonialsSection = ({ reviews = [] }: { reviews?: GoogleReviewPr
           Trusted by Flatwoods families for a healthier clean
         </motion.h2>
         <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-          We take pride in delivering eco-friendly cleaning services that our community loves.
+          We take pride in delivering quality workmanship that our community trusts.
         </motion.p>
 
         {reviews.length > 0 ? (
@@ -68,7 +68,7 @@ export const TestimonialsSection = ({ reviews = [] }: { reviews?: GoogleReviewPr
 
         <motion.a
           variants={fadeUp}
-          href="https://www.google.com/maps/place/Go+Green+Organic+Clean"
+          href="https://www.google.com/maps/place/Tri+State+Enterprise"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent/90"

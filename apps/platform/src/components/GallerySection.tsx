@@ -8,8 +8,8 @@ import { fadeUp, staggerContainer } from "@/src/lib/animations";
 const GALLERY_ITEMS = [
   {
     src: "/images/gallery-organic-cleaning.jpg",
-    title: "Organic Home Cleaning",
-    description: "Safe, all-organic cleaning for residential and commercial spaces",
+    title: "Construction & Renovation",
+    description: "Quality residential and commercial construction projects",
   },
   {
     src: "/images/gallery-pressure-washing.jpg",
@@ -40,7 +40,7 @@ export const GallerySection = () => (
           See the TriState difference
         </motion.h2>
         <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-          From spotless kitchens to gleaming driveways, our eco-friendly services leave every surface looking its best—without harsh chemicals.
+          From home renovations to commercial builds, our experienced crew delivers quality results on every project across the Tri-State area.
         </motion.p>
       </motion.div>
 

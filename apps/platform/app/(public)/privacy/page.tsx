@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Tri State Enterprise",
   description:
-    "Learn how Tri State Enterprise collects, uses, and protects your personal information. Flatwoods-based organic cleaning services committed to your privacy.",
+    "Learn how Tri State Enterprise collects, uses, and protects your personal information. Flatwoods-based construction, HVAC, and landscaping services committed to your privacy.",
 };
 
 const Section = ({
@@ -36,11 +36,12 @@ export default function PrivacyPolicyPage() {
       <div className="mx-auto max-w-3xl space-y-10 px-4 pb-20 pt-8 text-base leading-relaxed text-gray-700 sm:px-6">
         <p>
           Tri State Enterprise (&quot;we,&quot; &quot;us,&quot; or
-          &quot;our&quot;) operates the TriState platform and provides organic
-          cleaning services in the Flatwoods, Kentucky area. This Privacy Policy
-          explains how we collect, use, disclose, and safeguard your information
-          when you visit our website, book a cleaning service, or interact with
-          our platform.
+          &quot;our&quot;) operates the TriState platform and provides
+          construction, HVAC, landscaping, and site work services in the
+          Flatwoods, Kentucky area and the KY-OH-WV Tri-State region. This
+          Privacy Policy explains how we collect, use, disclose, and safeguard
+          your information when you visit our website, request a service
+          estimate, or interact with our platform.
         </p>
 
         <Section title="1. Information We Collect">
@@ -60,8 +61,8 @@ export default function PrivacyPolicyPage() {
               full card number)
             </li>
             <li>
-              <strong>Service preferences:</strong> cleaning frequency, special
-              instructions, home access details, and scheduling preferences
+              <strong>Service preferences:</strong> project details, special
+              instructions, property access details, and scheduling preferences
             </li>
             <li>
               <strong>Communications:</strong> messages sent through our
@@ -77,7 +78,7 @@ export default function PrivacyPolicyPage() {
         <Section title="2. How We Use Your Information">
           <p>We use the information we collect to:</p>
           <ul className="list-disc space-y-2 pl-6">
-            <li>Schedule and deliver cleaning services at your location</li>
+            <li>Schedule and deliver services at your location</li>
             <li>Process payments and send invoices or receipts</li>
             <li>
               Communicate with you about bookings, reminders, and service

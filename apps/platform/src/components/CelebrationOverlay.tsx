@@ -26,7 +26,7 @@ const MESSAGES: Record<CelebrationProps["type"], { emoji: string; title: string;
   schedule: {
     emoji: "✨",
     title: "Clean Scheduled!",
-    subtitle: "Your eco-friendly cleaning is locked in. We'll send a reminder before we arrive.",
+    subtitle: "Your project is booked! We'll send a confirmation and reminder before we arrive.",
   },
   reschedule: {
     emoji: "📅",

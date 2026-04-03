@@ -71,7 +71,7 @@ export const NewsletterSignup = () => {
             variants={fadeUp}
             className="mt-4 text-base leading-relaxed text-white/80"
           >
-            Join Flatwoods families who get a daily dose of eco-friendly cleaning tips,
+            Join our newsletter for home improvement tips, seasonal maintenance guides,
             seasonal home care advice, and members-only offers delivered straight to their inbox.
           </motion.p>
 

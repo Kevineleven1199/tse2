@@ -37,18 +37,20 @@ export default function TermsOfServicePage() {
         <p>
           Welcome to Tri State Enterprise. These Terms of Service
           (&quot;Terms&quot;) govern your use of our website, platform, and
-          cleaning services. By booking a service or creating an account, you
+          services. By booking a service or creating an account, you
           agree to these Terms. If you do not agree, please do not use our
           services.
         </p>
 
         <Section title="1. About Our Services">
           <p>
-            Tri State Enterprise provides professional organic cleaning
-            services in the Flatwoods, Kentucky area. We use EPA Safer Choice and
-            plant-based cleaning products that are safe for children, pets, and
-            the environment. Our services include residential cleaning,
-            commercial cleaning, deep cleaning, and move-in/move-out cleaning.
+            Tri State Enterprise provides professional construction, HVAC,
+            landscaping, lawn care, site work, and paving services in the
+            Flatwoods, Kentucky area and the KY-OH-WV Tri-State region. We
+            are licensed, bonded, and insured, and have been proudly serving
+            the Tri-State area since 1992. Our services include residential
+            and commercial construction, heating and air conditioning,
+            landscaping, lawn maintenance, site work, and paving.
           </p>
         </Section>
 
@@ -70,7 +72,7 @@ export default function TermsOfServicePage() {
 
         <Section title="3. Booking and Scheduling">
           <p>
-            When you book a cleaning service through our platform, you are
+            When you book a service through our platform, you are
             entering into an agreement for us to provide the selected service at
             the agreed-upon date, time, and location. Booking confirmations will
             be sent via email and/or SMS.
@@ -123,8 +125,8 @@ export default function TermsOfServicePage() {
 
         <Section title="5. Pricing and Payment">
           <p>
-            Service prices are provided as quotes based on the size and
-            condition of your space, cleaning type, and any special requests. All
+            Service prices are provided as quotes based on the scope of work,
+            project type, and any special requests. All
             quotes are valid for 30 days from the date issued.
           </p>
           <ul className="list-disc space-y-2 pl-6">
@@ -137,13 +139,13 @@ export default function TermsOfServicePage() {
               as specified in your quote.
             </li>
             <li>
-              Recurring cleaning plans are billed automatically on the agreed
+              Recurring service plans are billed automatically on the agreed
               schedule. You may cancel a recurring plan at any time with 24
-              hours notice before the next scheduled cleaning.
+              hours notice before the next scheduled service.
             </li>
             <li>
               Tips are appreciated but never required. 100% of tips go directly
-              to your cleaning team.
+              to your service crew.
             </li>
           </ul>
         </Section>
@@ -151,27 +153,27 @@ export default function TermsOfServicePage() {
         <Section title="6. Satisfaction Guarantee">
           <p>
             We stand behind our work. If you are not satisfied with any aspect of
-            your cleaning, contact us within 24 hours and we will re-clean the
-            area in question at no additional cost. The satisfaction guarantee
+            your service, contact us within 24 hours and we will address the
+            issue at no additional cost. The satisfaction guarantee
             does not cover requests for services not included in the original
-            booking.
+            scope of work.
           </p>
         </Section>
 
         <Section title="7. Access to Your Property">
           <p>
-            You agree to provide safe and reasonable access to the areas to be
-            cleaned. This includes:
+            You agree to provide safe and reasonable access to the work areas.
+            This includes:
           </p>
           <ul className="list-disc space-y-2 pl-6">
-            <li>Securing pets in a safe area during the cleaning</li>
+            <li>Securing pets in a safe area during service work</li>
             <li>
               Removing or securing valuables, fragile items, and personal
               documents
             </li>
             <li>
               Providing working utilities (water, electricity) necessary for
-              cleaning
+              the service
             </li>
             <li>
               Informing us of any hazards, access codes, or special instructions
@@ -183,7 +185,7 @@ export default function TermsOfServicePage() {
         <Section title="8. Liability and Damages">
           <p>
             Tri State Enterprise carries general liability insurance. In the
-            unlikely event of accidental damage during a cleaning:
+            unlikely event of accidental damage during a service:
           </p>
           <ul className="list-disc space-y-2 pl-6">
             <li>
@@ -234,7 +236,7 @@ export default function TermsOfServicePage() {
               details
             </li>
             <li>
-              Attempt to directly hire or solicit our cleaning team members
+              Attempt to directly hire or solicit our team members
               outside the platform
             </li>
             <li>

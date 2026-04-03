@@ -31,7 +31,7 @@ export const ReferralCard = ({ referralCode, referralCount, referralCredits }: R
       try {
         await navigator.share({
           title: "Get $25 off your first eco-clean!",
-          text: "I love Tri State Enterpriseing! Use my code to get $25 off your first clean.",
+          text: "I love Tri State Enterprise! Use my code to get $25 off your first project.",
           url: shareUrl
         });
       } catch (err) {
@@ -93,7 +93,7 @@ export const ReferralCard = ({ referralCode, referralCount, referralCredits }: R
             <span>📤</span> Share Link
           </button>
           <a
-            href={`mailto:?subject=Get $25 off eco-friendly cleaning!&body=I love Tri State Enterpriseing! Use my referral code ${referralCode} to get $25 off your first clean. Book here: ${shareUrl}`}
+            href={`mailto:?subject=Get $25 off your next project!&body=I love Tri State Enterprise! Use my referral code ${referralCode} to get $25 off your first project. Book here: ${shareUrl}`}
             className="flex items-center justify-center gap-2 rounded-xl border border-brand-200 px-4 py-3 text-sm font-semibold text-accent transition hover:bg-brand-50"
           >
             <span>✉️</span> Email

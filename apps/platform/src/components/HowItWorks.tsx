@@ -9,7 +9,7 @@ const STEPS = [
   {
     title: "Request Your Quote",
     description:
-      "Tell us about your home or workspace, choose your ideal schedule, and get a personalized organic cleaning plan in minutes.",
+      "Tell us about your project, choose your preferred timeline, and get a free estimate. Construction, HVAC, lawn care, landscaping, site work, or paving.",
     icon: "/images/broom.png"
   },
   {

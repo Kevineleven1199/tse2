@@ -7,7 +7,7 @@ import { Sparkles, X, Phone } from "lucide-react";
 import { trackClick } from "@/src/lib/analytics";
 
 // Honest trust message — no fake scarcity
-const TRUST_MESSAGE = "Eco-friendly • Licensed & insured • Flatwoods's organic cleaning choice";
+const TRUST_MESSAGE = "Licensed & insured • 30+ years experience • One call does it all";
 
 export const StickyMobileCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
