@@ -11,7 +11,7 @@ enum Role {
   HQ
   MANAGER
   CLEANER
-  CUSTOM_PROJECTER
+  CUSTOMER
 }
 
 enum ServiceType {
@@ -991,7 +991,7 @@ model Achievement {
   description      String
   icon             String // emoji
   xpReward         Int               @default(10)
-  roleFilter       String // "HQ" | "MANAGER" | "CLEANER" | "CUSTOM_PROJECTER" | "ALL"
+  roleFilter       String // "HQ" | "MANAGER" | "CLEANER" | "CUSTOMER" | "ALL"
   category         String            @default("general")
   displayOrder     Int               @default(0)
   active           Boolean           @default(true)
