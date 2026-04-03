@@ -4,7 +4,7 @@ const features = [
   {
     title: "Instant booking page",
     description:
-      "Customers request eco-friendly cleanings, pressure washing, or mobile detailing with a couple taps.",
+      "Customers request professionals, pressure washing, or mobile detailing with a couple taps.",
     metric: "12s avg booking"
   },
   {

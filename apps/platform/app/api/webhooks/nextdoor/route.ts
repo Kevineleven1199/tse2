@@ -168,7 +168,7 @@ function buildAutoReplyText(name?: string | null): string {
     ``,
     `Thanks for reaching out to Tri State Enterprise! We'd love to help.`,
     ``,
-    `We use 100% organic, non-toxic products safe for kids, pets, and the planet.`,
+    `We use 100% organic, professional products safe for kids, pets, and the planet.`,
     ``,
     `A team member will reach out shortly to schedule your free estimate. Or you can get an instant quote at:`,
     `https://tsenow.com/get-a-quote`,
@@ -186,8 +186,8 @@ function buildAutoReplyEmail(name?: string | null): string {
       </div>
       <div style="padding: 24px; background: #f0fdf4; border-radius: 0 0 12px 12px;">
         <p style="font-size: 16px;">${greeting}!</p>
-        <p>Thanks for reaching out through Nextdoor! We're thrilled you're interested in our <strong>100% organic cleaning services</strong>.</p>
-        <p>We use non-toxic, plant-based products that are safe for your family, pets, and the planet — without compromising on clean.</p>
+        <p>Thanks for reaching out through Nextdoor! We're thrilled you're interested in our <strong>100% professional services services</strong>.</p>
+        <p>We use professional, professional-grade products that are safe for your family, pets, and the planet — without compromising on clean.</p>
         <p>A team member will be in touch shortly to schedule your free estimate.</p>
         <div style="text-align: center; margin: 24px 0;">
           <a href="https://tsenow.com/get-a-quote"
@@ -228,7 +228,7 @@ function buildAdminNotificationEmail(
         <div style="margin-top: 16px; padding: 12px; background: white; border-radius: 8px; border-left: 4px solid #166534;">
           <p style="margin: 0; font-size: 13px; color: #6b7280;">Lead ID: ${leadId}</p>
           <p style="margin: 4px 0 0; font-size: 13px;">
-            <a href="https://tseorganicclean264-production.up.railway.app/admin" style="color: #1e40af;">
+            <a href="https://tristateenterprise264-production.up.railway.app/admin" style="color: #1e40af;">
               Open Admin Dashboard →
             </a>
           </p>

@@ -154,7 +154,7 @@ export default function ConfirmEstimatePage({
         {/* Trust Badges */}
         <div className="grid grid-cols-2 gap-3">
           <TrustBadge icon={Shield} label="Licensed & Insured" sub="Background-checked crew" />
-          <TrustBadge icon={Leaf} label="100% Organic" sub="EPA Safer Choice certified" />
+          <TrustBadge icon={Leaf} label="Licensed & Insured" sub="Since 1992" />
           <TrustBadge icon={Camera} label="Photo Accountability" sub="Before & after every visit" />
           <TrustBadge icon={Star} label="5.0 ★ on Google" sub="Satisfaction guaranteed" />
         </div>

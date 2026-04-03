@@ -318,7 +318,7 @@ async function handleTranscriptCompleted(event: OpenPhoneEvent) {
           : null,
         cleanerBroadcast ? `\n--- CLEANER MESSAGE (ready to send) ---\n${cleanerBroadcast}` : null,
         ``,
-        `View: tseorganicclean264-production.up.railway.app/admin/transcripts`,
+        `View: tristateenterprise264-production.up.railway.app/admin/transcripts`,
       ]
         .filter(Boolean)
         .join("\n");
@@ -455,7 +455,7 @@ async function handleTranscriptCompleted(event: OpenPhoneEvent) {
         ``,
         `Preview: ${transcript.substring(0, 200)}`,
         ``,
-        `View: tseorganicclean264-production.up.railway.app/admin/transcripts`,
+        `View: tristateenterprise264-production.up.railway.app/admin/transcripts`,
       ]
         .filter(Boolean)
         .join("\n");
@@ -492,7 +492,7 @@ async function handleTranscriptCompleted(event: OpenPhoneEvent) {
             <pre style="white-space: pre-wrap; font-size: 13px; color: #374151; margin: 0;">${transcript.substring(0, 2000)}</pre>
           </div>
           <p style="margin-top: 16px; font-size: 13px; color: #6b7280;">
-            <a href="https://tseorganicclean264-production.up.railway.app/admin/transcripts" style="color: #0d5e3b; font-weight: 600;">View in Dashboard →</a>
+            <a href="https://tristateenterprise264-production.up.railway.app/admin/transcripts" style="color: #0d5e3b; font-weight: 600;">View in Dashboard →</a>
           </p>
         </div>
       </div>
@@ -586,7 +586,7 @@ async function handleSummaryCompleted(event: OpenPhoneEvent) {
       ``,
       openPhoneSummary,
       ``,
-      `View: tseorganicclean264-production.up.railway.app/admin/transcripts`,
+      `View: tristateenterprise264-production.up.railway.app/admin/transcripts`,
     ]
       .filter(Boolean)
       .join("\n");
@@ -622,7 +622,7 @@ async function handleSummaryCompleted(event: OpenPhoneEvent) {
           <p style="margin: 0; color: #374151; line-height: 1.6;">${openPhoneSummary}</p>
         </div>
         <p style="margin-top: 16px; font-size: 13px; color: #6b7280;">
-          <a href="https://tseorganicclean264-production.up.railway.app/admin/transcripts" style="color: #0d5e3b; font-weight: 600;">View in Dashboard →</a>
+          <a href="https://tristateenterprise264-production.up.railway.app/admin/transcripts" style="color: #0d5e3b; font-weight: 600;">View in Dashboard →</a>
         </p>
       </div>
     </div>
@@ -759,7 +759,7 @@ async function handleInboundMessage(event: OpenPhoneEvent) {
       smsAnalysis?.sentiment === "negative" ? `⚠️ Negative sentiment detected` : null,
       actionableTags.length > 0 ? `🏷️ Tags: ${actionableTags.join(", ")}` : null,
       ``,
-      `View: tseorganicclean264-production.up.railway.app/admin/todos`,
+      `View: tristateenterprise264-production.up.railway.app/admin/todos`,
     ]
       .filter(Boolean)
       .join("\n");
@@ -954,7 +954,7 @@ function buildCleanerBroadcastMessage(analysis: any, client: ExistingClient | nu
 }
 
 /** System prompt for transcript analysis */
-const ANALYSIS_SYSTEM_PROMPT = `You are an assistant for Tri State Enterprise, an organic cleaning company in Flatwoods, KY. Analyze this phone call transcript and extract information in JSON format.
+const ANALYSIS_SYSTEM_PROMPT = `You are an assistant for Tri State Enterprise, an professional services company in Flatwoods, KY. Analyze this phone call transcript and extract information in JSON format.
 
 Return JSON with these fields:
 - summary: string (2-3 sentence summary of the call)
@@ -1276,7 +1276,7 @@ function buildSmsEmailHtml(phone: string, content: string, analysis: any, client
     ` : ""}
 
     <div style="text-align: center; margin-top: 24px;">
-      <a href="https://tseorganicclean264-production.up.railway.app/admin/todos" style="background: #166534; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">View To-Dos</a>
+      <a href="https://tristateenterprise264-production.up.railway.app/admin/todos" style="background: #166534; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">View To-Dos</a>
     </div>
 
     <p style="text-align: center; color: #9ca3af; font-size: 12px; margin-top: 24px;">
@@ -1520,7 +1520,7 @@ function buildCallEmailHtml(record: any, analysis: any, existingClient?: Existin
     ` : ""}
 
     <div style="text-align: center; margin-top: 24px;">
-      <a href="https://tseorganicclean264-production.up.railway.app/admin/transcripts" style="background: #166534; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">View All Transcripts</a>
+      <a href="https://tristateenterprise264-production.up.railway.app/admin/transcripts" style="background: #166534; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">View All Transcripts</a>
     </div>
 
     <p style="text-align: center; color: #9ca3af; font-size: 12px; margin-top: 24px;">

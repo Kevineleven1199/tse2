@@ -84,7 +84,7 @@ async function generateContractorAgreementPDF(name: string, email: string, phone
       body("The Company engages the Contractor as an independent contractor, and not as an employee. The Contractor acknowledges that they are not entitled to employee benefits including but not limited to health insurance, retirement plans, paid vacation, or workers' compensation insurance.");
 
       heading("2. SERVICES");
-      body("The Contractor agrees to perform residential and/or commercial cleaning services as assigned through the Company's platform. Services include but are not limited to: standard maintenance cleaning, deep cleaning, move-in/move-out cleaning, and commercial space cleaning using eco-friendly, organic products provided by the Company.");
+      body("The Contractor agrees to perform residential and/or commercial cleaning services as assigned through the Company's platform. Services include but are not limited to: standard maintenance cleaning, deep cleaning, move-in/move-out cleaning, and commercial space cleaning using professional, professional equipment provided by the Company.");
 
       heading("3. COMPENSATION");
       body("The Contractor will be compensated at the rate agreed upon at the time of engagement. Payment will be processed through the Company's designated payment platform (Stripe Connect or direct deposit). The Contractor is responsible for all self-employment taxes, including but not limited to federal income tax, Social Security, and Medicare taxes.");
@@ -93,7 +93,7 @@ async function generateContractorAgreementPDF(name: string, email: string, phone
       body("The Contractor maintains the right to set their own schedule and availability. The Contractor is not required to accept any job assignment. The Contractor may work for other companies or clients simultaneously.");
 
       heading("5. TOOLS & SUPPLIES");
-      body("The Company will provide eco-friendly cleaning products and supplies for use during services. The Contractor is responsible for providing their own transportation to and from job sites.");
+      body("The Company will provide professional products and supplies for use during services. The Contractor is responsible for providing their own transportation to and from job sites.");
 
       heading("6. CONDUCT & STANDARDS");
       body("While performing services, the Contractor agrees to:");

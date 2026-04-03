@@ -200,7 +200,7 @@ async function handleGenerateList(body: any) {
   const targetCity = city || "Flatwoods";
 
   // Use AI to generate prospect list
-  const prompt = `Generate a JSON array of 20 commercial businesses in ${targetCity}, KY area that would benefit from professional organic cleaning services. Focus on these industries: ${targetIndustries.join(", ")}.
+  const prompt = `Generate a JSON array of 20 commercial businesses in ${targetCity}, KY area that would benefit from professional professional services services. Focus on these industries: ${targetIndustries.join(", ")}.
 
 For each business, provide:
 - businessName: string (realistic business name)
@@ -212,7 +212,7 @@ For each business, provide:
 - postalCode: string (Flatwoods area: 34231-34243)
 - phone: string (941 area code)
 - website: string (realistic URL)
-- score: number (1-100, how good a fit for organic cleaning)
+- score: number (1-100, how good a fit for professional services)
 - reasoning: string (why this type of business is a good prospect)
 
 Return ONLY the JSON array, no other text.`;
@@ -349,7 +349,7 @@ function getSuggestedScript(lead: any): string {
   const industry = lead.industry?.replace(/_/g, " ") || "business";
 
   if (lead.callCount === 0) {
-    return `Hi, this is [Your Name] from Tri State Enterprise. I'm reaching out to ${industry} businesses in the ${lead.city || "Flatwoods"} area. We provide 100% organic, non-toxic commercial cleaning services. Is ${name} available to chat for 2 minutes about how we could help ${biz} with a healthier, greener clean?`;
+    return `Hi, this is [Your Name] from Tri State Enterprise. I'm reaching out to ${industry} businesses in the ${lead.city || "Flatwoods"} area. We provide 100% organic, professional commercial cleaning services. Is ${name} available to chat for 2 minutes about how we could help ${biz} with a healthier, greener clean?`;
   }
 
   if (lead.status === "contacted") {

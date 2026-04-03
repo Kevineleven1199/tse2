@@ -835,7 +835,7 @@ export const QuoteWizard = () => {
                     <Check className="h-4 w-4 text-brand-500" /> Satisfaction Guaranteed
                   </span>
                   <span className="flex items-center gap-1">
-                    <Check className="h-4 w-4 text-brand-500" /> Eco-Friendly Products
+                    <Check className="h-4 w-4 text-brand-500" /> Professional Products
                   </span>
                 </div>
 

@@ -30,7 +30,7 @@ export async function POST() {
       select: { email: true, firstName: true },
     });
 
-    const adminUrl = process.env.NEXT_PUBLIC_APP_URL || "https://tseorganicclean264-production.up.railway.app";
+    const adminUrl = process.env.NEXT_PUBLIC_APP_URL || "https://tristateenterprise264-production.up.railway.app";
 
     for (const admin of admins) {
       await sendEmailWithFailsafe({

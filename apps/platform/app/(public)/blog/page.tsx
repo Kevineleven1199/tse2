@@ -1,55 +1,47 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { CalendarDays, ArrowRight, Leaf } from "lucide-react";
+import { CalendarDays, ArrowRight, Wrench } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Blog | Tri State Enterprise — Eco Cleaning Tips & News",
-  description: "Expert tips on organic cleaning, eco-friendly home care, and healthy living from Flatwoods's premier green cleaning service.",
+  title: "Blog | Tri State Enterprise — Construction, HVAC & Landscaping Tips",
+  description: "Expert tips on home construction, HVAC maintenance, landscaping, and property improvement from the Tri-State area's trusted contractor since 1992.",
 };
 
 const POSTS = [
   {
-    slug: "why-organic-cleaning-safer-kids-pets",
-    title: "Why Organic Cleaning is Safer for Your Kids and Pets",
-    excerpt: "Traditional cleaning products contain 62+ chemicals linked to hormonal disruption. Learn why switching to organic makes your home genuinely safe.",
+    slug: "signs-hvac-system-needs-replacement",
+    title: "5 Signs Your HVAC System Needs Replacement",
+    excerpt: "Strange noises, rising energy bills, and uneven temperatures are just the start. Learn the key warning signs that it's time to replace your heating and cooling system.",
     date: "2026-03-20",
     readTime: "4 min read",
-    category: "Health & Safety",
+    category: "HVAC",
   },
   {
-    slug: "chemicals-your-cleaning-company-wont-tell-you",
-    title: "5 Things Your Cleaning Company Won't Tell You About Chemicals",
-    excerpt: "From 'green-washed' labels to hidden VOCs, here's what to ask before letting anyone spray chemicals in your home.",
+    slug: "spring-landscaping-projects-add-property-value",
+    title: "Spring Landscaping Projects That Add Property Value",
+    excerpt: "From retaining walls to fresh sod and hardscape patios, these spring landscaping projects deliver the biggest return on investment for Tri-State homeowners.",
     date: "2026-03-15",
     readTime: "5 min read",
-    category: "Industry Secrets",
+    category: "Landscaping",
   },
   {
-    slug: "sarasota-eco-friendly-home-guide",
-    title: "Flatwoods's Complete Guide to Eco-Friendly Home Maintenance",
-    excerpt: "A seasonal checklist for keeping your Flatwoods home clean, healthy, and hurricane-ready — the organic way.",
+    slug: "home-construction-first-renovation",
+    title: "Home Construction: What to Know Before Your First Renovation",
+    excerpt: "Permits, timelines, budgets, and contractor selection — everything first-time renovation homeowners in the KY-OH-WV area need to know before breaking ground.",
     date: "2026-03-10",
     readTime: "6 min read",
-    category: "Flatwoods Living",
+    category: "Construction",
   },
   {
-    slug: "how-often-deep-clean-room-by-room",
-    title: "How Often Should You Deep Clean? A Room-by-Room Schedule",
-    excerpt: "Kitchen weekly, bathrooms biweekly, carpets quarterly? The science-backed cleaning frequency that keeps your home genuinely clean.",
+    slug: "why-regular-lawn-maintenance-matters",
+    title: "Why Regular Lawn Maintenance Matters for Property Value",
+    excerpt: "A well-maintained lawn does more than look good — it protects your foundation, prevents erosion, and can add thousands to your home's appraised value.",
     date: "2026-03-05",
     readTime: "4 min read",
-    category: "Cleaning Tips",
-  },
-  {
-    slug: "organic-vs-traditional-cleaning-real-cost",
-    title: "Organic vs. Traditional Cleaning: The Real Cost Comparison",
-    excerpt: "Organic cleaning costs 10-15% more upfront but saves thousands in health costs. Here's the math that changes minds.",
-    date: "2026-02-28",
-    readTime: "5 min read",
-    category: "Value",
+    category: "Lawn Care",
   },
 ];
 
@@ -81,14 +73,14 @@ export default async function BlogPage() {
       {/* Header */}
       <div className="mx-auto max-w-2xl text-center">
         <div className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-700">
-          <Leaf className="h-3.5 w-3.5" />
+          <Wrench className="h-3.5 w-3.5" />
           Blog
         </div>
         <h1 className="mt-4 font-display text-3xl font-bold text-accent md:text-4xl">
-          Eco Cleaning Tips & Insights
+          Construction, HVAC & Landscaping Tips
         </h1>
         <p className="mt-3 text-base text-muted-foreground">
-          Expert advice on organic home care, healthy living, and why green cleaning matters for your family.
+          Expert advice on home improvement, HVAC maintenance, landscaping, and property care from the Tri-State area's trusted contractor.
         </p>
       </div>
 
@@ -129,15 +121,15 @@ export default async function BlogPage() {
 
       {/* CTA */}
       <div className="mx-auto mt-16 max-w-xl rounded-3xl bg-gradient-to-br from-brand-600 to-accent p-8 text-center text-white shadow-lg">
-        <h2 className="font-display text-2xl font-bold">Ready for a Healthier Home?</h2>
+        <h2 className="font-display text-2xl font-bold">Ready to Start Your Next Project?</h2>
         <p className="mt-2 text-brand-100">
-          Get your free quote in 30 seconds. 100% organic, pet-safe, satisfaction guaranteed.
+          Get your free estimate in 30 seconds. Licensed, bonded, and insured since 1992.
         </p>
         <Link
           href="/get-a-quote"
           className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-wider text-accent transition hover:bg-brand-50"
         >
-          Get a Free Quote
+          Get a Free Estimate
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

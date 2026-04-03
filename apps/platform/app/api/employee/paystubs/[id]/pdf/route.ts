@@ -121,7 +121,7 @@ async function generatePaystubPDF(
       // ─── Header Banner ───
       doc.rect(0, 0, 612, 88).fill(G);
       doc.font("Helvetica-Bold").fontSize(22).fillColor("#FFFFFF").text("Tri State Enterprise", 40, 20);
-      doc.font("Helvetica").fontSize(10).fillColor("#FFFFFF").text("Eco-Friendly Cleaning Services  |  Flatwoods, KY  |  (606) 836-2534", 40, 50);
+      doc.font("Helvetica").fontSize(10).fillColor("#FFFFFF").text("Professional Cleaning Services  |  Flatwoods, KY  |  (606) 836-2534", 40, 50);
       doc.fontSize(9).text("tse@tristateenterprise.com  |  tsenow.com", 40, 65);
 
       // ─── Paystub Title ───

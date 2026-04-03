@@ -107,7 +107,7 @@ export const CleanerReferralCard = ({
             Share Link
           </button>
           <a
-            href={`sms:?body=I work with Tri State Enterpriseing! Use my referral code ${referralCode} to get $25 off your first eco-friendly clean. Book here: ${shareUrl}`}
+            href={`sms:?body=I work with Tri State Enterpriseing! Use my referral code ${referralCode} to get $25 off your first professional clean. Book here: ${shareUrl}`}
             className="flex items-center justify-center gap-2 rounded-xl border border-brand-200 px-4 py-3 text-sm font-semibold text-accent transition hover:bg-brand-50"
           >
             Text a Friend

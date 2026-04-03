@@ -113,7 +113,7 @@ export function buildProspectGenerationPrompt(options: {
     return data?.label || i.replace(/_/g, " ");
   }).join(", ");
 
-  return `Generate a JSON array of ${count} REAL commercial businesses in the ${city}, KY area (Flatwoods County including Ashland, Venice, South Shore, Russell, Catlettsburg) that would benefit from professional organic cleaning services.
+  return `Generate a JSON array of ${count} REAL commercial businesses in the ${city}, KY area (Flatwoods County including Ashland, Venice, South Shore, Russell, Catlettsburg) that would benefit from professional professional services services.
 
 Focus on these industries: ${industryLabels}
 
@@ -130,7 +130,7 @@ For EACH business, provide ALL of these fields:
 - state: "FL"
 - postalCode: string (Flatwoods area: 34231-34243, Ashland: 34201-34212, Venice: 34285-34293)
 - website: string (realistic URL)
-- score: number (1-100, how good a fit for organic cleaning)
+- score: number (1-100, how good a fit for professional services)
 - reasoning: string (2-3 sentences on why this is a good prospect and selling angle)
 - estimatedEmployees: number
 - hasMultipleLocations: boolean
@@ -139,8 +139,8 @@ For EACH business, provide ALL of these fields:
 
 Prioritize:
 1. Condo associations and HOAs (largest contracts, recurring monthly)
-2. Medical/dental offices (need organic/non-toxic, health regulations)
-3. Daycares (parents demand chemical-free, regulatory requirements)
+2. Medical/dental offices (need organic/professional, health regulations)
+3. Daycares (parents demand expert, regulatory requirements)
 4. Large office buildings (volume contracts)
 
 Return ONLY the JSON array, no other text.`;

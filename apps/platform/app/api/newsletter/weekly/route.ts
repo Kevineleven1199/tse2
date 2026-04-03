@@ -130,7 +130,7 @@ function buildWeeklyDigestHTML(recapSection: string, weekNumber: number): string
   <tr>
     <td style="padding:32px 24px;">
       <p style="color:#333;font-size:16px;line-height:1.6;">
-        Happy Monday! Here's your weekly roundup of green cleaning tips, plus an exclusive offer for our newsletter family.
+        Happy Monday! Here's your weekly roundup of professional services tips, plus an exclusive offer for our newsletter family.
       </p>
 
       ${recapSection}

@@ -228,7 +228,7 @@ export function EstimateClient({
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: Shield, title: "Licensed & Insured", desc: "Background-checked, fully insured crew members" },
-              { icon: Leaf, title: "EPA Safer Choice", desc: "100% plant-based, certified organic products" },
+              { icon: Leaf, title: "Professional Grade", desc: "100% professional-grade, certified professional equipment" },
               { icon: Camera, title: "Photo Accountability", desc: "Before & after photos for every visit" },
               { icon: Star, title: "4.9★ on Google", desc: "Hundreds of 5-star reviews from local families" },
               { icon: CheckCircle2, title: "Satisfaction Guarantee", desc: "Not happy? We re-clean within 24 hours, free" },

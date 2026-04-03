@@ -61,7 +61,7 @@ export async function POST(request: Request) {
       },
     });
 
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://tseorganicclean264-production.up.railway.app";
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL || "https://tristateenterprise264-production.up.railway.app";
     const resetLink = `${baseUrl}/reset-password?token=${token}`;
 
     await sendEmailWithFailsafe({

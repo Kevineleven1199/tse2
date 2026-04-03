@@ -83,7 +83,7 @@ const SERVICES = [
     startingAt: "Free Estimate",
     frequency: "per project",
     icon: TreePine,
-    image: "/images/gallery-organic-cleaning.jpg",
+    image: "/images/tse-landscaping.jpg",
   },
   {
     title: "Site Work",

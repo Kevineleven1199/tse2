@@ -181,7 +181,7 @@ export const renderNewsletterHTML = (
           <!-- CTA Button -->
           <tr>
             <td style="padding: 8px 32px 32px; text-align: center;">
-              <a href="https://tseorganicclean264-production.up.railway.app${content.cta.url}"
+              <a href="https://tristateenterprise264-production.up.railway.app${content.cta.url}"
                  style="display: inline-block; background: ${BRAND_GREEN}; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; padding: 14px 32px; border-radius: 50px; letter-spacing: 0.5px;">
                 ${content.cta.text} →
               </a>
@@ -210,12 +210,12 @@ export const renderNewsletterHTML = (
               <p style="margin: 0; font-size: 12px; color: #9ca3af;">
                 You're receiving this because you subscribed to our daily newsletter.
                 <br>
-                <a href="https://tseorganicclean264-production.up.railway.app/api/newsletter/unsubscribe?email={{EMAIL}}"
+                <a href="https://tristateenterprise264-production.up.railway.app/api/newsletter/unsubscribe?email={{EMAIL}}"
                    style="color: #9ca3af; text-decoration: underline;">
                   Unsubscribe
                 </a>
                 •
-                <a href="https://tseorganicclean264-production.up.railway.app/community"
+                <a href="https://tristateenterprise264-production.up.railway.app/community"
                    style="color: #9ca3af; text-decoration: underline;">
                   Community
                 </a>

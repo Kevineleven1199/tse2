@@ -104,7 +104,7 @@ Start the year breathing easier. Your family (and your pets!) will thank you.`,
     month: 2,
     day: 14,
     subject: "Show Your Home Some Love This Valentine's Day",
-    preview: "Give the gift of a sparkling, toxin-free home.",
+    preview: "Give the gift of a sparkling, quality home.",
     body: `This Valentine's Day, show your home — and your loved ones — some extra love with a professional organic clean.
 
 Imagine coming home to freshly polished surfaces, sparkling bathrooms, and that unmistakable feeling of a truly clean space — all without a single harsh chemical. It's the kind of gift that keeps giving, because a healthier home means a healthier family.
@@ -120,10 +120,10 @@ Treat yourself or surprise someone special with a Tri State gift certificate. Lo
     preview: "We're green every day — not just March 17th.",
     body: `While everyone else is wearing green for a day, we live it every day at Tri State Enterprise!
 
-Our EPA Safer Choice certified products are truly green — no greenwashing here. Every product we bring into your home is plant-based, biodegradable, and safe for kids, pets, and the Kentucky waterways we all love.
+Our Professional Grade certified products are truly green — no greenwashing here. Every product we bring into your home is professional-grade, biodegradable, and safe for kids, pets, and the Kentucky waterways we all love.
 
 This St. Patrick's Day, make the switch to a cleaning service that's green where it counts. Your home, your health, and our Flatwoods ecosystem will all benefit.`,
-    cta: "Switch to Green Cleaning",
+    cta: "Switch to Professional Services",
     promoCode: "TRISTATE17",
   },
   {
@@ -137,7 +137,7 @@ This St. Patrick's Day, make the switch to a cleaning service that's green where
 Every day is Earth Day for our team. Here's how we make a difference with every clean:
 
 • Zero single-use plastic bottles — we use refillable systems
-• 100% plant-based, biodegradable cleaning solutions
+• 100% professional-grade, biodegradable cleaning solutions
 • Low-VOC processes that protect indoor and outdoor air quality
 • HEPA filtration to capture allergens without chemical sprays
 
@@ -152,7 +152,7 @@ When you choose Tri State, you're not just getting a clean home — you're choos
     preview: "Give Mom the gift of relaxation with a professional organic clean.",
     body: `This Mother's Day, give the mom in your life something she actually wants — a perfectly clean home that she didn't have to lift a finger for.
 
-Our organic cleaning gift certificates are the perfect way to say "thank you" and "take a break." We'll handle every room with eco-friendly products that are safe for the whole family.
+Our professional services gift certificates are the perfect way to say "thank you" and "take a break." We'll handle every room with professional products that are safe for the whole family.
 
 No harsh chemicals. No stress. Just a beautifully clean home and a happy mom.
 
@@ -169,7 +169,7 @@ Gift certificates available in any amount — delivered instantly by email.`,
 
 Whether it's the garage deep clean he's been putting off, the pressure wash the driveway desperately needs, or just a full-house refresh so he can kick back and relax — we've got it covered.
 
-Our eco-friendly cleaning crew handles everything with plant-based products and professional care. Give Dad the gift of a clean home without the work.`,
+Our professional crew handles everything with professional-grade products and professional care. Give Dad the gift of a clean home without the work.`,
     cta: "Book Dad's Day Off",
   },
   {
@@ -187,7 +187,7 @@ Let us handle the pre-party prep so you can focus on the fireworks:
 • Patio and outdoor area scrub-down
 • Post-party cleanup available too!
 
-All done with our signature organic products — safe for kids, pets, and the Kentucky heat.`,
+All done with our signature professional equipment — safe for kids, pets, and the Kentucky heat.`,
     cta: "Book Pre-Party Clean",
     promoCode: "FREEDOM24",
   },
@@ -199,7 +199,7 @@ All done with our signature organic products — safe for kids, pets, and the Ke
     preview: "Start the school year with a fresh, healthy home.",
     body: `Summer's winding down and the kids are heading back to school. It's the perfect time to reset your home with a thorough organic deep clean.
 
-After months of summer fun, sand, and sunscreen, your home could use some extra attention. Our team will tackle the post-summer buildup with plant-based products that eliminate germs and allergens without the harsh chemicals.
+After months of summer fun, sand, and sunscreen, your home could use some extra attention. Our team will tackle the post-summer buildup with professional-grade products that eliminate germs and allergens without the harsh chemicals.
 
 A clean home means fewer sick days, better sleep, and a fresh start for the whole family. Let's get your home school-year ready!`,
     cta: "Book a Back-to-School Clean",
@@ -267,7 +267,7 @@ Our end-of-year deep clean is the perfect way to:
 • Remove allergens and dust from the past year
 • Create a healthier environment for the year ahead
 
-Book before December 31st and we'll include a complimentary eco-friendly air freshening treatment with your service. Here's to a clean, green new year!`,
+Book before December 31st and we'll include a complimentary professional air freshening treatment with your service. Here's to a clean, green new year!`,
     cta: "Book Your Year-End Clean",
   },
 ];
@@ -293,7 +293,7 @@ export const getHolidaysForYear = (year: number): (Holiday & { date: Date })[] =
     preview: "Celebrate renewal with an organic deep clean.",
     body: `Happy Easter from Tri State Enterprise!
 
-Easter is all about renewal and fresh starts — and that extends to your home too. After a long winter, spring is the perfect time for a deep, thorough clean with our plant-based products.
+Easter is all about renewal and fresh starts — and that extends to your home too. After a long winter, spring is the perfect time for a deep, thorough clean with our professional-grade products.
 
 Our spring cleaning packages are designed to shake off winter dust, refresh every room, and leave your home feeling brand new. Open the windows, let the Kentucky sunshine in, and breathe easy knowing every surface has been cleaned the green way.
 
@@ -356,7 +356,7 @@ Enjoy the long weekend and let us handle the rest. Book now for pre-Memorial Day
     preview: "You deserve a break. Let us clean while you relax.",
     body: `Happy Labor Day! You work hard all year — today is about relaxing, not cleaning.
 
-This Labor Day weekend, let Tri State Enterprise handle the housework so you can truly enjoy your day off. Our team will tackle every room with eco-friendly products while you enjoy the last long weekend of summer.
+This Labor Day weekend, let Tri State Enterprise handle the housework so you can truly enjoy your day off. Our team will tackle every room with professional products while you enjoy the last long weekend of summer.
 
 Whether you need a quick refresh or a full deep clean, we're here to help you make the most of your well-deserved break.`,
     cta: "Book Your Day Off",

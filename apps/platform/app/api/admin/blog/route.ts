@@ -7,11 +7,11 @@ export const dynamic = "force-dynamic";
 
 const BLOG_TOPICS = [
   { category: "Health & Safety", topics: [
-    "Why organic cleaning products are safer for families with young children",
+    "Why professional services products are safer for families with young children",
     "The hidden dangers of common household cleaning chemicals",
-    "How indoor air quality improves after switching to organic cleaning",
+    "How indoor air quality improves after switching to professional services",
     "Pet-safe cleaning: what every Kentucky pet owner needs to know",
-    "Allergy season in Flatwoods: how organic cleaning reduces triggers",
+    "Allergy season in Flatwoods: how professional services reduces triggers",
   ]},
   { category: "Cleaning Tips", topics: [
     "The ultimate room-by-room spring cleaning checklist for Kentucky homes",
@@ -35,11 +35,11 @@ const BLOG_TOPICS = [
     "Keeping your lanai and outdoor spaces spotless year-round",
   ]},
   { category: "Eco & Sustainability", topics: [
-    "How switching to organic cleaning reduces your carbon footprint",
+    "How switching to professional services reduces your carbon footprint",
     "The environmental impact of cleaning product runoff in Kentucky waterways",
     "Sustainable cleaning tools that actually work",
-    "Why EPA Safer Choice certified products matter for your home",
-    "Building an eco-friendly cleaning routine from scratch",
+    "Why Professional Grade certified products matter for your home",
+    "Building an professional routine from scratch",
   ]},
 ];
 
@@ -103,7 +103,7 @@ export async function POST(request: Request) {
     }
   }
 
-  const systemPrompt = `You are an expert content writer for Tri State Enterprise, an eco-friendly cleaning company in Flatwoods, Kentucky. Write SEO-optimized blog posts that:
+  const systemPrompt = `You are an expert content writer for Tri State Enterprise, an professional company in Flatwoods, Kentucky. Write SEO-optimized blog posts that:
 - Are 800-1200 words long
 - Use natural, conversational tone
 - Include relevant keywords for local SEO (Flatwoods, Ashland, Tri-State Area, Kentucky)

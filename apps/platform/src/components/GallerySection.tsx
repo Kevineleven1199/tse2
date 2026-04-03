@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer } from "@/src/lib/animations";
 
 const GALLERY_ITEMS = [
   {
-    src: "/images/gallery-organic-cleaning.jpg",
+    src: "/images/tse-landscaping.jpg",
     title: "Construction & Renovation",
     description: "Quality residential and commercial construction projects",
   },

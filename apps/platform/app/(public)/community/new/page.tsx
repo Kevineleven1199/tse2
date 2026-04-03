@@ -209,7 +209,7 @@ const NewPostPage = () => {
                   : category === "cleaning_tip"
                     ? "Share your cleaning tip with the community..."
                     : category === "eco_tip"
-                      ? "Share your eco-friendly tip..."
+                      ? "Share your professional tip..."
                       : category === "before_after"
                         ? "Describe the transformation..."
                         : "Write your post here..."

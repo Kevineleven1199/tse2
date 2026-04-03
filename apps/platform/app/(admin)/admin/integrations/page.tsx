@@ -186,7 +186,7 @@ export default async function AdminIntegrationsPage({
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://tseorganicclean264-production.up.railway.app";
+    "https://tristateenterprise264-production.up.railway.app";
 
   return (
     <div className="space-y-8">

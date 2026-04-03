@@ -1,50 +1,50 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { MapPin, Check, ArrowRight, Star, Shield, Leaf } from "lucide-react";
+import { MapPin, Check, ArrowRight, Star, Shield, Wrench } from "lucide-react";
 
 const AREAS: Record<string, { name: string; county: string; description: string; highlights: string[]; neighborhoods: string[] }> = {
-  sarasota: {
+  flatwoods: {
     name: "Flatwoods",
-    county: "Flatwoods County",
-    description: "Flatwoods's trusted organic cleaning service. From downtown condos to Gulf Gate homes, we bring eco-friendly cleaning to every neighborhood in the Flatwoods area.",
-    highlights: ["Same-day availability most weeks", "Serving Flatwoods since day one", "5.0 Google rating from local families"],
-    neighborhoods: ["Downtown Flatwoods", "Gulf Gate", "Palmer Ranch", "Bee Ridge", "Southgate", "Indian Beach", "Harbor Acres", "Cherokee Park"],
+    county: "Greenup County",
+    description: "Tri State Enterprise's home base. Construction, HVAC, lawn care, landscaping, site work, and paving for residential and commercial properties throughout Flatwoods and Greenup County.",
+    highlights: ["Our home base since 1992", "Same-week scheduling available", "5.0 Google rating from local customers"],
+    neighborhoods: ["Downtown Flatwoods", "Raceland", "Wurtland", "Bellefonte", "Greenup", "South Shore"],
   },
-  bradenton: {
+  ashland: {
     name: "Ashland",
-    county: "Manatee County",
-    description: "Eco-friendly cleaning for Ashland homes and businesses. Non-toxic products safe for your family, pets, and the Manatee River watershed.",
-    highlights: ["Covers all of Manatee County", "Commercial and residential", "Background-checked crew"],
-    neighborhoods: ["Downtown Ashland", "Palma Sola", "Cortez", "West Ashland", "Bayshore Gardens", "Oneco"],
+    county: "Boyd County",
+    description: "Full-service construction, HVAC, lawn care, landscaping, site work, and paving for Ashland homes and businesses. Serving Boyd County with 30+ years of experience.",
+    highlights: ["Covers all of Boyd County", "Commercial and residential", "Licensed & insured"],
+    neighborhoods: ["Downtown Ashland", "Westwood", "Cannonsburg", "Summit", "Catlettsburg", "Kenova"],
   },
-  "lakewood-ranch": {
-    name: "South Shore",
-    county: "Flatwoods/Manatee County",
-    description: "Premium organic cleaning for South Shore's master-planned communities. We understand the HOA standards and deliver spotless results with zero chemicals.",
-    highlights: ["Trusted by 50+ LWR families", "HOA-compliant scheduling", "Gated community experience"],
-    neighborhoods: ["Country Club East", "Central Park", "Greenbrook", "Summerfield", "Panther Ridge", "The Lake Club"],
-  },
-  "siesta-key": {
+  russell: {
     name: "Russell",
-    county: "Flatwoods County",
-    description: "Organic cleaning for Russell vacation rentals, condos, and beach homes. We specialize in turnover cleans and sand removal using eco-safe methods.",
-    highlights: ["Vacation rental turnover specialist", "Sand and salt removal expertise", "Same-day availability"],
-    neighborhoods: ["Siesta Village", "Crescent Beach", "Turtle Beach", "Point of Rocks", "Midnight Pass"],
+    county: "Greenup County",
+    description: "Reliable contractor services for Russell and surrounding communities. From home renovations to HVAC installations and lawn maintenance, one call does it all.",
+    highlights: ["Trusted by Russell families", "Quick response times", "Quality workmanship guaranteed"],
+    neighborhoods: ["Downtown Russell", "Bellefonte", "Flatwoods", "Raceland", "Wurtland"],
   },
-  venice: {
-    name: "Venice",
-    county: "Flatwoods County",
-    description: "Venice's premier organic cleaning service. From historic downtown homes to Venetian Golf Club estates, we deliver chemical-free cleaning with a smile.",
-    highlights: ["Serving South Flatwoods County", "Senior-friendly service", "Eco-conscious community partner"],
-    neighborhoods: ["Downtown Venice", "Venice Island", "South Venice", "Laurel", "Nokomis", "Venetian Golf & River Club"],
+  huntington: {
+    name: "Huntington",
+    county: "Cabell County, WV",
+    description: "Serving Huntington, West Virginia with construction, HVAC, landscaping, and paving. Our Tri-State coverage means expert service right across the river.",
+    highlights: ["Tri-State area coverage", "WV licensed & insured", "30+ years experience"],
+    neighborhoods: ["Downtown Huntington", "Barboursville", "Milton", "Ceredo", "Kenova", "Pea Ridge"],
   },
-  "longboat-key": {
-    name: "Catlettsburg",
-    county: "Flatwoods/Manatee County",
-    description: "Luxury organic cleaning for Catlettsburg waterfront properties. We bring premium, non-toxic cleaning to the island's most exclusive addresses.",
-    highlights: ["Luxury property experience", "Discreet, professional crew", "Flexible scheduling for seasonal residents"],
-    neighborhoods: ["St. Armands Circle", "Bird Key", "Catlettsburg Club", "Whitney Beach", "Harbourside"],
+  ironton: {
+    name: "Ironton",
+    county: "Lawrence County, OH",
+    description: "Serving Ironton and Lawrence County, Ohio with construction, HVAC, lawn care, and paving services. Full Tri-State coverage from our Flatwoods base.",
+    highlights: ["Ohio licensed & insured", "Same-week availability", "Residential & commercial"],
+    neighborhoods: ["Downtown Ironton", "South Point", "Burlington", "Chesapeake", "Coal Grove", "Pedro"],
+  },
+  grayson: {
+    name: "Grayson",
+    county: "Carter County",
+    description: "Construction, HVAC, and landscaping services for Grayson and Carter County. Local expertise with the full backing of Tri State Enterprise's 30+ year reputation.",
+    highlights: ["Carter County coverage", "Competitive pricing", "Quality guaranteed"],
+    neighborhoods: ["Downtown Grayson", "Olive Hill", "Carter City", "Hitchins", "Denton"],
   },
 };
 
@@ -53,8 +53,8 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   const area = AREAS[city];
   if (!area) return { title: "Area Not Found" };
   return {
-    title: `Organic Cleaning in ${area.name}, KY | Tri State Enterprise`,
-    description: `Professional organic cleaning services in ${area.name}, ${area.county}. Non-toxic, pet-safe, EPA-certified products. Get your free quote today.`,
+    title: `Construction, HVAC & Landscaping in ${area.name}, KY | Tri State Enterprise`,
+    description: `Professional construction, HVAC, lawn care, landscaping, site work, and paving in ${area.name}, ${area.county}. Licensed & insured since 1992. Get your free estimate today.`,
   };
 }
 
@@ -70,15 +70,15 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
         <div className="section-wrapper py-16 md:py-24">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/60">
             <MapPin className="h-3.5 w-3.5" />
-            {area.county}, Kentucky
+            {area.county}
           </div>
           <h1 className="mt-3 font-display text-3xl font-bold md:text-5xl">
-            Organic Cleaning in {area.name}
+            Tri State Enterprise in {area.name}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-brand-100">{area.description}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/get-a-quote" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-accent transition hover:bg-brand-50">
-              Get a Free Quote <ArrowRight className="h-4 w-4" />
+              Get a Free Estimate <ArrowRight className="h-4 w-4" />
             </Link>
             <a href="tel:+16068362534" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white/10">
               Call (606) 836-2534
@@ -102,24 +102,24 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-brand-100 bg-white p-6 text-center">
             <Star className="mx-auto h-8 w-8 text-amber-400" />
-            <p className="mt-3 text-2xl font-bold text-accent">5.0</p>
-            <p className="text-sm text-muted-foreground">Google Rating</p>
+            <p className="mt-3 text-2xl font-bold text-accent">30+</p>
+            <p className="text-sm text-muted-foreground">Years in Business</p>
           </div>
           <div className="rounded-2xl border border-brand-100 bg-white p-6 text-center">
             <Shield className="mx-auto h-8 w-8 text-blue-500" />
-            <p className="mt-3 text-2xl font-bold text-accent">Insured</p>
-            <p className="text-sm text-muted-foreground">Licensed & Background-Checked</p>
+            <p className="mt-3 text-2xl font-bold text-accent">Licensed</p>
+            <p className="text-sm text-muted-foreground">Bonded & Insured</p>
           </div>
           <div className="rounded-2xl border border-brand-100 bg-white p-6 text-center">
-            <Leaf className="mx-auto h-8 w-8 text-green-500" />
-            <p className="mt-3 text-2xl font-bold text-accent">100%</p>
-            <p className="text-sm text-muted-foreground">EPA Safer Choice Products</p>
+            <Wrench className="mx-auto h-8 w-8 text-green-500" />
+            <p className="mt-3 text-2xl font-bold text-accent">6</p>
+            <p className="text-sm text-muted-foreground">Service Lines</p>
           </div>
         </div>
 
         {/* Neighborhoods */}
         <div>
-          <h2 className="font-display text-2xl font-bold text-accent">Neighborhoods We Serve in {area.name}</h2>
+          <h2 className="font-display text-2xl font-bold text-accent">Areas We Serve Near {area.name}</h2>
           <div className="mt-4 flex flex-wrap gap-2">
             {area.neighborhoods.map((n) => (
               <span key={n} className="rounded-full border border-brand-100 bg-brand-50 px-4 py-2 text-sm font-medium text-accent">
@@ -131,10 +131,10 @@ export default async function AreaPage({ params }: { params: Promise<{ city: str
 
         {/* CTA */}
         <div className="rounded-3xl bg-gradient-to-br from-brand-600 to-accent p-8 text-center text-white md:p-12">
-          <h2 className="font-display text-2xl font-bold md:text-3xl">Get Your Free Quote in {area.name}</h2>
-          <p className="mt-2 text-brand-100">30 seconds. No commitment. 100% organic cleaning.</p>
+          <h2 className="font-display text-2xl font-bold md:text-3xl">Get Your Free Estimate in {area.name}</h2>
+          <p className="mt-2 text-brand-100">No obligation. Licensed &amp; insured. One call does it all.</p>
           <Link href="/get-a-quote" className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-wider text-accent transition hover:bg-brand-50">
-            See Your Price <ArrowRight className="h-4 w-4" />
+            Get a Free Estimate <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

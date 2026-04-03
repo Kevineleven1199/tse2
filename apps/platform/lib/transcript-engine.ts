@@ -35,7 +35,7 @@ type TranscriptAnalysis = {
   keyDetails: string;
 };
 
-const TRANSCRIPT_SYSTEM_PROMPT = `You are an AI assistant for Tri State Enterprise, a residential/commercial eco-friendly cleaning company in the Flatwoods, KY area.
+const TRANSCRIPT_SYSTEM_PROMPT = `You are an AI assistant for Tri State Enterprise, a residential/commercial professional company in the Flatwoods, KY area.
 
 Analyze this phone call transcript and extract:
 1. A concise 2-3 sentence summary of the call

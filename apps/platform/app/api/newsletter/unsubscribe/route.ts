@@ -58,7 +58,7 @@ const unsubscribeHTML = (message: string) => `<!DOCTYPE html>
   <div style="max-width:480px;margin:0 auto;background:#fff;padding:40px;border-radius:16px;box-shadow:0 4px 6px rgba(0,0,0,0.05);">
     <h1 style="font-size:24px;color:#1e5130;margin:0 0 16px;">Tri State Enterprise</h1>
     <p style="font-size:16px;color:#374151;line-height:1.6;">${message}</p>
-    <a href="https://tseorganicclean264-production.up.railway.app/"
+    <a href="https://tristateenterprise264-production.up.railway.app/"
        style="display:inline-block;margin-top:24px;background:#0fb77a;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:600;">
       Visit Our Website
     </a>

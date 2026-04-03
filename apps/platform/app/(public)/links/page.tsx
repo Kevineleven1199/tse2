@@ -65,8 +65,8 @@ const LINKS: { category: string; items: LinkItem[] }[] = [
       },
       {
         label: "Why Tri State?",
-        description: "Our organic, eco-friendly approach",
-        href: "/#why-green",
+        description: "Our professional approach",
+        href: "/#why-choose-us",
         icon: "leaf"
       }
     ]
@@ -83,29 +83,29 @@ const LINKS: { category: string; items: LinkItem[] }[] = [
       },
       {
         label: "Facebook",
-        description: "@tseorganicclean",
-        href: "https://www.facebook.com/tseorganicclean",
+        description: "@tristateenterprise",
+        href: "https://www.facebook.com/tristateenterprise",
         icon: "facebook",
         external: true
       },
       {
         label: "Instagram",
-        description: "@tseorganicclean",
-        href: "https://www.instagram.com/tseorganicclean/",
+        description: "@tristateenterprise",
+        href: "https://www.instagram.com/tristateenterprise/",
         icon: "instagram",
         external: true
       },
       {
         label: "TikTok",
-        description: "@go.green.organic",
-        href: "https://www.tiktok.com/@go.green.organic",
+        description: "@tristateenterprise",
+        href: "https://www.tiktok.com/@tristateenterprise",
         icon: "tiktok",
         external: true
       },
       {
         label: "X (Twitter)",
-        description: "@ggorganicclean",
-        href: "https://x.com/ggorganicclean",
+        description: "@tristateenterprise",
+        href: "https://x.com/tristateenterprise",
         icon: "x",
         external: true
       }
@@ -116,7 +116,7 @@ const LINKS: { category: string; items: LinkItem[] }[] = [
     items: [
       {
         label: "Apply to Join Our Crew",
-        description: "We're hiring eco-friendly cleaners",
+        description: "We're hiring professional cleaners",
         href: "/apply",
         icon: "briefcase"
       }
@@ -206,10 +206,10 @@ const LinksPage = () => (
         />
         <h1 className="mt-4 text-2xl font-bold">Tri State Enterprise</h1>
         <p className="mt-1 text-sm text-brand-200">
-          Flatwoods's premier organic cleaning service
+          Flatwoods's premier professional services service
         </p>
         <p className="mt-3 text-xs text-brand-200/80">
-          100% organic products · Licensed & insured · 5.0 stars on Google
+          100% professional equipment · Licensed & insured · 5.0 stars on Google
         </p>
       </div>
     </div>

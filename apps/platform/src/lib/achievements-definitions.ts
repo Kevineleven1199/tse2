@@ -129,7 +129,7 @@ export const CUSTOMER_ACHIEVEMENTS: AchievementDefinition[] = [
   {
     key: "green_selector",
     title: "Green Selector",
-    description: "Choose eco-friendly options in 3 bookings",
+    description: "Choose professional options in 3 bookings",
     icon: "♻️",
     xpReward: 150,
     roleFilter: "CUSTOMER",

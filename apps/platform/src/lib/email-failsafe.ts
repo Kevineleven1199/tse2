@@ -234,13 +234,13 @@ export async function emailDiscountCode(email: string): Promise<void> {
           Mention this code when you book or apply it during checkout.<br/>
           New customers only. Valid for 30 days.
         </p>
-        <a href="https://tseorganicclean264-production.up.railway.app/get-a-quote"
+        <a href="https://tristateenterprise264-production.up.railway.app/get-a-quote"
            style="display: inline-block; background: #0d5e3b; color: white; padding: 12px 32px; border-radius: 999px; text-decoration: none; font-weight: 600; margin-top: 16px;">
           Get Your Quote Now
         </a>
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 24px 0;" />
         <p style="font-size: 12px; color: #9ca3af;">
-          Tri State Enterprise — Flatwoods's #1 Organic Cleaning Service<br/>
+          Tri State Enterprise — Flatwoods's #1 Professional Services Service<br/>
           (606) 836-2534 | tse@tristateenterprise.com
         </p>
       </div>

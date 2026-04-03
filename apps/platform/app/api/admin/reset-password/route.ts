@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Send email with new password
-    const loginUrl = process.env.NEXT_PUBLIC_APP_URL || "https://tseorganicclean264-production.up.railway.app";
+    const loginUrl = process.env.NEXT_PUBLIC_APP_URL || "https://tristateenterprise264-production.up.railway.app";
     await sendEmailWithFailsafe({
       to: user.email,
       subject: "Your TriState Password Has Been Reset",
@@ -179,7 +179,7 @@ export async function PUT(request: NextRequest) {
         data: { avatarUrl: avatarMeta, status: "active" },
       });
 
-      const loginUrl = process.env.NEXT_PUBLIC_APP_URL || "https://tseorganicclean264-production.up.railway.app";
+      const loginUrl = process.env.NEXT_PUBLIC_APP_URL || "https://tristateenterprise264-production.up.railway.app";
       await sendEmailWithFailsafe({
         to: user.email,
         subject: "Your TriState Password Reset Has Been Approved",

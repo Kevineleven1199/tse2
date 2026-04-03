@@ -83,10 +83,10 @@ const DRIP_TEMPLATES = {
     {
       subject: "Welcome to Tri State Enterprise! 🌿",
       delay: 0,
-      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto"><div style="background:#2E7D32;padding:24px;border-radius:12px 12px 0 0"><h1 style="color:#fff;margin:0;font-size:24px">Welcome to Tri State! 🌿</h1></div><div style="padding:24px;background:#fff;border:1px solid #e5e7eb;border-top:0;border-radius:0 0 12px 12px"><p>Thank you for choosing organic cleaning! Here's what makes us different:</p><ul><li><strong>100% organic, EPA-certified products</strong> — safe for kids, pets, and the planet</li><li><strong>Background-checked, insured crew</strong> — trusted professionals in your home</li><li><strong>Satisfaction guaranteed</strong> — if it's not perfect, we'll re-clean for free</li></ul><p>Ready to book your first clean?</p><p><a href="https://tsenow.com/get-a-quote" style="display:inline-block;padding:14px 28px;background:#2E7D32;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">Get Your Free Quote →</a></p><p style="color:#6b7280;font-size:13px;margin-top:24px">Tri State Enterprise · Flatwoods, KY · (606) 836-2534</p></div></div>`,
+      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto"><div style="background:#2E7D32;padding:24px;border-radius:12px 12px 0 0"><h1 style="color:#fff;margin:0;font-size:24px">Welcome to Tri State! 🌿</h1></div><div style="padding:24px;background:#fff;border:1px solid #e5e7eb;border-top:0;border-radius:0 0 12px 12px"><p>Thank you for choosing professional services! Here's what makes us different:</p><ul><li><strong>100% organic, EPA-certified products</strong> — safe for kids, pets, and the planet</li><li><strong>Background-checked, insured crew</strong> — trusted professionals in your home</li><li><strong>Satisfaction guaranteed</strong> — if it's not perfect, we'll re-clean for free</li></ul><p>Ready to book your first clean?</p><p><a href="https://tsenow.com/get-a-quote" style="display:inline-block;padding:14px 28px;background:#2E7D32;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">Get Your Free Quote →</a></p><p style="color:#6b7280;font-size:13px;margin-top:24px">Tri State Enterprise · Flatwoods, KY · (606) 836-2534</p></div></div>`,
     },
     {
-      subject: "5 Reasons Organic Cleaning is Better for Your Family",
+      subject: "5 Reasons Professional Services is Better for Your Family",
       delay: 3,
       html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#2E7D32">Did You Know? 🧪</h2><p>Traditional cleaning products contain 62+ chemicals linked to hormonal disruption and respiratory issues. Here's why organic matters:</p><ol><li><strong>No VOCs</strong> — Volatile organic compounds cause headaches and asthma</li><li><strong>Pet safe</strong> — Cats and dogs are 10x more sensitive to chemical residue</li><li><strong>Better air quality</strong> — Your home air improves within 24 hours</li><li><strong>Eco-friendly</strong> — Biodegradable products that don't harm waterways</li><li><strong>Long-term health</strong> — Reduced cancer risk from household chemical exposure</li></ol><p>Questions? Reply to this email or call us at (606) 836-2534.</p></div>`,
     },
@@ -106,7 +106,7 @@ const DRIP_TEMPLATES = {
     {
       subject: "Last chance: Your 15% discount expires tomorrow",
       delay: 5,
-      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#dc2626">⏰ Expiring Tomorrow</h2><p>Your <strong>15% off coupon (COMEBACK15)</strong> expires tomorrow. Don't miss out on a sparkling clean home with organic, pet-safe products.</p><p><a href="https://tsenow.com/get-a-quote" style="display:inline-block;padding:14px 28px;background:#2E7D32;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">Use My Discount →</a></p></div>`,
+      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#dc2626">⏰ Expiring Tomorrow</h2><p>Your <strong>15% off coupon (COMEBACK15)</strong> expires tomorrow. Don't miss out on a sparkling clean home with organic, quality products.</p><p><a href="https://tsenow.com/get-a-quote" style="display:inline-block;padding:14px 28px;background:#2E7D32;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">Use My Discount →</a></p></div>`,
     },
   ],
 
@@ -114,7 +114,7 @@ const DRIP_TEMPLATES = {
     {
       subject: "How was your clean? ⭐",
       delay: 0,
-      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#2E7D32">Thank You! 🌿</h2><p>We hope your home feels amazing! Your feedback helps us improve and helps other families find safe, organic cleaning.</p><p style="font-size:18px;text-align:center;margin:20px 0"><a href="https://g.page/r/tseorganicclean/review" style="display:inline-block;padding:14px 28px;background:#FFA000;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">⭐ Leave a Google Review</a></p><p style="color:#6b7280">It only takes 30 seconds and means the world to our small team.</p></div>`,
+      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#2E7D32">Thank You! 🌿</h2><p>We hope your home feels amazing! Your feedback helps us improve and helps other families find safe, professional services.</p><p style="font-size:18px;text-align:center;margin:20px 0"><a href="https://g.page/r/tristateenterprise/review" style="display:inline-block;padding:14px 28px;background:#FFA000;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">⭐ Leave a Google Review</a></p><p style="color:#6b7280">It only takes 30 seconds and means the world to our small team.</p></div>`,
     },
     {
       subject: "Refer a friend, earn $25 credit 💚",
@@ -127,7 +127,7 @@ const DRIP_TEMPLATES = {
     {
       subject: "Organic cleaning for your office — free walkthrough",
       delay: 0,
-      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#2E7D32">A Cleaner Office Without the Chemicals 🏢</h2><p>Tri State Enterprise provides commercial cleaning services using EPA Safer Choice certified products — healthier for your employees, clients, and the environment.</p><p><strong>We offer:</strong></p><ul><li>Daily/weekly/monthly office cleaning</li><li>Medical & dental office sanitization</li><li>Condo & HOA common area maintenance</li><li>Post-construction cleanup</li></ul><p>We'd love to do a free walkthrough and custom quote for your space.</p><p><a href="https://tsenow.com/get-a-quote" style="display:inline-block;padding:14px 28px;background:#2E7D32;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">Schedule Free Walkthrough →</a></p></div>`,
+      html: `<div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px"><h2 style="color:#2E7D32">A Cleaner Office Without the Chemicals 🏢</h2><p>Tri State Enterprise provides commercial cleaning services using Professional Grade certified products — healthier for your employees, clients, and the environment.</p><p><strong>We offer:</strong></p><ul><li>Daily/weekly/monthly office cleaning</li><li>Medical & dental office sanitization</li><li>Condo & HOA common area maintenance</li><li>Post-construction cleanup</li></ul><p>We'd love to do a free walkthrough and custom quote for your space.</p><p><a href="https://tsenow.com/get-a-quote" style="display:inline-block;padding:14px 28px;background:#2E7D32;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold">Schedule Free Walkthrough →</a></p></div>`,
     },
   ],
 } as const;

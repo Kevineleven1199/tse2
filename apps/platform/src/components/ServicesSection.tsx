@@ -36,7 +36,7 @@ const SERVICES = [
       "Grading, excavation, driveway paving, parking lots, and complete site preparation for residential and commercial projects.",
     highlights: ["Driveways & parking lot paving", "Grading & excavation", "Drainage solutions & site prep"],
     icon: HardHat,
-    image: "/images/gallery-organic-cleaning.jpg"
+    image: "/images/tse-landscaping.jpg"
   }
 ];
 

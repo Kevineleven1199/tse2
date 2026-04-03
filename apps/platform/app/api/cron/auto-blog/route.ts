@@ -4,11 +4,11 @@ import { prisma } from "@/lib/prisma";
 export const dynamic = "force-dynamic";
 
 const BLOG_TOPICS = [
-  "Why organic cleaning products are safer for families with young children",
+  "Why professional services products are safer for families with young children",
   "The hidden dangers of common household cleaning chemicals",
-  "How indoor air quality improves after switching to organic cleaning",
+  "How indoor air quality improves after switching to professional services",
   "Pet-safe cleaning: what every Kentucky pet owner needs to know",
-  "Allergy season in Flatwoods: how organic cleaning reduces triggers",
+  "Allergy season in Flatwoods: how professional services reduces triggers",
   "The ultimate room-by-room spring cleaning checklist for Kentucky homes",
   "How to maintain a clean home between professional visits",
   "Bathroom deep cleaning secrets the pros use",
@@ -22,11 +22,11 @@ const BLOG_TOPICS = [
   "Hurricane prep cleaning checklist for Kentucky homeowners",
   "Best practices for vacation rental turnover cleaning in Russell",
   "Move-in cleaning guide for new Flatwoods residents",
-  "How switching to organic cleaning reduces your carbon footprint",
+  "How switching to professional services reduces your carbon footprint",
   "Sustainable cleaning tools that actually work",
 ];
 
-const SYSTEM_PROMPT = `You are an expert content writer for Tri State Enterprise, an eco-friendly cleaning company in Flatwoods, Kentucky. Write SEO-optimized blog posts that:
+const SYSTEM_PROMPT = `You are an expert content writer for Tri State Enterprise, an professional company in Flatwoods, Kentucky. Write SEO-optimized blog posts that:
 - Are 800-1200 words long
 - Use natural, conversational tone
 - Include relevant keywords for local SEO (Flatwoods, Ashland, Tri-State Area, Kentucky)

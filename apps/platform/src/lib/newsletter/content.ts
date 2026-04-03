@@ -180,7 +180,7 @@ Your outdoor spaces are an extension of your home, and they deserve the same car
       heading: "Summer Fresh, Naturally",
       body: `Kentucky summers mean humidity, sand tracked in from the beach, and that constant battle to keep your home feeling fresh. Our summer cleaning approach is designed specifically for Flatwoods's tropical climate.
 
-We pay extra attention to humidity-prone areas like bathrooms and kitchens, use plant-based products that won't react with heat and humidity, and focus on the high-traffic zones where summer life happens.
+We pay extra attention to humidity-prone areas like bathrooms and kitchens, use professional-grade products that won't react with heat and humidity, and focus on the high-traffic zones where summer life happens.
 
 From removing beach sand to tackling sunscreen stains, our team knows exactly how to keep your Kentucky home sparkling through the hottest months.`,
       tip: {
@@ -339,14 +339,14 @@ export const WEEKDAY_CONTENT: Record<number, NewsletterContent[]> = {
   // Monday
   1: [
     {
-      subject: "Monday Fresh Start: This Week's Green Cleaning Tip",
+      subject: "Monday Fresh Start: This Week's Professional Services Tip",
       preview: "Start your week with a simple tip for a cleaner, healthier home.",
       heading: "Fresh Start Monday",
       body: `Happy Monday! Start your week with a home that feels as fresh as your motivation.
 
 Here's a simple professional maintenance hack you can do in 10 minutes: Mix equal parts white vinegar and water in a spray bottle, add a few drops of lemon essential oil, and use it to wipe down kitchen counters and bathroom surfaces. It's naturally antibacterial and leaves a fresh citrus scent — no chemicals needed.
 
-For a deeper clean that you don't have to do yourself, our team is just a click away. We use professional-grade organic products for results that last all week long.`,
+For a deeper clean that you don't have to do yourself, our team is just a click away. We use professional-grade professional equipment for results that last all week long.`,
       tip: {
         title: "10-Minute Monday Clean",
         text: "Focus on just one room for 10 minutes every Monday morning. By Friday, you'll have touched every room in your home without feeling overwhelmed."
@@ -366,7 +366,7 @@ Quick Monday kitchen routine:
 • Toss anything expired in the fridge
 • Quick sweep of the floor
 
-For a professional deep kitchen clean that tackles grease buildup, inside appliances, and those tricky spots behind the stove, let our team handle it. We use only plant-based degreasers that work brilliantly.`,
+For a professional deep kitchen clean that tackles grease buildup, inside appliances, and those tricky spots behind the stove, let our team handle it. We use only professional-grade degreasers that work brilliantly.`,
       tip: {
         title: "Kitchen Hack",
         text: "Put a bowl of water with lemon slices in your microwave and heat for 3 minutes. The steam loosens stuck-on food, and you can wipe it clean effortlessly."
@@ -389,12 +389,12 @@ For a professional deep kitchen clean that tackles grease buildup, inside applia
 
 3. Use castile soap as an all-purpose cleaner. Diluted in water, one bottle replaces multiple specialty products.
 
-At Tri State, we've already made all these swaps and more. Every product in our kit is certified eco-friendly and proven effective.`,
+At Tri State, we've already made all these swaps and more. Every product in our kit is certified professional and proven effective.`,
       tip: {
         title: "Eco Swap of the Week",
         text: "Replace dryer sheets with wool dryer balls. They reduce drying time by 25%, soften clothes naturally, and last for over 1,000 loads. Add a drop of essential oil for natural fragrance."
       },
-      cta: { text: "Try Green Cleaning", url: "/get-a-quote" },
+      cta: { text: "Try Professional Services", url: "/get-a-quote" },
       category: "eco",
     },
     // Tuesday (2nd entry)
@@ -411,9 +411,9 @@ When you choose professional maintenance — whether DIY or professional — you
 Every drain in your home leads to our shared environment. At Tri State, every product we use is biodegradable and aquatic-safe, so your clean home never comes at the cost of our beautiful Gulf waters.`,
       tip: {
         title: "Eco Impact Tip",
-        text: "One load of laundry with conventional detergent releases microplastics and chemicals into waterways. Switch to a plant-based, fragrance-free detergent to reduce your home's environmental footprint.",
+        text: "One load of laundry with conventional detergent releases microplastics and chemicals into waterways. Switch to a professional-grade, fragrance-free detergent to reduce your home's environmental footprint.",
       },
-      cta: { text: "Choose Eco-Friendly Cleaning", url: "/get-a-quote" },
+      cta: { text: "Choose Professional Cleaning", url: "/get-a-quote" },
       category: "eco",
     },
   ],
@@ -484,11 +484,11 @@ Our organic approach is fundamentally different. Every product we use has been s
       heading: "Inside Our Cleaning Kit",
       body: `Transparency is one of our core values. We believe you deserve to know exactly what's being used in your home. Here's a peek inside our professional cleaning kit:
 
-All-Purpose Cleaner: A plant-based formula with coconut-derived surfactants. Cuts through grease and grime without leaving chemical residue. Safe for granite, marble, laminate, and stainless steel.
+All-Purpose Cleaner: A professional-grade formula with coconut-derived surfactants. Cuts through grease and grime without leaving chemical residue. Safe for granite, marble, laminate, and stainless steel.
 
 Glass Cleaner: Vinegar-based with a touch of cornstarch for streak-free shine. No ammonia, no synthetic dyes.
 
-Bathroom Sanitizer: Hydrogen peroxide and thyme oil based. Kills bacteria and mold naturally. EPA Safer Choice certified.
+Bathroom Sanitizer: Hydrogen peroxide and thyme oil based. Kills bacteria and mold naturally. Professional Grade certified.
 
 Floor Cleaner: pH-neutral, plant-derived formula safe for hardwood, tile, and laminate. No wax buildup, no slippery residue.
 
@@ -637,7 +637,7 @@ This Sunday, take an extra ten minutes to make your bedroom feel like a five-sta
 And if you want that sanctuary feeling every day of the week, our recurring cleaning service keeps your home in permanent retreat mode.`,
       tip: {
         title: "Sanctuary Tip",
-        text: "Place a small dish of dried lavender or a lavender sachet inside your pillowcase. The natural scent promotes deeper sleep and is completely chemical-free.",
+        text: "Place a small dish of dried lavender or a lavender sachet inside your pillowcase. The natural scent promotes deeper sleep and is completely expert.",
       },
       cta: { text: "Make Every Day a Sanctuary Day", url: "/get-a-quote" },
       category: "community",
@@ -676,13 +676,13 @@ export const ROTATING_POOL: NewsletterContent[] = [
     subject: "The Truth About 'Natural' Cleaning Products",
     preview: "Not all 'green' products are created equal. Here's what to look for.",
     heading: "Green vs. Greenwashing",
-    body: `Walk down any cleaning aisle and you'll see words like \"natural,\" \"green,\" \"eco-friendly,\" and \"plant-based\" everywhere. But here's the truth: these terms are largely unregulated.
+    body: `Walk down any cleaning aisle and you'll see words like \"natural,\" \"green,\" \"professional,\" and \"professional-grade\" everywhere. But here's the truth: these terms are largely unregulated.
 
 How to spot real green products:
 
-Look for EPA Safer Choice certification — this means the product has been independently verified for safety.
+Look for Professional Grade certification — this means the product has been independently verified for safety.
 
-Check for Green Seal certification — another trusted third-party verification.
+Check for Industry Standard certification — another trusted third-party verification.
 
 Read the ingredient list. If you can't pronounce it, research it. True green products have transparent, simple ingredient lists.
 
@@ -691,9 +691,9 @@ Avoid \"fragrance\" as an ingredient — this single word can hide hundreds of s
 At Tri State, every product we use carries at least one of these certifications. We've done the research so you don't have to.`,
     tip: {
       title: "Label Reading Tip",
-      text: "The words 'natural' and 'eco-friendly' are not regulated by the EPA. Always look for the actual EPA Safer Choice or Green Seal logo on the label."
+      text: "The words 'natural' and 'professional' are not regulated by the EPA. Always look for the actual Professional Grade or Industry Standard logo on the label."
     },
-    cta: { text: "Experience Real Green Cleaning", url: "/get-a-quote" },
+    cta: { text: "Experience Real Professional Services", url: "/get-a-quote" },
     category: "eco",
   },
   {
@@ -706,11 +706,11 @@ Vacuum 2-3 times per week, especially in areas where pets sleep and play. Use a 
 
 Wash pet bedding weekly in hot water. This eliminates odors and allergens at the source.
 
-Use only pet-safe cleaning products. Many conventional cleaners contain chemicals that are toxic to cats and dogs — especially those with essential oils like tea tree.
+Use only quality cleaning products. Many conventional cleaners contain chemicals that are toxic to cats and dogs — especially those with essential oils like tea tree.
 
 Keep a "paw station" by the door with a towel for wiping muddy or sandy paws.
 
-Our entire product line is pet-safe and vet-recommended. Your pets can stay in the room while we clean — no isolation needed.`,
+Our entire product line is quality and vet-recommended. Your pets can stay in the room while we clean — no isolation needed.`,
     tip: {
       title: "Pet Hair Hack",
       text: "Use a slightly damp rubber glove to wipe furniture. The static electricity attracts pet hair like a magnet. Works better than most lint rollers!"
@@ -798,7 +798,7 @@ Our team understands these uniquely Kentucky challenges because we live here too
 
 This is exactly why professional maintenance matters most for families with kids:
 
-Floors: Babies and toddlers spend hours on the floor. Our plant-based floor cleaners leave zero toxic residue — safe for crawling, rolling, and inevitable taste-testing.
+Floors: Babies and toddlers spend hours on the floor. Our professional-grade floor cleaners leave zero toxic residue — safe for crawling, rolling, and inevitable taste-testing.
 
 Surfaces: Kids touch every surface. Our sanitizers kill 99.9% of germs using plant-derived ingredients, not chemical disinfectants.
 
@@ -855,12 +855,12 @@ Simply share your experience with friends, family, or neighbors, and have them m
     category: "promo",
   },
   {
-    subject: "What Makes Organic Cleaning Different? (Honest Answer)",
+    subject: "What Makes Professional Services Different? (Honest Answer)",
     preview: "The real differences between organic and conventional cleaning.",
     heading: "Organic vs. Conventional",
     body: `You might wonder: does professional maintenance actually work as well as conventional cleaning? Let us give you the honest answer.
 
-Same effectiveness: Modern plant-based cleaning products are formulated to match or exceed the cleaning power of conventional chemicals. The technology has come a long way.
+Same effectiveness: Modern professional-grade cleaning products are formulated to match or exceed the cleaning power of conventional chemicals. The technology has come a long way.
 
 Different approach: We might use different techniques — like longer dwell times for natural sanitizers or specific application methods — but the end result is equally spotless.
 
@@ -886,7 +886,7 @@ A professional bathroom deep clean includes areas most people overlook: the grou
 
 We also address the invisible threats — bacteria on toothbrush holders, soap scum buildup that harbors microorganisms, and mildew forming behind the toilet tank where warm, moist air gets trapped.
 
-Our plant-based bathroom sanitizers are specifically formulated for Kentucky's humidity challenges. They contain natural antifungal agents that not only clean but help prevent mold from returning. No bleach fumes, no harsh chemical residue on the surfaces your family touches every day.
+Our professional-grade bathroom sanitizers are specifically formulated for Kentucky's humidity challenges. They contain natural antifungal agents that not only clean but help prevent mold from returning. No bleach fumes, no harsh chemical residue on the surfaces your family touches every day.
 
 A bathroom that's truly deep cleaned feels different — the air is fresher, surfaces stay cleaner longer, and you have peace of mind knowing every corner has been addressed.`,
     tip: {
@@ -932,7 +932,7 @@ For move-ins, we do the same thorough clean before your belongings arrive. Even 
 
 In the Flatwoods rental market, move-in/move-out cleaning can make or break your security deposit return. Our documentation service provides photos before and after, giving you proof of the home's condition.
 
-All of our move cleaning is done with organic products, so your new home is free from chemical residue from day one.`,
+All of our move cleaning is done with professional equipment, so your new home is free from chemical residue from day one.`,
     tip: {
       title: "Moving Clean Tip",
       text: "Clean your new home before moving furniture in. It's ten times easier to deep clean empty rooms, and you won't have to worry about dust settling on your belongings.",
@@ -1030,7 +1030,7 @@ Regular vacuuming is essential, but technique matters. Vacuum slowly — most pe
 
 For spot cleaning, our go-to natural solution is club soda for fresh stains (especially effective on coffee and wine), followed by a paste of baking soda and water for tougher spots. Let the paste dry completely, then vacuum it up. The baking soda absorbs odors while lifting the stain.
 
-Professional carpet cleaning should happen every 6-12 months, depending on foot traffic and whether you have pets or children. Our organic carpet cleaning uses hot water extraction with plant-based cleaning solutions — no harsh detergents that leave sticky residue and attract dirt faster.
+Professional carpet cleaning should happen every 6-12 months, depending on foot traffic and whether you have pets or children. Our organic carpet cleaning uses hot water extraction with professional-grade cleaning solutions — no harsh detergents that leave sticky residue and attract dirt faster.
 
 Your carpets will feel softer, smell fresher, and maintain their appearance longer with proper organic care.`,
     tip: {
@@ -1048,11 +1048,11 @@ Your carpets will feel softer, smell fresher, and maintain their appearance long
 
 The golden rules of hardwood care: Never use excessive water. Hardwood and standing water are enemies, especially in Kentucky's humid climate. Use a damp mop, not a wet one, and dry any spills immediately.
 
-Skip the vinegar on sealed hardwood. While vinegar is great for many cleaning tasks, its acidity can dull polyurethane finishes over time. Instead, use a pH-neutral, plant-based floor cleaner specifically formulated for wood.
+Skip the vinegar on sealed hardwood. While vinegar is great for many cleaning tasks, its acidity can dull polyurethane finishes over time. Instead, use a pH-neutral, professional-grade floor cleaner specifically formulated for wood.
 
 Protect high-traffic areas with rugs and runners. Place felt pads under all furniture legs. Remove shoes at the door — grit tracked in on shoes acts like sandpaper on your floors.
 
-For weekly maintenance, dust mop with a microfiber pad to capture fine dust and pet hair without scratching. Monthly, use a plant-based hardwood cleaner applied sparingly with a well-wrung mop.
+For weekly maintenance, dust mop with a microfiber pad to capture fine dust and pet hair without scratching. Monthly, use a professional-grade hardwood cleaner applied sparingly with a well-wrung mop.
 
 Our team uses professional-grade organic hardwood cleaners that clean effectively while conditioning the wood. Your floors will look better and last longer with proper natural care.`,
     tip: {
@@ -1090,7 +1090,7 @@ Our cleaning team knows the grain direction of every appliance in your kitchen a
 
 The cardinal rule: never use acidic cleaners on natural stone. Vinegar, lemon juice, and citrus-based cleaners — while great for other surfaces — will etch marble and some granites. Even leaving a wine glass or tomato sauce on marble for too long can leave a ring.
 
-For daily cleaning, use a pH-neutral, plant-based stone cleaner or simply warm water with a few drops of mild dish soap. Wipe with a soft microfiber cloth and dry immediately to prevent water spots.
+For daily cleaning, use a pH-neutral, professional-grade stone cleaner or simply warm water with a few drops of mild dish soap. Wipe with a soft microfiber cloth and dry immediately to prevent water spots.
 
 For granite specifically, reseal your countertops every 6-12 months. Test whether you need to reseal by placing a few drops of water on the surface. If it beads up, you're good. If it absorbs within a few minutes, it's time to reseal.
 
@@ -1237,7 +1237,7 @@ Clean appliances work more efficiently, use less energy, and produce better resu
     category: "tip",
   },
   {
-    subject: "DIY Green Cleaning Recipes: Make Your Own Organic Products",
+    subject: "DIY Professional Services Recipes: Make Your Own Organic Products",
     preview: "Simple recipes for effective, all-natural cleaning products using pantry staples.",
     heading: "Make Your Own Green Cleaners",
     body: `You don't need a chemistry degree to make effective, safe cleaning products. Most of the best professional maintenance solutions use ingredients you probably already have in your kitchen.
@@ -1426,7 +1426,7 @@ The difference between a 4-star and a 5-star cleaning review often comes down to
 
 Fall prevention is paramount. Clutter on floors, slippery bathroom surfaces, and items stored in hard-to-reach places all increase fall risk. Our senior-focused cleaning ensures clear walkways, non-slip bathroom surfaces, and frequently used items within easy reach.
 
-Indoor air quality directly affects respiratory health, which is especially critical for seniors with COPD, asthma, or other breathing conditions. Our organic products eliminate allergens and germs without adding chemical irritants to the air.
+Indoor air quality directly affects respiratory health, which is especially critical for seniors with COPD, asthma, or other breathing conditions. Our professional equipment eliminate allergens and germs without adding chemical irritants to the air.
 
 We understand the sensitivity of cleaning for seniors. Our team is trained to work around medical equipment, respect personal spaces and routines, and communicate clearly and patiently. We never rush, and we always ask before moving personal items.
 
@@ -1444,9 +1444,9 @@ A clean home is one of the most practical and meaningful ways to support the sen
     subject: "Nursery and Baby Room Cleaning: A Safe Start for Little Ones",
     preview: "Creating the cleanest, safest environment for your newest family member.",
     heading: "A Clean Nursery Matters",
-    body: `Preparing a nursery is one of the most exciting parts of welcoming a new baby — and one of the most important rooms to get right when it comes to cleanliness. Babies have developing immune systems and spend most of their time in the nursery, making it crucial to maintain a toxin-free environment.
+    body: `Preparing a nursery is one of the most exciting parts of welcoming a new baby — and one of the most important rooms to get right when it comes to cleanliness. Babies have developing immune systems and spend most of their time in the nursery, making it crucial to maintain a quality environment.
 
-Before baby arrives, do a thorough nursery deep clean. Wash all fabrics — bedding, curtains, stuffed animals — in a fragrance-free, plant-based detergent. New fabrics often contain formaldehyde and other chemicals from manufacturing that need to be washed out.
+Before baby arrives, do a thorough nursery deep clean. Wash all fabrics — bedding, curtains, stuffed animals — in a fragrance-free, professional-grade detergent. New fabrics often contain formaldehyde and other chemicals from manufacturing that need to be washed out.
 
 Wipe down all furniture with a natural cleaner. Cribs, changing tables, dressers, and shelving should be cleaned and allowed to air out, especially if they're new. Off-gassing from new furniture is a real concern for nurseries.
 
@@ -1641,10 +1641,10 @@ Deep clean the kitchen and guest areas, wash all holiday linens, and do a thorou
     category: "seasonal",
   },
   {
-    subject: "Eco-Friendly Gift Ideas for the Clean Home Lover",
+    subject: "Professional Gift Ideas for the Clean Home Lover",
     preview: "Sustainable gift ideas that keep on giving all year long.",
     heading: "Green Gifts They'll Love",
-    body: `Looking for a gift that's thoughtful, practical, and environmentally responsible? Here are our favorite eco-friendly gifts for the clean home enthusiast in your life.
+    body: `Looking for a gift that's thoughtful, practical, and environmentally responsible? Here are our favorite professional gifts for the clean home enthusiast in your life.
 
 A professional professional maintenance session. Seriously — this is one of the most appreciated gifts anyone can receive. It's not just a service; it's the gift of time, health, and a beautiful home.
 
@@ -1661,7 +1661,7 @@ Wool dryer balls with a set of essential oils. They replace dryer sheets for ove
 Every one of these gifts reduces waste, eliminates chemicals from the home, and shows you care about both the recipient and the planet.`,
     tip: {
       title: "Gift Wrapping Tip",
-      text: "Wrap eco-friendly gifts in eco-friendly packaging: fabric wraps (furoshiki style), newspaper comics page, brown kraft paper with twine, or reusable gift bags. It reinforces the green message beautifully.",
+      text: "Wrap professional gifts in professional packaging: fabric wraps (furoshiki style), newspaper comics page, brown kraft paper with twine, or reusable gift bags. It reinforces the green message beautifully.",
     },
     cta: { text: "Gift a Tri State Clean", url: "/get-a-quote" },
     promoCode: "GIFTCLEAN",
@@ -1815,7 +1815,7 @@ For a limited time, new clients can enjoy a special discount on their first clea
 
 Here's what you can expect from your first visit: a thorough deep clean using exclusively organic, professional-grade equipment. A professional, uniformed team that arrives on time with all supplies and equipment. Attention to detail in every room, including those hidden spots most services overlook.
 
-After your first clean, there's absolutely no obligation to continue — but we think you'll want to. Over 90% of our first-time clients become recurring customers. Once you experience a truly clean, chemical-free home, it's hard to go back.
+After your first clean, there's absolutely no obligation to continue — but we think you'll want to. Over 90% of our first-time clients become recurring customers. Once you experience a truly clean, expert home, it's hard to go back.
 
 Our satisfaction guarantee means there's zero risk. If you're not completely happy with the results, we'll come back and make it right at no charge. That's how confident we are in our team and our products.`,
     tip: {
@@ -1941,7 +1941,7 @@ Our lanai cleaning service covers screens, tracks, floors, and furniture — tra
     category: "tip",
   },
   {
-    subject: "Green Cleaning on a Budget: Affordable Organic Options",
+    subject: "Professional Services on a Budget: Affordable Organic Options",
     preview: "You don't need to break the bank to clean your home the natural way.",
     heading: "Tri State on Any Budget",
     body: `One of the biggest myths about professional maintenance is that it's expensive. In reality, many of the most effective natural cleaning products cost a fraction of their conventional counterparts. Your pantry is practically a cleaning supply store.
@@ -1952,14 +1952,14 @@ Compare that to buying separate specialty products for every surface — glass c
 
 Essential oils are the one "luxury" ingredient, but they're optional and a single small bottle lasts for months since you only use drops at a time. Lemon and tea tree are the two most versatile for cleaning purposes.
 
-For professional professional maintenance, our services are competitively priced with conventional cleaning companies. The organic premium is minimal because plant-based products have become mainstream and cost-efficient. You're not paying extra for green — you're just paying for a smarter, safer clean.
+For professional professional maintenance, our services are competitively priced with conventional cleaning companies. The organic premium is minimal because professional-grade products have become mainstream and cost-efficient. You're not paying extra for green — you're just paying for a smarter, safer clean.
 
 Going green is a budget-friendly choice that saves money while protecting your family's health.`,
     tip: {
       title: "Budget Green Tip",
       text: "Buy white vinegar and baking soda in bulk at warehouse stores. A gallon of vinegar and a large bag of baking soda cost under $5 total and handle 80% of household cleaning tasks.",
     },
-    cta: { text: "Affordable Green Cleaning", url: "/get-a-quote" },
+    cta: { text: "Affordable Professional Services", url: "/get-a-quote" },
     category: "eco",
   },
   {
@@ -1970,7 +1970,7 @@ Going green is a budget-friendly choice that saves money while protecting your f
 
 A whole-home detox doesn't happen overnight, but room-by-room changes add up quickly.
 
-Kitchen: Replace chemical cleaners with plant-based alternatives. Switch to natural dish soap. Store food in glass containers instead of plastic. Get rid of non-stick cookware with PFAS coatings.
+Kitchen: Replace chemical cleaners with professional-grade alternatives. Switch to natural dish soap. Store food in glass containers instead of plastic. Get rid of non-stick cookware with PFAS coatings.
 
 Bathroom: Swap conventional cleaning products for organic options. Choose fragrance-free personal care products. Replace vinyl shower curtains with fabric or PEVA alternatives.
 
@@ -1978,9 +1978,9 @@ Bedroom: Use organic or natural fiber bedding. Remove air fresheners and synthet
 
 Living areas: Open windows daily for fresh air exchange. Replace synthetic air fresheners with essential oil diffusers or simply good ventilation. Dust regularly with damp cloths to capture rather than redistribute particles.
 
-Laundry: Switch to a plant-based, fragrance-free detergent. Replace dryer sheets with wool dryer balls. Skip fabric softener — it coats fibers with synthetic chemicals.
+Laundry: Switch to a professional-grade, fragrance-free detergent. Replace dryer sheets with wool dryer balls. Skip fabric softener — it coats fibers with synthetic chemicals.
 
-Our professional maintenance service is a key part of the home detox process. Every visit replaces potential chemical exposure with proven-safe, plant-based alternatives.`,
+Our professional maintenance service is a key part of the home detox process. Every visit replaces potential chemical exposure with proven-safe, professional-grade alternatives.`,
     tip: {
       title: "Home Detox Tip",
       text: "Start your detox by replacing one product per week as you run out of the old ones. Trying to switch everything at once is overwhelming and expensive. Gradual change is sustainable change.",

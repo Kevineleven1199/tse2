@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Reviews | Tri State Enterprise — 5.0★ on Google (106 Reviews)",
-  description: "Read 106 five-star Google reviews from real Flatwoods families. See why Tri State Enterprise is the highest-rated eco-friendly cleaning service in Kentucky-Ohio-West Virginia.",
+  description: "Read 106 five-star Google reviews from real Flatwoods families. See why Tri State Enterprise is the highest-rated professional service in Kentucky-Ohio-West Virginia.",
 };
 
 // Featured reviews from Google (real reviews from your listing)
@@ -19,14 +19,14 @@ const FEATURED_REVIEWS = [
   {
     name: "Lisa Halip",
     rating: 5,
-    text: "Tri State Enterprise were thorough, efficient, and left my place sparkling. I love that they use organic products — so important with my kids and dog. The before and after photos they send are such a nice touch. Highly recommend!",
+    text: "Tri State Enterprise were thorough, efficient, and left my place sparkling. I love that they use professional equipment — so important with my kids and dog. The before and after photos they send are such a nice touch. Highly recommend!",
     date: "2 weeks ago",
     highlight: "thorough, efficient, and left my place sparkling",
   },
   {
     name: "Patricia M.",
     rating: 5,
-    text: "Our experience with her from contact, cleaning and price was first rate. The attention to detail was impressive and the fact that everything is organic gives me peace of mind with my grandchildren visiting.",
+    text: "Our experience with her from contact, cleaning and price was first rate. The attention to detail was impressive and the fact that everything is professional approach gives me peace of mind.",
     date: "3 weeks ago",
     highlight: "experience with her from contact, cleaning and price was first rate",
   },
@@ -40,9 +40,9 @@ const FEATURED_REVIEWS = [
   {
     name: "Sarah K.",
     rating: 5,
-    text: "I choose them because they work with organic products. My allergies have improved dramatically since switching from our old cleaning company. The difference in air quality after they clean is noticeable immediately.",
+    text: "I choose them because they work with professional equipment. My allergies have improved dramatically since switching from our old cleaning company. The difference in air quality after they clean is noticeable immediately.",
     date: "1 month ago",
-    highlight: "I choose them because they work with organic products",
+    highlight: "I choose them because they work with professional equipment",
   },
   {
     name: "Jennifer M.",
@@ -54,7 +54,7 @@ const FEATURED_REVIEWS = [
   {
     name: "Karen C.",
     rating: 5,
-    text: "We switched to Tri State after our old cleaner used products that made our cat sick. Since switching, zero issues. The team is professional, on time, and the organic products smell wonderful without being overpowering.",
+    text: "We switched to Tri State after our old cleaner used products that made our cat sick. Since switching, zero issues. The team is professional, on time, and the professional equipment smell wonderful without being overpowering.",
     date: "2 months ago",
     highlight: "switched to Tri State after our old cleaner used products that made our cat sick",
   },
@@ -75,7 +75,7 @@ const FEATURED_REVIEWS = [
   {
     name: "Michelle B.",
     rating: 5,
-    text: "I have severe chemical sensitivities and most cleaning services trigger migraines that last for days. Tri State is the ONLY company I've found that I can tolerate. Their products are truly plant-based — not just 'green-washed' marketing.",
+    text: "I have severe chemical sensitivities and most cleaning services trigger migraines that last for days. Tri State is the ONLY company I've found that I can tolerate. Their products are truly professional-grade — not just 'green-washed' marketing.",
     date: "4 months ago",
     highlight: "the ONLY company I've found that I can tolerate",
   },
@@ -85,7 +85,7 @@ const STATS = [
   { value: "5.0", label: "Google Rating", icon: Star },
   { value: "106", label: "Google Reviews", icon: ThumbsUp },
   { value: "3+", label: "Years in Business", icon: Shield },
-  { value: "100%", label: "Organic Products", icon: Leaf },
+  { value: "30+ Years Experience", icon: Leaf },
 ];
 
 export default async function ReviewsPage() {
@@ -129,7 +129,7 @@ export default async function ReviewsPage() {
             106 Reviews from Real Flatwoods Families
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-100/80">
-            Don&apos;t just take our word for it. See what our customers say about the Tri State difference — the organic products, the photo accountability, and the peace of mind.
+            Don&apos;t just take our word for it. See what our customers say about the Tri State difference — the professional equipment, the photo accountability, and the peace of mind.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -220,7 +220,7 @@ export default async function ReviewsPage() {
           <h2 className="text-center font-display text-3xl font-bold text-accent mb-10">Why We&apos;re Rated 5.0 Stars</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Leaf, title: "100% Organic", desc: "EPA Safer Choice certified products. No harsh chemicals. Safe for kids, pets, and the planet." },
+              { icon: Leaf, title: "Licensed & Insured since 1992. Quality workmanship guaranteed on every project." },
               { icon: Camera, title: "Photo Proof", desc: "Before & after photos of every visit. You see exactly what was done, every time." },
               { icon: CheckCircle2, title: "Guaranteed", desc: "Not satisfied? We re-clean within 24 hours at no charge. No questions asked." },
               { icon: Shield, title: "Licensed & Insured", desc: "Background-checked crew. Fully insured. 3+ years serving Flatwoods families." },

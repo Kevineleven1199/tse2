@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { CalendarDays, ArrowLeft, Clock, Leaf } from "lucide-react";
+import { CalendarDays, ArrowLeft, Clock, Wrench } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
@@ -17,240 +17,213 @@ async function getDbPost(slug: string) {
 }
 
 const POSTS: Record<string, { title: string; date: string; readTime: string; category: string; metaDescription: string; content: string }> = {
-  "why-organic-cleaning-safer-kids-pets": {
-    title: "Why Organic Cleaning is Safer for Your Kids and Pets",
+  "signs-hvac-system-needs-replacement": {
+    title: "5 Signs Your HVAC System Needs Replacement",
     date: "2026-03-20",
     readTime: "4 min read",
-    category: "Health & Safety",
-    metaDescription: "Learn why organic cleaning products are safer for children and pets. Traditional cleaners contain 62+ chemicals linked to health issues.",
-    content: `Most families don't realize that the very products meant to "clean" their homes are introducing dozens of harmful chemicals into their living spaces.
+    category: "HVAC",
+    metaDescription: "Learn the five key warning signs that your heating and cooling system needs replacement. Tri State Enterprise serves the KY-OH-WV Tri-State area.",
+    content: `Your HVAC system is one of the most critical and expensive components of your home. Knowing when to repair versus replace can save you thousands of dollars and keep your family comfortable year-round.
 
-## The Hidden Problem with Traditional Cleaners
+## 1. Your System Is Over 15 Years Old
 
-The average household cleaning product contains between 50 and 65 synthetic chemicals. Many of these — like phthalates, triclosan, and quaternary ammonium compounds — are classified as endocrine disruptors, meaning they interfere with hormonal systems in both humans and animals.
+The average lifespan of a central air conditioning unit is 15-20 years, and a furnace typically lasts 15-25 years. If your system is approaching or past these milestones, replacement is often more cost-effective than continued repairs.
 
-Children are especially vulnerable because they spend more time on floors, put objects in their mouths, and have developing immune systems that are less equipped to process chemical exposure.
+Modern systems are significantly more energy-efficient. A unit installed in 2006 likely has a SEER rating of 10-13, while today's units range from 15-25 SEER. That efficiency gap translates directly into your monthly energy bills.
 
-## Why Pets Are at Even Greater Risk
+## 2. Rising Energy Bills Without Explanation
 
-Your pets are 5-10x more sensitive to chemical residue than humans. Dogs and cats walk on chemically-treated floors, then groom their paws — directly ingesting whatever was sprayed. Cats are particularly susceptible because their livers lack certain enzymes needed to break down common cleaning chemicals.
+If your electricity or gas bills have been climbing steadily without a corresponding increase in usage, your HVAC system may be losing efficiency. As components wear out, the system has to work harder to maintain the same temperature, consuming more energy in the process.
 
-Common symptoms of chemical exposure in pets include respiratory irritation, skin rashes, excessive drooling, and in severe cases, organ damage from chronic exposure.
+Compare your bills year-over-year for the same months. An increase of 15-20% or more with similar usage patterns is a strong indicator that your system is struggling.
 
-## What Makes Organic Cleaning Different
+## 3. Frequent and Expensive Repairs
 
-Organic cleaning products certified by the EPA Safer Choice program or Green Seal use plant-derived surfactants, essential oils, and biodegradable compounds. These ingredients clean effectively without leaving toxic residue.
+The general rule of thumb: if a single repair costs more than 50% of the value of a new system, or if you are calling for repairs more than twice per year, replacement makes better financial sense.
 
-At Tri State Enterprise, every product we use is third-party certified. We never use chlorine bleach, ammonia, synthetic fragrances, or petroleum-based solvents.
+Keep a log of all repair costs. When cumulative repairs over two years exceed 30% of replacement cost, you have reached the tipping point.
 
-## The Bottom Line
+## 4. Uneven Temperatures and Poor Airflow
 
-Switching to organic cleaning isn't just an environmental choice — it's a health decision that directly impacts the people and animals you love most. The 10-15% premium for organic cleaning pays for itself many times over in reduced health risks.
+If some rooms are too hot while others are too cold, or if you notice weak airflow from your vents, your system may no longer be capable of properly distributing conditioned air throughout your home.
 
-Ready to make the switch? [Get your free quote](/get-a-quote) and experience the difference organic cleaning makes in your home.`,
+This can stem from a failing compressor, deteriorating ductwork, or a system that was never properly sized for your home. A professional assessment can identify the root cause.
+
+## 5. Strange Noises or Odors
+
+Banging, squealing, grinding, or rattling noises from your HVAC unit are signs of serious mechanical problems. Similarly, musty or burning smells can indicate mold in the ductwork or electrical issues in the unit.
+
+These symptoms often mean components are failing and the system is nearing the end of its useful life.
+
+## What to Do Next
+
+If you are experiencing any of these warning signs, schedule a professional assessment. At Tri State Enterprise, we provide honest evaluations and will recommend repair when it makes sense and replacement only when it is truly necessary.
+
+[Get your free HVAC assessment](/get-a-quote) today. We serve the entire KY-OH-WV Tri-State area from our Flatwoods, KY headquarters.`,
   },
 
-  "chemicals-your-cleaning-company-wont-tell-you": {
-    title: "5 Things Your Cleaning Company Won't Tell You About Chemicals",
+  "spring-landscaping-projects-add-property-value": {
+    title: "Spring Landscaping Projects That Add Property Value",
     date: "2026-03-15",
     readTime: "5 min read",
-    category: "Industry Secrets",
-    metaDescription: "Discover what most cleaning companies don't tell you about the chemicals they use in your home. From green-washing to hidden VOCs.",
-    content: `The cleaning industry has a transparency problem. Here are five things most companies would rather you didn't know.
+    category: "Landscaping",
+    metaDescription: "Discover which spring landscaping projects deliver the best ROI for Tri-State area homeowners. From retaining walls to hardscape patios.",
+    content: `Spring is the ideal time to invest in landscaping projects in the KY-OH-WV Tri-State area. The weather cooperates, plants establish well, and you get to enjoy the results all summer. Here are the projects that deliver the best return on investment.
 
-## 1. "Green" Labels Often Mean Nothing
+## Retaining Walls: Function Meets Curb Appeal
 
-The terms "natural," "eco-friendly," and "green" are not regulated by the FDA or EPA for cleaning products. Any company can slap these labels on a bottle of conventional chemicals. The only certifications that matter are EPA Safer Choice, Green Seal, and USDA BioPreferred.
+Retaining walls are one of the highest-ROI landscaping investments, especially on the hilly terrain common throughout eastern Kentucky, southern Ohio, and western West Virginia. A well-built retaining wall prevents erosion, creates usable yard space on sloped lots, and dramatically improves curb appeal.
 
-Always ask your cleaning company: "Which specific certifications do your products carry?" If they can't answer, they're likely using conventional products with green marketing.
+Materials range from natural stone and segmental block to poured concrete. For most residential applications, segmental block walls offer the best balance of cost, durability, and appearance. Expect to invest $3,000-$8,000 for a typical residential retaining wall, with an ROI of 60-75% at resale.
 
-## 2. Air Quality Gets Worse After a Traditional Clean
+## Hardscape Patios and Walkways
 
-Studies from the Environmental Working Group found that indoor air quality actually decreases by 200-500% immediately after cleaning with conventional products. Volatile Organic Compounds (VOCs) from sprays, disinfectants, and air fresheners linger for 24-48 hours.
+A paver patio or stamped concrete walkway extends your living space outdoors and consistently ranks among the top landscaping investments. In the Tri-State area, flagstone and concrete pavers are popular choices that hold up well through our freeze-thaw cycles.
 
-## 3. Your Cleaning Crew Is Exposed Too
+Consider adding a fire pit area to maximize year-round use. A basic patio with fire pit runs $4,000-$10,000 and typically returns 50-70% of the investment at sale.
 
-Professional cleaners using conventional products have a 43% higher rate of asthma and a 25% higher rate of respiratory issues compared to the general population. Companies that care about their crew use safer products — it's a signal of how they run their business.
+## Professional Sod Installation
 
-## 4. "Hospital-Grade Disinfectant" Is Overkill for Homes
+Nothing transforms a property faster than fresh sod. If your lawn has bare patches, heavy weed invasion, or grading issues, spring is the perfect time for a full sod installation. In the Tri-State region, tall fescue and Kentucky bluegrass blends perform best given our climate.
 
-Unless someone in your household is immunocompromised, hospital-grade disinfectants are unnecessary and harmful for residential use. They're designed for operating rooms, not kitchens. Plant-based antimicrobials achieve the same level of cleanliness for home environments.
+Professional sod installation including grading and soil preparation typically costs $1.50-$3.00 per square foot. The curb appeal improvement is immediate and the ROI is strong at 200-300% for properties with poor existing lawns.
 
-## 5. The Real Cost Is Hidden
+## Tree and Shrub Planting
 
-Traditional cleaning seems cheaper upfront, but the hidden costs add up: air purifier filters, allergy medications, veterinary bills from pet chemical exposure, and long-term health impacts. When you factor in these costs, organic cleaning is often the more economical choice.
+Strategic tree and shrub placement provides shade that reduces cooling costs, screens unsightly views, and adds visual depth to your landscape. Mature trees can add $1,000-$10,000 to a property's appraised value depending on species, size, and placement.
 
-## What to Look For
+Focus on native species that thrive in our region: red maple, white oak, Eastern redbud, and serviceberry are excellent choices for the Tri-State area.
 
-Ask these three questions before hiring any cleaning service:
-- Can you provide Safety Data Sheets for every product you use?
-- Which third-party certifications do your products carry?
-- Do you use different products for homes with children or pets?
+## Drainage and Grading Improvements
 
-At Tri State Enterprise, every product ingredient list is available on request. [Get your free quote](/get-a-quote) today.`,
+Proper drainage protects your foundation, prevents basement flooding, and eliminates standing water that attracts mosquitoes. French drains, swales, and regrading are essential investments, especially on properties with water intrusion issues.
+
+This is one of the few landscaping projects that directly prevents costly damage. A $2,000-$5,000 drainage improvement can prevent tens of thousands in foundation repair costs.
+
+## Getting Started
+
+Spring fills up fast for landscaping contractors. The best time to schedule your spring projects is late winter so materials can be ordered and crews can be scheduled.
+
+[Get your free landscaping estimate](/get-a-quote) from Tri State Enterprise. We have been serving the KY-OH-WV Tri-State area since 1992.`,
   },
 
-  "sarasota-eco-friendly-home-guide": {
-    title: "Flatwoods's Complete Guide to Eco-Friendly Home Maintenance",
+  "home-construction-first-renovation": {
+    title: "Home Construction: What to Know Before Your First Renovation",
     date: "2026-03-10",
     readTime: "6 min read",
-    category: "Flatwoods Living",
-    metaDescription: "A seasonal guide to eco-friendly home maintenance in Flatwoods, KY. Tips for hurricane season, summer humidity, and year-round green living.",
-    content: `Living in Flatwoods means dealing with unique environmental challenges — from summer humidity to hurricane season. Here's how to maintain your home the eco-friendly way, season by season.
+    category: "Construction",
+    metaDescription: "Essential guide for first-time renovation homeowners in the KY-OH-WV area. Covers permits, timelines, budgets, and contractor selection.",
+    content: `Taking on your first home renovation is exciting but can quickly become overwhelming without proper preparation. Whether you are adding a room, remodeling a kitchen, or finishing a basement, here is everything you need to know before breaking ground.
 
-## Winter (December – February): Peak Season Prep
+## Start with Permits
 
-Flatwoods's peak tourist season means more visitors, more entertaining, and more cleaning needs.
+In Kentucky, Ohio, and West Virginia, most structural renovations require building permits. This includes additions, structural modifications, electrical work, plumbing changes, and HVAC installations. Cosmetic work like painting, flooring, and cabinet replacement typically does not require permits.
 
-- **Deep clean before holiday guests arrive** — Focus on guest bathrooms and common areas
-- **Switch to organic air fresheners** — Diffuse essential oils instead of synthetic sprays
-- **Clean lanai furniture** with a vinegar-water solution (1:1 ratio)
-- **Schedule weekly cleanings** if you have rental property — turnover rates spike
+Contact your local building department before starting any project. Permit fees in the Tri-State area typically range from $100-$500 depending on the scope of work. Skipping permits can result in fines, difficulty selling your home, and insurance complications.
 
-## Spring (March – May): Allergy Season
+## Set a Realistic Budget (Then Add 20%)
 
-Pollen counts in Flatwoods peak in March and April, making organic cleaning especially important.
+The number one cause of renovation stress is budget overruns. Construction projects almost always encounter surprises once walls are opened and existing conditions are revealed.
 
-- **HEPA-filter your vacuum** — Conventional vacuums recirculate allergens
-- **Wet-mop instead of dry-sweep** — Captures pollen instead of dispersing it
-- **Clean ceiling fans** — They've been off all winter and collect dust
-- **Wash curtains and window treatments** — Major pollen traps
+The industry standard is to set aside a 15-20% contingency fund on top of your estimated project cost. If your renovation is quoted at $50,000, budget $60,000 total. If you do not use the contingency, that is money back in your pocket.
 
-## Summer (June – September): Humidity Control
+## Understand the Timeline
 
-Kentucky's 80-90% humidity creates unique challenges for home maintenance.
+Renovation timelines in the Tri-State area are affected by several factors: permit processing times, material lead times, weather (especially for exterior work), and subcontractor availability.
 
-- **Mold prevention is everything** — Clean bathrooms weekly with plant-based antimicrobials
-- **Dehumidify closets** — Use silica gel packets or small dehumidifiers
-- **Clean AC filters monthly** — A dirty filter circulates mold spores
-- **Hurricane prep** — Keep cleaning supplies in waterproof containers
+General guidelines:
+- **Kitchen remodel**: 6-12 weeks
+- **Bathroom remodel**: 3-6 weeks
+- **Room addition**: 3-6 months
+- **Basement finishing**: 4-8 weeks
+- **Roof replacement**: 1-3 days for standard homes
 
-## Fall (October – November): Post-Hurricane Recovery
+Add 2-4 weeks to any timeline for permits and inspections. Weather delays are common for exterior projects between November and March.
 
-After storm season, homes need extra attention.
+## Choose the Right Contractor
 
-- **Check for hidden moisture** — Behind walls, under carpets, in closets
-- **Clean and sanitize** any areas exposed to standing water
-- **Replace any damaged weatherstripping** around doors and windows
-- **Schedule a deep clean** to reset your home after storm season
+Your contractor relationship will define your renovation experience. Here is what to look for:
 
-## Year-Round Flatwoods Tips
+- **Licensing and insurance**: Verify active state licenses and general liability insurance. Ask for certificates of insurance, not just claims of coverage.
+- **Local references**: Ask for 3-5 references from projects similar to yours, preferably in the same county.
+- **Written estimates**: Get at least three written estimates. Be wary of any bid that is significantly lower than the others as it often indicates corners that will be cut.
+- **Payment terms**: Never pay more than 10-15% upfront. Payments should be tied to completed milestones, not calendar dates.
+- **Communication style**: Your contractor should be responsive, clear, and willing to answer questions. Poor communication before the project starts only gets worse during construction.
 
-- **Use microfiber cloths** — They clean without chemicals using just water
-- **Make your own all-purpose cleaner**: 1 cup water + 1 cup white vinegar + 10 drops tea tree oil
-- **Choose bamboo or recycled paper towels** — Conventional paper towels use chlorine bleach
-- **Support local** — Flatwoods's eco community is growing; shop at farmers markets for cleaning supplies
+## Prepare Your Home and Family
 
-Need help keeping your Flatwoods home clean and green? [Get your free quote](/get-a-quote) — we serve Flatwoods, Ashland, South Shore, and surrounding areas.`,
+Living through a renovation requires planning:
+
+- **Dust containment**: Discuss dust barriers and containment plans with your contractor, especially for kitchen and bathroom renovations.
+- **Temporary arrangements**: For major kitchen or bathroom remodels, plan for alternative cooking and bathing arrangements.
+- **Pet safety**: Construction sites pose real dangers to pets. Plan to keep animals in a separate, secure area away from the work zone.
+- **Noise and schedule**: Understand daily work hours and set expectations with neighbors if needed.
+
+## The Tri State Enterprise Difference
+
+At Tri State Enterprise, we have guided hundreds of Tri-State area families through their first renovations since 1992. We provide detailed written estimates, maintain open communication throughout the project, and stand behind our work.
+
+[Get your free renovation estimate](/get-a-quote) and let us help you plan your project the right way.`,
   },
 
-  "how-often-deep-clean-room-by-room": {
-    title: "How Often Should You Deep Clean? A Room-by-Room Schedule",
+  "why-regular-lawn-maintenance-matters": {
+    title: "Why Regular Lawn Maintenance Matters for Property Value",
     date: "2026-03-05",
     readTime: "4 min read",
-    category: "Cleaning Tips",
-    metaDescription: "Science-backed cleaning frequency guide. Learn how often to deep clean every room in your home for optimal health and hygiene.",
-    content: `One of the most common questions we hear: "How often should I really be cleaning?" Here's the evidence-based answer, room by room.
+    category: "Lawn Care",
+    metaDescription: "Learn how regular lawn maintenance protects your property value, prevents costly repairs, and improves curb appeal in the KY-OH-WV Tri-State area.",
+    content: `A well-maintained lawn is more than just a nice thing to look at. It is a critical component of your property's value, structural health, and curb appeal. Here is why consistent lawn care should be a priority for every Tri-State area homeowner.
 
-## Kitchen: Weekly Deep Clean
+## Curb Appeal Drives Property Value
 
-The kitchen is the highest-traffic, highest-germ area of your home.
+Studies consistently show that quality landscaping adds 5-15% to a home's appraised value. For a $200,000 home in the Tri-State area, that translates to $10,000-$30,000 in additional value from professional lawn maintenance alone.
 
-- **Daily**: Wipe counters, wash dishes, clean stovetop
-- **Weekly**: Deep clean appliance surfaces, mop floors, sanitize handles
-- **Monthly**: Inside oven, inside fridge, behind appliances
-- **Quarterly**: Deep clean exhaust hood, descale coffee maker
+The first thing potential buyers see is your lawn. A patchy, weed-filled yard signals deferred maintenance throughout the entire property, while a lush, well-edged lawn communicates pride of ownership.
 
-## Bathrooms: Every 1-2 Weeks
+## Lawn Health Protects Your Foundation
 
-Bathrooms are breeding grounds for mold and bacteria, especially in Kentucky's humidity.
+Healthy turf grass is one of the best defenses against soil erosion and foundation problems. In the rolling hills of eastern Kentucky and the Ohio River valley, proper turf coverage prevents rainwater from washing away topsoil and pooling against your foundation.
 
-- **Every 3 days**: Wipe down shower walls after use
-- **Weekly**: Scrub toilet, clean mirrors, mop floor
-- **Biweekly**: Deep scrub shower/tub, clean grout
-- **Monthly**: Wash shower curtain, clean exhaust fan
+Bare spots and thin turf allow water to penetrate the soil unevenly, leading to settling, cracking, and potentially expensive foundation repairs. Regular mowing, fertilization, and overseeding maintain the dense turf coverage that protects your home.
 
-## Bedrooms: Biweekly
+## Weed Control Saves Money Long-Term
 
-Most people underestimate bedroom cleaning frequency.
+Weeds are not just unsightly; they compete with your grass for water, nutrients, and sunlight. Left unchecked, a weed problem compounds quickly. What starts as a few dandelions in spring becomes a full yard takeover by fall.
 
-- **Weekly**: Change sheets, vacuum or sweep floors
-- **Biweekly**: Dust all surfaces, clean under bed, wipe baseboards
-- **Monthly**: Wash pillows and comforters, flip/rotate mattress
-- **Quarterly**: Deep clean mattress, wash curtains
+Professional weed management through pre-emergent and targeted post-emergent applications costs a fraction of what a full lawn renovation would cost after years of neglect. An annual lawn care program typically runs $400-$800 for a standard Tri-State area yard, while a full lawn renovation (sod or seed, grading, and soil amendment) can cost $3,000-$8,000.
 
-## Living Areas: Weekly
+## Seasonal Maintenance Calendar for the Tri-State Area
 
-High-traffic living spaces collect dust and allergens rapidly.
+### Spring (March - May)
+- First mow when grass reaches 3-4 inches
+- Apply pre-emergent weed control by mid-April
+- Aerate compacted areas
+- Begin regular mowing schedule at 3-3.5 inch height
 
-- **Daily**: Quick tidy, fluff pillows
-- **Weekly**: Vacuum all floors, dust surfaces, clean remotes/switches
-- **Monthly**: Clean upholstery, wash throw blankets, clean windows
-- **Quarterly**: Deep clean carpets, clean ceiling fans, wash walls
+### Summer (June - August)
+- Maintain weekly mowing schedule
+- Water deeply but infrequently (1 inch per week)
+- Raise mowing height during heat stress periods
+- Spot-treat broadleaf weeds as needed
 
-## The 80/20 Rule
+### Fall (September - November)
+- Overseed thin areas in September
+- Apply fall fertilizer in October
+- Continue mowing until growth stops
+- Remove leaves promptly to prevent smothering
 
-80% of your home's cleanliness comes from maintaining just these four areas consistently: kitchen counters, bathroom surfaces, floors, and high-touch surfaces (handles, switches, remotes).
+### Winter (December - February)
+- Service and sharpen mower blades
+- Plan spring improvements
+- Avoid walking on frozen turf
 
-If you can only do one thing, focus on those four. For everything else, [let us help](/get-a-quote) — that's what we're here for.`,
-  },
+## Professional vs. DIY Maintenance
 
-  "organic-vs-traditional-cleaning-real-cost": {
-    title: "Organic vs. Traditional Cleaning: The Real Cost Comparison",
-    date: "2026-02-28",
-    readTime: "5 min read",
-    category: "Value",
-    metaDescription: "Is organic cleaning worth the premium? A detailed cost comparison including hidden health costs of traditional cleaning chemicals.",
-    content: `At first glance, organic cleaning services cost 10-15% more than traditional alternatives. But when you factor in the true total cost, the math tells a very different story.
+While basic mowing can be handled by homeowners, professional lawn care programs deliver measurably better results because they include proper fertilization timing, targeted weed control, and expert diagnosis of turf problems.
 
-## The Sticker Price Comparison
+At Tri State Enterprise, our lawn care programs are tailored to the specific grass types and soil conditions of the KY-OH-WV region. We have been maintaining properties in the Tri-State area since 1992.
 
-For a typical 2,000 sq ft Flatwoods home with biweekly cleaning:
-
-- **Traditional cleaning service**: $130-160 per visit
-- **Organic cleaning service**: $149-185 per visit
-- **Difference**: ~$20-25 more per visit, or $40-50 per month
-
-That $50/month premium is real. But it's only part of the equation.
-
-## The Hidden Costs of Traditional Cleaning
-
-### Healthcare Costs
-- Families using traditional cleaners report 30% more respiratory visits per year
-- Average cost of an urgent care visit for chemical-related symptoms: $150-300
-- Allergy medication for chemical sensitivity: $25-50/month
-
-### Pet Health
-- Veterinary visits for chemical-related skin/respiratory issues: $200-500 per incident
-- Pets in traditionally-cleaned homes have 40% more skin irritation diagnoses
-
-### Indoor Air Quality
-- HEPA air purifier to compensate for VOCs: $200-400 upfront + $50-100/year in filters
-- Without purification, you're breathing those chemicals 24/7
-
-### Property Damage
-- Harsh chemicals degrade granite countertops, hardwood floors, and stainless steel over time
-- Average refinishing cost for chemical-damaged countertops: $500-1,500
-
-## The Real Math
-
-| Cost Category | Traditional (Annual) | Organic (Annual) |
-|---|---|---|
-| Cleaning service (biweekly) | $3,640 | $4,290 |
-| Extra healthcare visits | $450 | $0 |
-| Allergy medications | $360 | $0 |
-| Pet vet visits | $350 | $0 |
-| Air purifier + filters | $250 | $0 |
-| Surface damage | $200 | $0 |
-| **Total** | **$5,250** | **$4,290** |
-
-**Organic cleaning actually saves $960 per year** when you account for the hidden costs of traditional chemicals.
-
-## Beyond the Numbers
-
-Some things don't have a price tag: peace of mind knowing your children can play on the floor safely, your pets aren't ingesting toxins, and your home's air is genuinely clean.
-
-Ready to make the switch? [Get your free organic cleaning quote](/get-a-quote) in 30 seconds. Flatwoods families trust Tri State Enterprise for a reason.`,
+[Get your free lawn care estimate](/get-a-quote) and see the difference professional maintenance makes.`,
   },
 };
 
@@ -326,10 +299,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
           <h1 className="font-display text-3xl font-bold text-accent md:text-4xl leading-tight">{post.title}</h1>
           <div className="mt-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-700"><Leaf className="h-5 w-5" /></div>
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-700"><Wrench className="h-5 w-5" /></div>
             <div>
               <p className="text-sm font-semibold text-accent">Tri State Enterprise</p>
-              <p className="text-xs text-muted-foreground">Flatwoods's Premier Organic Cleaning Service</p>
+              <p className="text-xs text-muted-foreground">Serving the KY-OH-WV Tri-State Area Since 1992</p>
             </div>
           </div>
         </div>
@@ -342,10 +315,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {/* CTA */}
         <div className="mt-12 rounded-3xl bg-gradient-to-br from-brand-600 to-accent p-8 text-center text-white">
-          <h2 className="font-display text-2xl font-bold">Ready for a Healthier Home?</h2>
-          <p className="mt-2 text-brand-100">Get your free quote in 30 seconds. 100% organic, satisfaction guaranteed.</p>
+          <h2 className="font-display text-2xl font-bold">Ready to Start Your Next Project?</h2>
+          <p className="mt-2 text-brand-100">Get your free estimate in 30 seconds. Licensed, bonded, and insured since 1992.</p>
           <Link href="/get-a-quote" className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold uppercase tracking-wider text-accent transition hover:bg-brand-50">
-            Get a Free Quote
+            Get a Free Estimate
           </Link>
         </div>
       </div>

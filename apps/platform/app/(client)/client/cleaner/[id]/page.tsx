@@ -43,7 +43,7 @@ const CleanerProfilePage = async ({
   const avgRating = { count: 0 };
 
   const certifications = [
-    { name: "EPA Safer Choice Products", icon: "shield" },
+    { name: "Professional Grade Products", icon: "shield" },
     { name: "Background Checked", icon: "check" },
     { name: "Licensed & Insured", icon: "award" },
   ];
