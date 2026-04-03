@@ -15,6 +15,12 @@ enum Role {
 }
 
 enum ServiceType {
+  // Legacy (used throughout existing codebase)
+  HOME_CLEAN
+  PRESSURE_WASH
+  AUTO_DETAIL
+  CUSTOM
+  // TSE2-specific service types
   RESIDENTIAL_SERVICE
   SITE_WORK
   HVAC_SERVICE
@@ -129,7 +135,7 @@ enum CommunityAuthorRole {
   CLIENT
   CLEANER
   ADMIN
-  GOGREEN
+  TRISTATE
 }
 
 enum CommunityReactionType {
@@ -449,7 +455,7 @@ model CommunityPost {
   mediaUrl     String?
   mediaUrls    String[]             @default([])
   authorName   String
-  authorRole   CommunityAuthorRole  @default(GOGREEN)
+  authorRole   CommunityAuthorRole  @default(TRISTATE)
   authorBadge  String?
   authorUserId String?
   authorUser   User?                @relation("CommunityAuthor", fields: [authorUserId], references: [id])
