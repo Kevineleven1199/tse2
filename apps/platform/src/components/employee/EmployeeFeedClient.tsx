@@ -280,7 +280,7 @@ export const EmployeeFeedClient = ({
             No posts yet — be the first!
           </p>
           <p className="text-sm text-muted-foreground">
-            Share an update, cleaning tip, or job photo with the team.
+            Share an update, project tip, or job photo with the team.
           </p>
           <Link
             href="/employee-hub/new"

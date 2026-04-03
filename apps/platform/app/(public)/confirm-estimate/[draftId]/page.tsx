@@ -129,7 +129,7 @@ export default function ConfirmEstimatePage({
     );
   }
 
-  const serviceLabel = SERVICE_LABELS[draft?.serviceType ?? ""] ?? "Cleaning Service";
+  const serviceLabel = SERVICE_LABELS[draft?.serviceType ?? ""] ?? "Service Estimate";
   const price = draft?.estimatedCost ? `$${draft.estimatedCost.toFixed(0)}` : "Custom";
 
   return (
@@ -138,7 +138,7 @@ export default function ConfirmEstimatePage({
       <div className="bg-gradient-to-br from-[#0d5e3b] to-[#16a34a] text-white">
         <div className="mx-auto max-w-lg px-5 py-8 text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Tri State Enterprise</p>
-          <h1 className="mt-3 text-2xl font-bold">Your Cleaning Estimate</h1>
+          <h1 className="mt-3 text-2xl font-bold">Your Service Estimate</h1>
           <p className="mt-2 text-white/80 text-sm">Personalized for {draft?.customerName?.split(" ")[0] || "you"}</p>
         </div>
       </div>
@@ -168,7 +168,7 @@ export default function ConfirmEstimatePage({
           {confirming ? (
             <span className="flex items-center justify-center gap-2"><Loader2 className="h-5 w-5 animate-spin" /> Confirming...</span>
           ) : (
-            "Confirm My Cleaning"
+            "Confirm My Service"
           )}
         </button>
 
@@ -183,7 +183,7 @@ export default function ConfirmEstimatePage({
         {/* Footer */}
         <div className="pt-4 text-center text-xs text-gray-400">
           <p>Tri State Enterprise · Flatwoods, KY</p>
-          <p className="mt-1">Eco-friendly cleaning you can trust</p>
+          <p className="mt-1">Quality service you can trust</p>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ const SERVICE_OPTIONS: { value: QuoteServiceType; label: string; description: st
   { 
     value: "healthy_home", 
     label: "Healthy Home", 
-    description: "Weekly, bi-weekly, or monthly maintenance cleaning",
+    description: "Weekly, bi-weekly, or monthly maintenance service",
     icon: Home,
     popular: true
   },
@@ -54,7 +54,7 @@ const FREQUENCY_OPTIONS: { value: QuoteFrequency; label: string; savings: string
   { value: "weekly", label: "Weekly", savings: "Save 22%", description: "Best results + biggest savings", popular: true },
   { value: "biweekly", label: "Every 2 Weeks", savings: "Save 15%", description: "Our most popular choice" },
   { value: "monthly", label: "Monthly", savings: "Save 8%", description: "Perfect for light-traffic homes" },
-  { value: "one_time", label: "One Time", savings: "", description: "Single deep clean or special event" },
+  { value: "one_time", label: "One Time", savings: "", description: "One-time project or special job" },
 ];
 
 const ADD_ON_OPTIONS: { value: QuoteAddOn; label: string; price: string; icon: string }[] = [

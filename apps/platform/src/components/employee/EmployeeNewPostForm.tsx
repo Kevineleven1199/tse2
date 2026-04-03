@@ -10,7 +10,7 @@ const EMPLOYEE_CATEGORIES: {
   label: string;
   icon: string;
 }[] = [
-  { key: "cleaning_tip", label: "Tip", icon: "💡" },
+  { key: "project_tip", label: "Tip", icon: "💡" },
   { key: "before_after", label: "Photo Update", icon: "📸" },
   { key: "question", label: "Question", icon: "❓" },
   { key: "recommendation", label: "Shoutout", icon: "⭐" },
@@ -37,7 +37,7 @@ export default function EmployeeNewPostForm({
   sessionRole,
 }: EmployeeNewPostFormProps) {
   const router = useRouter();
-  const [category, setCategory] = useState<PostCategory>("cleaning_tip");
+  const [category, setCategory] = useState<PostCategory>("project_tip");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -200,8 +200,8 @@ export default function EmployeeNewPostForm({
             placeholder={
               category === "question"
                 ? "Share more details so the team can help..."
-                : category === "cleaning_tip"
-                  ? "Share your cleaning tip with the team..."
+                : category === "project_tip"
+                  ? "Share your project tip with the team..."
                   : category === "before_after"
                     ? "Describe the job and the transformation..."
                     : category === "recommendation"

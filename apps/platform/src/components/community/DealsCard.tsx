@@ -20,7 +20,7 @@ export const DealsCard = ({ deals }: DealsCardProps) => {
   };
 
   const CATEGORY_STYLES = {
-    cleaning: { bg: "bg-brand-50", border: "border-brand-200", icon: "🧹" },
+    project: { bg: "bg-brand-50", border: "border-brand-200", icon: "🧹" },
     eco_product: { bg: "bg-green-50", border: "border-green-200", icon: "🌿" },
     home_service: { bg: "bg-blue-50", border: "border-blue-200", icon: "🏠" },
     local_business: { bg: "bg-purple-50", border: "border-purple-200", icon: "🏪" }

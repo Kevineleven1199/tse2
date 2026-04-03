@@ -1,28 +1,28 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/src/lib/animations";
 import { Card, CardContent, CardHeader } from "@/src/components/ui/card";
+import { FileText, HardHat, ThumbsUp } from "lucide-react";
 
 const STEPS = [
   {
-    title: "Request Your Quote",
+    title: "Request Your Estimate",
     description:
-      "Tell us about your project, choose your preferred timeline, and get a free estimate. Construction, HVAC, lawn care, landscaping, site work, or paving.",
-    icon: "/images/broom.png"
+      "Tell us about your project and get a free, no-obligation estimate. Construction, HVAC, lawn care, landscaping, site work, or paving — one call does it all.",
+    Icon: FileText,
   },
   {
-    title: "We Prepare & Clean Green",
+    title: "We Get to Work",
     description:
-      "Our Flatwoods crew arrives with certified eco products and a task list built just for you — every surface polished without the harsh chemicals.",
-    icon: "/images/booking.png"
+      "Our experienced Tri-State crew arrives on schedule with professional equipment and a detailed project plan. Quality craftsmanship on every job.",
+    Icon: HardHat,
   },
   {
-    title: "Breathe & Enjoy",
+    title: "Quality Guaranteed",
     description:
-      "Come back to a healthier space with long-lasting freshness, improved indoor air, and zero toxic residue — backed by our satisfaction guarantee.",
-    icon: "/images/clean.png"
+      "Your project is completed to the highest standards. We stand behind every job with our satisfaction guarantee — backed by 30+ years of experience.",
+    Icon: ThumbsUp,
   }
 ];
 
@@ -37,10 +37,10 @@ export const HowItWorks = () => (
         className="mx-auto max-w-3xl text-center text-accent"
       >
         <motion.span variants={fadeUp} className="text-sm font-semibold uppercase tracking-[0.3em] text-accent/70">
-          Simple & Seamless
+          Simple &amp; Seamless
         </motion.span>
         <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-semibold leading-tight md:text-4xl">
-          Three steps to a naturally clean space
+          Three steps to getting your project done right
         </motion.h2>
       </motion.div>
 
@@ -55,8 +55,8 @@ export const HowItWorks = () => (
           <motion.div key={step.title} variants={fadeUp}>
             <Card className="h-full bg-white text-center">
               <CardHeader className="flex flex-col items-center gap-4">
-                <span className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-100">
-                  <Image src={step.icon} alt={step.title} width={64} height={64} />
+                <span className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                  <step.Icon className="h-10 w-10" />
                 </span>
                 <h3 className="text-lg font-semibold text-accent">{step.title}</h3>
               </CardHeader>

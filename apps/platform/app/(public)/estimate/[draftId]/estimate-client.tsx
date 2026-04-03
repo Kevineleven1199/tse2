@@ -78,7 +78,7 @@ export function EstimateClient({
           <div className="mt-8 rounded-3xl border border-brand-100 bg-brand-50/30 p-6 text-left">
             <h3 className="font-semibold text-accent mb-3">What happens next:</h3>
             <div className="space-y-3">
-              {["We're assigning your dedicated cleaning crew", "You'll receive a confirmation text with your crew's name", "24 hours before: we'll send a reminder with arrival window", "After service: before & after photos delivered to your portal"].map((step, i) => (
+              {["We're assigning your dedicated service crew", "You'll receive a confirmation with your crew details", "24 hours before: we'll send a reminder with arrival window", "After completion: before & after photos delivered to your portal"].map((step, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">{i + 1}</span>
                   <span className="text-sm text-accent">{step}</span>

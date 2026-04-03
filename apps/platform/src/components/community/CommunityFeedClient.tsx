@@ -242,7 +242,7 @@ export const CommunityFeedClient = ({
           No posts yet — be the first!
         </p>
         <p className="text-sm text-muted-foreground">
-          Share a cleaning tip, ask a question, or post a transformation.
+          Share a project tip, ask a question, or post photos.
         </p>
         <Link
           href="/community/new"

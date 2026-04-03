@@ -237,7 +237,7 @@ export const FullCalendar = ({ initialJobs }: Props) => {
                 <Calendar className="h-5 w-5" />
                 <h1 className="text-2xl font-bold">Schedule Management</h1>
               </div>
-              <p className="text-brand-100">Organize and manage your cleaning jobs</p>
+              <p className="text-brand-100">Organize and manage your service jobs</p>
             </div>
             <button
               onClick={() => setScheduleModal({ open: true })}

@@ -31,7 +31,7 @@ const MESSAGES: Record<CelebrationProps["type"], { emoji: string; title: string;
   reschedule: {
     emoji: "📅",
     title: "Rescheduled Successfully!",
-    subtitle: "Your new cleaning date is confirmed. Flexibility is our thing!",
+    subtitle: "Your new service date is confirmed. Flexibility is our thing!",
   },
   payment: {
     emoji: "💚",

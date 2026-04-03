@@ -370,7 +370,7 @@ export default function GetAQuotePage() {
               </div>
               <div className="flex items-start gap-3">
                 <Check className="mt-0.5 h-4 w-4 text-green-400 shrink-0" />
-                <p>A cleaner in your area will claim your job shortly — you&apos;ll get a text when they do</p>
+                <p>A crew member in your area will claim your job shortly — you&apos;ll get a text when they do</p>
               </div>
             </div>
             <p className="mt-6 text-xs text-white/50">
@@ -620,7 +620,7 @@ export default function GetAQuotePage() {
                   }`}
                 >
                   <Check className={`inline h-4 w-4 mr-2 ${f.keepBasic && f.addOns.length === 0 ? "text-green-300" : "text-white/30"}`} />
-                  Keep It Basic — Standard Clean Only
+                  Keep It Basic — Standard Service Only
                 </button>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                   {ADD_ON_KEYS.map((key) => {
@@ -790,7 +790,7 @@ export default function GetAQuotePage() {
                     {referralValid?.valid && (
                       <p className="mt-1 flex items-center gap-1.5 text-xs text-green-300">
                         <Check className="h-3.5 w-3.5" />
-                        Referral applied — ${referralValid.discount ?? 25} off your first clean!
+                        Referral applied — ${referralValid.discount ?? 25} off your first service!
                       </p>
                     )}
                     {referralValid && !referralValid.valid && (
@@ -828,7 +828,7 @@ export default function GetAQuotePage() {
                   </>
                 ) : (
                   <>
-                    Book My Clean — ${price.total.toFixed(2)}
+                    Book My Service — ${price.total.toFixed(2)}
                     <ArrowRight className="h-5 w-5" />
                   </>
                 )}
@@ -897,7 +897,7 @@ export default function GetAQuotePage() {
 
               {f.frequency !== "one_time" && (
                 <div className="mt-4 rounded-xl bg-green-50 p-3 text-center text-xs text-green-700">
-                  <strong>You save ${price.freqDisc.toFixed(2)}</strong> per visit with {FREQUENCY_LABELS[f.frequency].split(" (")[0]} cleaning
+                  <strong>You save ${price.freqDisc.toFixed(2)}</strong> per visit with {FREQUENCY_LABELS[f.frequency].split(" (")[0]} service
                 </div>
               )}
 

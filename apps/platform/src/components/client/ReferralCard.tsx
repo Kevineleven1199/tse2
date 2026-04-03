@@ -60,7 +60,7 @@ export const ReferralCard = ({ referralCode, referralCount, referralCredits }: R
         <div className="rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 p-4 text-white">
           <p className="text-lg font-bold">Give $25, Get $25</p>
           <p className="mt-1 text-sm opacity-90">
-            Share your code with friends. They get $25 off their first clean, you get $25 credit!
+            Share your code with friends. They get $25 off their first project, you get $25 credit!
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export const ReferralCard = ({ referralCode, referralCount, referralCredits }: R
             </li>
             <li className="flex items-start gap-2">
               <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-accent">2</span>
-              <span>They book their first clean with $25 off</span>
+              <span>They book their first project with $25 off</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-accent">3</span>

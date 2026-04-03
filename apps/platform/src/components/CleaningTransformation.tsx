@@ -8,19 +8,19 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const TRANSFORMATIONS = [
   {
-    label: "Kitchen Deep Clean",
-    before: "/images/service-deep-clean.jpg",
-    after: "/images/service-basic-clean.jpg",
+    label: "Construction",
+    before: "/images/tse-sitework.jpg",
+    after: "/images/tse-construction.jpg",
   },
   {
-    label: "Move-Out Detail",
-    before: "/images/service-moveout-clean.jpg",
-    after: "/images/gallery-organic-cleaning.jpg",
+    label: "HVAC Install",
+    before: "/images/tse-hvac-service.jpg",
+    after: "/images/tse-hvac-hero.png",
   },
   {
-    label: "Pressure Wash",
-    before: "/images/gallery-pressure-washing.jpg",
-    after: "/images/gallery-car-detailing.jpg",
+    label: "Landscaping",
+    before: "/images/tse-lawncare.jpg",
+    after: "/images/tse-landscaping.jpg",
   },
 ];
 
@@ -98,7 +98,7 @@ export const CleaningTransformation = () => {
             onTouchMove={(e) => handleMove(e.touches[0].clientX)}
           >
             {/* After image (full) */}
-            <Image src={active.after} alt="After cleaning" fill className="object-cover" />
+            <Image src={active.after} alt="After project" fill className="object-cover" />
 
             {/* Before image (clipped) */}
             <div

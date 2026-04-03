@@ -142,7 +142,7 @@ const ApplyPage = () => {
         <Card className="bg-white">
           <CardHeader>
             <h2 className="text-2xl font-semibold text-accent">Application form</h2>
-            <p className="text-sm text-muted-foreground">Tell us about yourself and your cleaning experience.</p>
+            <p className="text-sm text-muted-foreground">Tell us about yourself and your work experience.</p>
           </CardHeader>
           <CardContent>
             <form className="space-y-4" onSubmit={handleSubmit}>
@@ -222,7 +222,7 @@ const ApplyPage = () => {
               </div>
 
               <label className="flex flex-col text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-                Years of cleaning experience
+                Years of work experience
                 <select
                   name="experience"
                   value={formValues.experience}

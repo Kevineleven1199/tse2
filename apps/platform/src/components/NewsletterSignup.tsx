@@ -65,7 +65,7 @@ export const NewsletterSignup = () => {
             variants={fadeUp}
             className="mt-4 font-display text-3xl font-semibold leading-tight text-white md:text-4xl"
           >
-            Free cleaning tips & exclusive deals, daily
+            Home improvement tips &amp; project inspiration
           </motion.h2>
           <motion.p
             variants={fadeUp}

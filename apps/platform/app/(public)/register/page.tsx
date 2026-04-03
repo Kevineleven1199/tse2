@@ -202,7 +202,7 @@ const RegisterPage = () => {
                 />
                 {formValues.referralCode && (
                   <p className="mt-1 text-xs font-normal normal-case tracking-normal text-muted-foreground">
-                    If you were referred by a friend, enter their code to get $25 off your first clean!
+                    If you were referred by a friend, enter their code to get $25 off your first project!
                   </p>
                 )}
               </label>

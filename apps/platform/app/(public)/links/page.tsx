@@ -59,7 +59,7 @@ const LINKS: { category: string; items: LinkItem[] }[] = [
       },
       {
         label: "Our Services",
-        description: "Cleaning, pressure wash & detailing",
+        description: "Construction, HVAC & Landscaping",
         href: "/#services",
         icon: "services"
       },
@@ -76,7 +76,7 @@ const LINKS: { category: string; items: LinkItem[] }[] = [
     items: [
       {
         label: "Google Reviews",
-        description: "Eco-friendly cleaning in Flatwoods",
+        description: "Trusted contractor in Flatwoods",
         href: "https://maps.app.goo.gl/4FBEesLcS8c3Djc87",
         icon: "google",
         external: true

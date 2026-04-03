@@ -39,7 +39,7 @@ type QuoteResponse = {
 };
 
 const SERVICE_OPTIONS: { value: QuoteServiceType; label: string }[] = [
-  { value: "healthy_home", label: "Healthy Home Cleaning" },
+  { value: "healthy_home", label: "Construction & Renovation" },
   { value: "deep_refresh", label: "Deep Refresh & Detox" },
   { value: "move_in_out", label: "Move-In / Move-Out Detail" },
   { value: "commercial", label: "Eco Commercial Care" }
@@ -64,7 +64,7 @@ const LOCATION_OPTIONS: { value: QuoteLocationTier; label: string }[] = [
 const ADD_ON_OPTIONS: { value: QuoteAddOn; label: string; helper: string }[] = [
   { value: "deep_clean_oven", label: "Deep Clean Oven", helper: "+$45" },
   { value: "deep_scrub_shower", label: "Deep Scrub Shower / Tub", helper: "+$35" },
-  { value: "inside_fridge", label: "Inside Fridge Cleaning", helper: "+$30" },
+  { value: "inside_fridge", label: "Additional Work", helper: "+$30" },
   { value: "interior_windows", label: "Interior Windows & Tracks", helper: "+$55" },
   { value: "laundry_fold_iron", label: "Laundry, Fold & Iron", helper: "+$60" },
   { value: "bed_making", label: "Bed Making & Linen Change", helper: "+$25" },
@@ -422,7 +422,7 @@ export const QuoteForm = () => {
           <Input
             type="date"
             name="preferredDate"
-            aria-label="Preferred cleaning date"
+            aria-label="Preferred service date"
             className="mt-2"
             value={formValues.preferredDate}
             onChange={(event) => updateField("preferredDate", event.target.value)}

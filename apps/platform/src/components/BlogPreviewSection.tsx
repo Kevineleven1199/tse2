@@ -10,16 +10,16 @@ const BLOG_HIGHLIGHTS = [
     href: "/blog/hvac-replacement-signs",
   },
   {
-    title: "5 Things Your Cleaning Company Won't Tell You About Chemicals",
+    title: "Spring Landscaping Projects That Add Property Value",
     excerpt: "From green-washed labels to hidden VOCs, here's what to ask before letting anyone spray chemicals in your home.",
     category: "Industry Secrets",
     readTime: "5 min",
-    href: "/blog/chemicals-your-cleaning-company-wont-tell-you",
+    href: "/blog/spring-landscaping-projects",
   },
   {
     title: "How Often Should You Deep Clean? A Room-by-Room Schedule",
-    excerpt: "Kitchen weekly, bathrooms biweekly, carpets quarterly? The science-backed cleaning frequency that keeps your home genuinely clean.",
-    category: "Cleaning Tips",
+    excerpt: "The top landscaping investments that boost curb appeal and property value for Tri-State homeowners.",
+    category: "Home Tips",
     readTime: "4 min",
     href: "/blog/how-often-deep-clean-room-by-room",
   },
@@ -33,7 +33,7 @@ export const BlogPreviewSection = () => (
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand-700">
             <BookOpen className="h-3 w-3" /> Blog & Tips
           </span>
-          <h2 className="mt-3 font-display text-3xl font-bold text-accent">Eco Cleaning Insights</h2>
+          <h2 className="mt-3 font-display text-3xl font-bold text-accent">Home Improvement Insights</h2>
           <p className="mt-2 text-muted-foreground">Expert home improvement and maintenance tips from the Tri-State area.</p>
         </div>
         <Link href="/blog" className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-brand-600 hover:text-brand-700">
