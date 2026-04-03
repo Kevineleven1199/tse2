@@ -15,16 +15,10 @@ enum Role {
 }
 
 enum ServiceType {
-  // Legacy (used throughout existing codebase)
   HOME_CLEAN
   PRESSURE_WASH
   AUTO_DETAIL
   CUSTOM
-  // TSE2-specific service types
-  RESIDENTIAL_SERVICE
-  SITE_WORK
-  HVAC_SERVICE
-  CUSTOM_PROJECT
 }
 
 enum RequestStatus {
