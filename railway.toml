@@ -7,7 +7,7 @@ buildCommand = "npm run prisma:generate && npm run build && cp -r apps/platform/
 # (column drops, type changes) and fail the deploy. This is intentional.
 # If a schema change requires destructive operations, apply it manually with explicit review.
 # The app will NOT start if db push fails — this prevents running on an inconsistent schema.
-startCommand = "cd apps/platform && npx prisma db push 2>&1 && cd ../.. && node apps/platform/.next/standalone/apps/platform/server.js"
+startCommand = "cd apps/platform && npx prisma db push 2>&1 && cd ../.. && HOSTNAME=0.0.0.0 node apps/platform/.next/standalone/apps/platform/server.js"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 5
 numReplicas = 1
