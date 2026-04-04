@@ -43,7 +43,7 @@ export const LoyaltyCard = ({ loyalty }: LoyaltyCardProps) => {
             {loyalty.discountPercent > 0 ? (
               <li className="flex items-center gap-2">
                 <span className="text-green-500">✓</span>
-                {loyalty.discountPercent}% off every clean
+                {loyalty.discountPercent}% off every project
               </li>
             ) : (
               <li className="flex items-center gap-2">
@@ -76,7 +76,7 @@ export const LoyaltyCard = ({ loyalty }: LoyaltyCardProps) => {
         {loyalty.visitsToNextTier && loyalty.nextTierName && (
           <div>
             <div className="flex items-center justify-between text-xs text-muted-foreground">
-              <span>{loyalty.totalVisits} cleans completed</span>
+              <span>{loyalty.totalVisits} jobs completed</span>
               <span>{loyalty.visitsToNextTier} to {loyalty.nextTierName}</span>
             </div>
             <div className="mt-1 h-2 overflow-hidden rounded-full bg-brand-100">

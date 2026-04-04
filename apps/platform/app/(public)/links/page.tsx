@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Links | Tri State Enterprise",
-  description: "All our links in one place — book a clean, follow us on social media, join our crew, or explore our community."
+  description: "All our links in one place — request an estimate, follow us on social media, join our crew, or explore our community."
 };
 
 type LinkItem = {

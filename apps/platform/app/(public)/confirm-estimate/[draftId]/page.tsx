@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { CheckCircle2, Shield, Leaf, Camera, Star, Loader2, Phone } from "lucide-react";
 
 const SERVICE_LABELS: Record<string, string> = {
-  HOME_CLEAN: "Healthy Home Clean",
+  HOME_CLEAN: "Construction",
   PRESSURE_WASH: "Pressure Washing",
   AUTO_DETAIL: "Eco Auto Detail",
   CUSTOM: "Custom Service",
@@ -101,7 +101,7 @@ export default function ConfirmEstimatePage({
               <li className="flex gap-2"><span className="font-bold">1.</span> A crew member will claim your job (usually within hours)</li>
               <li className="flex gap-2"><span className="font-bold">2.</span> You'll get a confirmation with their name and arrival time</li>
               <li className="flex gap-2"><span className="font-bold">3.</span> 24 hours before, we'll send a reminder</li>
-              <li className="flex gap-2"><span className="font-bold">4.</span> After your clean, view before/after photos in your portal</li>
+              <li className="flex gap-2"><span className="font-bold">4.</span> After your project, view before/after photos in your portal</li>
             </ol>
           </div>
           <a

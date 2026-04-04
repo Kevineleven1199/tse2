@@ -174,7 +174,7 @@ export function EstimateClient({
                 onClick={() => setShowRegister(true)}
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition hover:bg-brand-700 active:scale-[0.98]"
               >
-                <Sparkles className="h-4 w-4" /> Accept & Book My Cleaning
+                <Sparkles className="h-4 w-4" /> Accept & Book My Project
               </button>
             ) : (
               <div className="space-y-4">
@@ -231,7 +231,7 @@ export function EstimateClient({
               { icon: Leaf, title: "Professional Grade", desc: "100% professional-grade, certified professional equipment" },
               { icon: Camera, title: "Photo Accountability", desc: "Before & after photos for every visit" },
               { icon: Star, title: "4.9★ on Google", desc: "Hundreds of 5-star reviews from local families" },
-              { icon: CheckCircle2, title: "Satisfaction Guarantee", desc: "Not happy? We re-clean within 24 hours, free" },
+              { icon: CheckCircle2, title: "Satisfaction Guarantee", desc: "Not satisfied? We make it right, guaranteed" },
               { icon: Lock, title: "Your Own Portal", desc: "Track visits, pay invoices, manage your account" },
             ].map((badge) => (
               <div key={badge.title} className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm">

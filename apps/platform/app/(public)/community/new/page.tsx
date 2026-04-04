@@ -12,7 +12,7 @@ const CATEGORY_LIST = Object.entries(POST_CATEGORIES) as [
 
 const NewPostPage = () => {
   const router = useRouter();
-  const [category, setCategory] = useState<PostCategory>("cleaning_tip");
+  const [category, setCategory] = useState<PostCategory>("project_tip");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [authorName, setAuthorName] = useState("");
@@ -206,8 +206,8 @@ const NewPostPage = () => {
               placeholder={
                 category === "question"
                   ? "Share more details about your question so the community can help..."
-                  : category === "cleaning_tip"
-                    ? "Share your cleaning tip with the community..."
+                  : category === "project_tip"
+                    ? "Share your project tip with the community..."
                     : category === "eco_tip"
                       ? "Share your professional tip..."
                       : category === "before_after"

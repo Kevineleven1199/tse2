@@ -32,7 +32,7 @@ const CommunityPage = async ({ searchParams }: CommunityPageProps) => {
                 Neighborhood Hub
               </h1>
               <p className="mt-2 max-w-xl text-brand-100">
-                Connect with neighbors, discover cleaning tips, and stay updated on local deals.
+                Connect with neighbors, get project tips, and stay updated on local deals.
                 Share your experiences and learn from the community.
               </p>
             </div>
@@ -112,7 +112,7 @@ const CommunityPage = async ({ searchParams }: CommunityPageProps) => {
                   href="/community/new"
                   className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm text-muted-foreground hover:bg-brand-50"
                 >
-                  Cleaning Tip
+                  Project Tip
                 </Link>
                 <Link
                   href="/community/new"
@@ -134,7 +134,7 @@ const CommunityPage = async ({ searchParams }: CommunityPageProps) => {
               <div className="rounded-2xl border border-brand-100 bg-white p-8 text-center">
                 <p className="mt-2 font-semibold text-accent">No posts yet</p>
                 <p className="text-sm text-muted-foreground">
-                  Community posts, cleaning tips, and local updates will appear here.
+                  Community posts, project tips, and local updates will appear here.
                   Check back soon for the latest from your neighborhood!
                 </p>
               </div>

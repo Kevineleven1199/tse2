@@ -201,7 +201,7 @@ const LoginPage = () => {
                     href="/apply"
                     className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-brand-700"
                   >
-                    Apply to Clean
+                    Apply to Work
                   </Link>
                 </div>
               </div>

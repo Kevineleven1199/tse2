@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 };
 
 const SERVICE_LABELS: Record<string, string> = {
-  HOME_CLEAN: "Healthy Home Cleaning",
-  healthy_home: "Healthy Home Cleaning",
+  HOME_CLEAN: "Construction",
+  healthy_home: "Construction",
   DEEP_CLEAN: "Deep Refresh & Detox",
   deep_refresh: "Deep Refresh & Detox",
   MOVE_IN_OUT: "Move-In / Move-Out Detail",
@@ -28,16 +28,16 @@ const SERVICE_LABELS: Record<string, string> = {
 const SERVICE_INCLUDES: Record<string, string[]> = {
   HOME_CLEAN: ["All rooms dusted & sanitized", "Kitchen deep wipe & appliance exteriors", "Bathrooms fully sanitized", "Floors vacuumed & mopped", "HEPA-filter vacuuming", "Baseboards & light switches", "Trash & recycling removed"],
   healthy_home: ["All rooms dusted & sanitized", "Kitchen deep wipe & appliance exteriors", "Bathrooms fully sanitized", "Floors vacuumed & mopped", "HEPA-filter vacuuming", "Baseboards & light switches", "Trash & recycling removed"],
-  DEEP_CLEAN: ["Everything in Home Clean PLUS:", "Inside oven & microwave", "Inside refrigerator", "Cabinet fronts & handles", "Window tracks & sills", "Grout scrubbing", "Ceiling fans & vents", "Blinds & shutters"],
-  deep_refresh: ["Everything in Home Clean PLUS:", "Inside oven & microwave", "Inside refrigerator", "Cabinet fronts & handles", "Window tracks & sills", "Grout scrubbing", "Ceiling fans & vents", "Blinds & shutters"],
+  DEEP_CLEAN: ["Full scope includes:", "Inside oven & microwave", "Inside refrigerator", "Cabinet fronts & handles", "Window tracks & sills", "Grout scrubbing", "Ceiling fans & vents", "Blinds & shutters"],
+  deep_refresh: ["Full scope includes:", "Inside oven & microwave", "Inside refrigerator", "Cabinet fronts & handles", "Window tracks & sills", "Grout scrubbing", "Ceiling fans & vents", "Blinds & shutters"],
   PRESSURE_WASH: ["Driveway & sidewalks", "Patio, lanai & pool deck", "Exterior walls & fences", "Garage floor", "Eco-friendly detergents"],
   pressure_wash: ["Driveway & sidewalks", "Patio, lanai & pool deck", "Exterior walls & fences", "Garage floor", "Eco-friendly detergents"],
   AUTO_DETAIL: ["Exterior hand wash & dry", "Interior vacuum & wipe-down", "Dashboard & console detail", "Windows inside & out", "Tire dressing & wheels"],
   auto_detail: ["Exterior hand wash & dry", "Interior vacuum & wipe-down", "Dashboard & console detail", "Windows inside & out", "Tire dressing & wheels"],
-  CUSTOM: ["Custom scope assessment", "Tailored cleaning plan", "Detail work", "Final inspection", "Client walkthrough"],
-  commercial: ["Custom scope assessment", "Tailored cleaning plan", "Detail work", "Final inspection", "Client walkthrough"],
-  MOVE_IN_OUT: ["All rooms floor-to-ceiling", "Inside all cabinets & closets", "Inside all appliances", "Construction dust removal", "Garage sweep", "Window cleaning"],
-  move_in_out: ["All rooms floor-to-ceiling", "Inside all cabinets & closets", "Inside all appliances", "Construction dust removal", "Garage sweep", "Window cleaning"],
+  CUSTOM: ["Custom scope assessment", "Tailored project plan", "Detail work", "Final inspection", "Client walkthrough"],
+  commercial: ["Custom scope assessment", "Tailored project plan", "Detail work", "Final inspection", "Client walkthrough"],
+  MOVE_IN_OUT: ["All rooms floor-to-ceiling", "Inside all cabinets & closets", "Inside all appliances", "Construction dust removal", "Garage sweep", "Final walkthrough"],
+  move_in_out: ["All rooms floor-to-ceiling", "Inside all cabinets & closets", "Inside all appliances", "Construction dust removal", "Garage sweep", "Final walkthrough"],
 };
 
 export default async function EstimatePage({
@@ -94,7 +94,7 @@ export default async function EstimatePage({
     reviews = dbReviews.map((r) => ({ ...r, text: r.text ?? "" }));
   } catch { /* graceful fail */ }
 
-  const serviceLabel = SERVICE_LABELS[draft.serviceType ?? "HOME_CLEAN"] ?? "Professional Cleaning";
+  const serviceLabel = SERVICE_LABELS[draft.serviceType ?? "HOME_CLEAN"] ?? "Professional Service";
   const includes = SERVICE_INCLUDES[draft.serviceType ?? "HOME_CLEAN"] ?? SERVICE_INCLUDES.HOME_CLEAN;
   const breakdown = (draft.estimateBreakdown as Record<string, unknown>) ?? {};
 

@@ -46,7 +46,7 @@ const SERVICE_OPTIONS: { value: QuoteServiceType; label: string }[] = [
 ];
 
 const FREQUENCY_OPTIONS: { value: QuoteFrequency; label: string; helper: string }[] = [
-  { value: "one_time", label: "One-time", helper: "Perfect for seasonal or special event cleans." },
+  { value: "one_time", label: "One-time", helper: "One-time project or special job." },
   { value: "weekly", label: "Weekly (22% savings)", helper: "Best results + biggest discount." },
   { value: "biweekly", label: "Bi-weekly (15% savings)", helper: "Our most popular cadence." },
   { value: "monthly", label: "Monthly (8% savings)", helper: "Ideal for lower-traffic homes." }
@@ -506,7 +506,7 @@ export const QuoteForm = () => {
 
           <dl className="space-y-2 text-sm text-accent">
             <div className="flex items-center justify-between">
-              <dt>Base clean</dt>
+              <dt>Base service</dt>
               <dd>${quoteResult.pricing.basePrice.toFixed(2)}</dd>
             </div>
             <div className="flex items-center justify-between">
@@ -560,7 +560,7 @@ export const QuoteForm = () => {
                 onClick={() => handleDecision("accept")}
                 disabled={decisionLoading === "accept"}
               >
-                {decisionLoading === "accept" ? "Securing your clean..." : "Accept & Pick Time"}
+                {decisionLoading === "accept" ? "Securing your booking..." : "Accept & Pick Time"}
               </button>
               <button
                 type="button"

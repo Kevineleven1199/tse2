@@ -94,7 +94,7 @@ export const BookAgainCard = ({ lastService }: Props) => {
             {lastService.address}
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            Last cleaned: {lastService.date}
+            Last service: {lastService.date}
           </p>
         </div>
         <div className="flex flex-shrink-0 flex-col gap-2">

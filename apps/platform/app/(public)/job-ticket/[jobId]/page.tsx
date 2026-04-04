@@ -95,7 +95,7 @@ export default async function JobTicketPage({
   const completedAt = job.assignments[0]?.clockOutAt;
 
   const SERVICE_LABELS: Record<string, string> = {
-    HOME_CLEAN: "Healthy Home Clean",
+    HOME_CLEAN: "Construction",
     PRESSURE_WASH: "Pressure Washing",
     AUTO_DETAIL: "Eco Auto Detail",
     CUSTOM: "Custom Service",

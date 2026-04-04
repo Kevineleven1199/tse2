@@ -17,11 +17,11 @@ const BLOG_HIGHLIGHTS = [
     href: "/blog/spring-landscaping-projects",
   },
   {
-    title: "How Often Should You Deep Clean? A Room-by-Room Schedule",
+    title: "Home Construction: What to Know Before Your First Renovation",
     excerpt: "The top landscaping investments that boost curb appeal and property value for Tri-State homeowners.",
     category: "Home Tips",
     readTime: "4 min",
-    href: "/blog/how-often-deep-clean-room-by-room",
+    href: "/blog/home-construction-first-renovation",
   },
 ];
 

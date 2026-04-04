@@ -23,29 +23,29 @@ type WizardStep = "service" | "size" | "details" | "frequency" | "addons" | "sch
 const STEPS: WizardStep[] = ["service", "size", "details", "frequency", "addons", "schedule", "contact", "review"];
 
 const SERVICE_OPTIONS: { value: QuoteServiceType; label: string; description: string; icon: typeof Home; popular?: boolean }[] = [
-  { 
-    value: "healthy_home", 
-    label: "Healthy Home", 
-    description: "Weekly, bi-weekly, or monthly maintenance service",
+  {
+    value: "healthy_home",
+    label: "Construction",
+    description: "New builds, renovations, additions & repairs",
     icon: Home,
     popular: true
   },
-  { 
-    value: "deep_refresh", 
-    label: "Deep Refresh", 
-    description: "Thorough top-to-bottom detox for your space",
+  {
+    value: "deep_refresh",
+    label: "HVAC",
+    description: "Heating & air conditioning install, repair & maintenance",
     icon: Sparkles
   },
-  { 
-    value: "move_in_out", 
-    label: "Move In/Out", 
-    description: "Get your full deposit back guaranteed",
+  {
+    value: "move_in_out",
+    label: "Lawn & Landscaping",
+    description: "Lawn care, landscape design, planting & maintenance",
     icon: RefreshCcw
   },
-  { 
-    value: "commercial", 
-    label: "Commercial", 
-    description: "Offices, studios, and professional spaces",
+  {
+    value: "commercial",
+    label: "Site Work & Paving",
+    description: "Grading, excavation, driveways & parking lots",
     icon: Building2
   },
 ];
@@ -58,27 +58,21 @@ const FREQUENCY_OPTIONS: { value: QuoteFrequency; label: string; savings: string
 ];
 
 const ADD_ON_OPTIONS: { value: QuoteAddOn; label: string; price: string; icon: string }[] = [
-  { value: "deep_clean_oven", label: "Deep Clean Oven", price: "+$45", icon: "🔥" },
-  { value: "deep_scrub_shower", label: "Deep Scrub Shower", price: "+$35", icon: "🚿" },
-  { value: "inside_fridge", label: "Inside Fridge", price: "+$30", icon: "🧊" },
-  { value: "interior_windows", label: "Interior Windows", price: "+$55", icon: "🪟" },
-  { value: "laundry_fold_iron", label: "Laundry & Iron", price: "+$60", icon: "👕" },
-  { value: "bed_making", label: "Bed Making", price: "+$25", icon: "🛏️" },
-  { value: "curtain_steam", label: "Curtain Steam", price: "+$40", icon: "🪄" },
-  { value: "carpet_steaming", label: "Carpet Steaming", price: "+$75", icon: "🧹" },
-  { value: "couch_steaming", label: "Couch Steaming", price: "+$65", icon: "🛋️" },
-  { value: "pressure_washing", label: "Pressure Wash", price: "+$125", icon: "💦" },
-  { value: "car_detailing", label: "Car Detailing", price: "+$95", icon: "🚗" },
-  { value: "eco_disinfection", label: "Eco Disinfection", price: "+$60", icon: "🦠" },
+  { value: "deep_clean_oven", label: "Permit Handling", price: "+$200", icon: "📋" },
+  { value: "deep_scrub_shower", label: "Debris Removal", price: "+$150", icon: "🚛" },
+  { value: "inside_fridge", label: "Material Delivery", price: "+$100", icon: "📦" },
+  { value: "interior_windows", label: "Extra Crew Member", price: "+$250/day", icon: "👷" },
+  { value: "pressure_washing", label: "Pressure Washing", price: "+$125", icon: "💦" },
+  { value: "eco_disinfection", label: "Emergency/Rush", price: "+$200", icon: "⚡" },
 ];
 
 const LOCATION_OPTIONS: { value: QuoteLocationTier; label: string }[] = [
-  { value: "sarasota", label: "Flatwoods County" },
-  { value: "manatee", label: "Manatee County" },
-  { value: "pinellas", label: "Pinellas County" },
-  { value: "hillsborough", label: "Hillsborough County" },
-  { value: "pasco", label: "Pasco County" },
-  { value: "out_of_area", label: "Other Area" },
+  { value: "sarasota", label: "Greenup County, KY" },
+  { value: "manatee", label: "Boyd County, KY" },
+  { value: "pinellas", label: "Carter County, KY" },
+  { value: "hillsborough", label: "Lawrence County, OH" },
+  { value: "pasco", label: "Cabell County, WV" },
+  { value: "out_of_area", label: "Other Tri-State Area" },
 ];
 
 type FormData = {
@@ -305,7 +299,7 @@ export const QuoteWizard = () => {
             {currentStep === "service" && (
               <div className="space-y-6">
                 <div className="text-center">
-                  <h2 className="font-display text-2xl font-semibold text-accent">What do you need cleaned?</h2>
+                  <h2 className="font-display text-2xl font-semibold text-accent">What service do you need?</h2>
                   <p className="mt-2 text-muted-foreground">Choose the service that fits your needs</p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -550,7 +544,7 @@ export const QuoteWizard = () => {
               <div className="space-y-6">
                 <div className="text-center">
                   <h2 className="font-display text-2xl font-semibold text-accent">How often do you need us?</h2>
-                  <p className="mt-2 text-muted-foreground">Recurring cleans save you money and keep your home healthier</p>
+                  <p className="mt-2 text-muted-foreground">Recurring service plans save you money on regular maintenance</p>
                 </div>
                 <div className="space-y-3">
                   {FREQUENCY_OPTIONS.map((freq) => {
@@ -601,7 +595,7 @@ export const QuoteWizard = () => {
               <div className="space-y-6">
                 <div className="text-center">
                   <h2 className="font-display text-2xl font-semibold text-accent">Any extras?</h2>
-                  <p className="mt-2 text-muted-foreground">Optional add-ons to customize your clean</p>
+                  <p className="mt-2 text-muted-foreground">Optional add-ons for your project</p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {ADD_ON_OPTIONS.map((addon) => {
@@ -632,7 +626,7 @@ export const QuoteWizard = () => {
                   })}
                 </div>
                 <p className="text-center text-sm text-muted-foreground">
-                  Skip this step if you just want the standard clean
+                  Skip this step if you just want the standard service
                 </p>
               </div>
             )}

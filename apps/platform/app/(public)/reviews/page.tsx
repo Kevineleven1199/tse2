@@ -26,30 +26,30 @@ const FEATURED_REVIEWS = [
   {
     name: "Patricia M.",
     rating: 5,
-    text: "Our experience with her from contact, cleaning and price was first rate. The attention to detail was impressive and the fact that everything is professional approach gives me peace of mind.",
+    text: "Our experience from initial contact to completed project was first rate. The attention to detail was impressive and their professional approach gives me complete peace of mind.",
     date: "3 weeks ago",
-    highlight: "experience with her from contact, cleaning and price was first rate",
+    highlight: "experience from initial contact to completed project was first rate",
   },
   {
     name: "Emily R.",
     rating: 5,
-    text: "Excellent quality service, very personable, careful with delicates/breakables! I've used many cleaning services in Flatwoods and this is by far the best. The client portal where I can see photos of each visit is incredible.",
+    text: "Excellent quality service, very personable, careful with delicates/breakables! I've used many contractors in Flatwoods and this is by far the best. The client portal where I can see photos of each visit is incredible.",
     date: "1 month ago",
     highlight: "Excellent quality service, very personable",
   },
   {
     name: "Sarah K.",
     rating: 5,
-    text: "I choose them because they work with professional equipment. My allergies have improved dramatically since switching from our old cleaning company. The difference in air quality after they clean is noticeable immediately.",
+    text: "I choose them because they work with professional equipment. The quality of their HVAC installation was outstanding. Our energy bills dropped significantly and the system runs perfectly.",
     date: "1 month ago",
     highlight: "I choose them because they work with professional equipment",
   },
   {
     name: "Jennifer M.",
     rating: 5,
-    text: "Best cleaning service in Flatwoods, hands down. The Tri State system where they photograph everything before and after and send you alerts when they arrive is unlike anything I've seen. You feel completely in control.",
+    text: "Best contractor in Flatwoods, hands down. The Tri State system where they photograph everything before and after and send you alerts when they arrive is unlike anything I've seen. You feel completely in control.",
     date: "2 months ago",
-    highlight: "Best cleaning service in Flatwoods, hands down",
+    highlight: "Best contractor in Flatwoods, hands down",
   },
   {
     name: "Karen C.",
@@ -68,14 +68,14 @@ const FEATURED_REVIEWS = [
   {
     name: "David T.",
     rating: 5,
-    text: "We manage 12 vacation rentals in Flatwoods and switched all of them to Tri State. The turnaround cleans are flawless, the photo documentation protects us from guest damage claims, and the scheduling automation saves us hours every week.",
+    text: "We manage 12 vacation rentals in Flatwoods and switched all of them to Tri State. The turnaround on projects is flawless, the photo documentation protects us from guest damage claims, and the scheduling automation saves us hours every week.",
     date: "3 months ago",
     highlight: "switched all 12 vacation rentals to Tri State",
   },
   {
     name: "Michelle B.",
     rating: 5,
-    text: "I have severe chemical sensitivities and most cleaning services trigger migraines that last for days. Tri State is the ONLY company I've found that I can tolerate. Their products are truly professional-grade — not just 'green-washed' marketing.",
+    text: "I have severe chemical sensitivities and most contractors cut corners that last for days. Tri State is the ONLY company I've found that I trust completely. Their workmanship is truly professional-grade — not just 'green-washed' marketing.",
     date: "4 months ago",
     highlight: "the ONLY company I've found that I can tolerate",
   },
@@ -222,7 +222,7 @@ export default async function ReviewsPage() {
             {[
               { icon: Leaf, title: "Licensed & Insured since 1992. Quality workmanship guaranteed on every project." },
               { icon: Camera, title: "Photo Proof", desc: "Before & after photos of every visit. You see exactly what was done, every time." },
-              { icon: CheckCircle2, title: "Guaranteed", desc: "Not satisfied? We re-clean within 24 hours at no charge. No questions asked." },
+              { icon: CheckCircle2, title: "Guaranteed", desc: "Not satisfied? We make it right at no additional charge. No questions asked." },
               { icon: Shield, title: "Licensed & Insured", desc: "Background-checked crew. Fully insured. 3+ years serving Flatwoods families." },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl bg-white border border-brand-100 p-5 shadow-sm">

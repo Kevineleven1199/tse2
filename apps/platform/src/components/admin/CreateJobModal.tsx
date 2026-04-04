@@ -18,7 +18,7 @@ type Props = {
 };
 
 const SERVICE_TYPES = [
-  { value: "HOME_CLEAN", label: "Home Clean" },
+  { value: "HOME_CLEAN", label: "Construction" },
   { value: "PRESSURE_WASH", label: "Pressure Wash" },
   { value: "AUTO_DETAIL", label: "Auto Detail" },
   { value: "CUSTOM", label: "Custom" },

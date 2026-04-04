@@ -29,7 +29,7 @@ export const TestimonialsSection = ({ reviews = [] }: { reviews?: GoogleReviewPr
           What Our Clients Say
         </motion.span>
         <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-semibold leading-tight text-accent md:text-4xl">
-          Trusted by Flatwoods families for a healthier clean
+          Trusted by Tri-State families for quality workmanship
         </motion.h2>
         <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
           We take pride in delivering quality workmanship that our community trusts.

@@ -16,7 +16,7 @@ const MESSAGES: Record<CelebrationProps["type"], { emoji: string; title: string;
   register: {
     emoji: "🎉",
     title: "Welcome to the Tri State Family!",
-    subtitle: "Your account is all set. Let's get your first eco-clean booked!",
+    subtitle: "Your account is all set. Let's get your first project scheduled!",
   },
   login: {
     emoji: "👋",
@@ -25,7 +25,7 @@ const MESSAGES: Record<CelebrationProps["type"], { emoji: string; title: string;
   },
   schedule: {
     emoji: "✨",
-    title: "Clean Scheduled!",
+    title: "Project Scheduled!",
     subtitle: "Your project is booked! We'll send a confirmation and reminder before we arrive.",
   },
   reschedule: {

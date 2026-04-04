@@ -30,7 +30,7 @@ export const ReferralCard = ({ referralCode, referralCount, referralCredits }: R
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Get $25 off your first eco-clean!",
+          title: "Get $25 off your first project!",
           text: "I love Tri State Enterprise! Use my code to get $25 off your first project.",
           url: shareUrl
         });
@@ -126,7 +126,7 @@ export const ReferralCard = ({ referralCode, referralCount, referralCredits }: R
             </li>
             <li className="flex items-start gap-2">
               <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-brand-100 text-xs font-bold text-accent">3</span>
-              <span>You get $25 credit after their clean</span>
+              <span>You get $25 credit after their first job</span>
             </li>
           </ol>
         </div>

@@ -138,7 +138,7 @@ export const ExitIntentPopup = () => {
                     </div>
 
                     <h2 className="mb-2 text-2xl font-bold text-accent">
-                      Wait! Get 15% Off Your First Clean
+                      Wait! Get 15% Off Your First Project
                     </h2>
 
                     <p className="mb-1 text-xs font-semibold text-green-600">
