@@ -7,6 +7,7 @@
 
 export type PostCategory =
   | "cleaning_tip"
+  | "project_tip"
   | "eco_tip"
   | "recommendation"
   | "question"

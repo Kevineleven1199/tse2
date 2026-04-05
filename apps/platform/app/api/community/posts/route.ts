@@ -17,6 +17,7 @@ export const dynamic = "force-dynamic";
 const audienceSchema = z.enum(["public", "team"]);
 const categorySchema = z.enum([
   "cleaning_tip",
+  "project_tip",
   "eco_tip",
   "recommendation",
   "question",
