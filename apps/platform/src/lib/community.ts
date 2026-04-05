@@ -175,6 +175,7 @@ type TrackCommunityViewInput = {
 
 const CATEGORY_TO_DB = {
   cleaning_tip: "CLEANING_TIP",
+  project_tip: "PROJECT_TIP",
   eco_tip: "ECO_TIP",
   recommendation: "RECOMMENDATION",
   question: "QUESTION",
@@ -186,6 +187,7 @@ const CATEGORY_TO_DB = {
 
 const DB_TO_CATEGORY: Record<string, PostCategory> = {
   CLEANING_TIP: "cleaning_tip",
+  PROJECT_TIP: "project_tip",
   ECO_TIP: "eco_tip",
   RECOMMENDATION: "recommendation",
   QUESTION: "question",
@@ -232,6 +234,7 @@ const EMPTY_REACTIONS: ReactionType[] = ["like", "helpful", "love", "celebrate"]
 
 export const POST_CATEGORIES: Record<PostCategory, { label: string; icon: string; color: string }> = {
   cleaning_tip: { label: "Cleaning Tip", icon: "✨", color: "bg-blue-100 text-blue-700" },
+  project_tip: { label: "Project Tip", icon: "🔧", color: "bg-orange-100 text-orange-700" },
   eco_tip: { label: "Eco Tip", icon: "🌱", color: "bg-green-100 text-green-700" },
   recommendation: { label: "Recommendation", icon: "👍", color: "bg-purple-100 text-purple-700" },
   question: { label: "Question", icon: "❓", color: "bg-amber-100 text-amber-700" },
