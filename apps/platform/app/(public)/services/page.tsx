@@ -4,8 +4,13 @@ import { Hammer, ThermometerSun, TreePine, HardHat, Wrench, Home, CheckCircle2, 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Services | Tri State Enterprise",
-  description: "Construction, HVAC, lawn care, landscaping, site work, and paving in the KY-OH-WV Tri-State area. Licensed, bonded, and insured since 1992.",
+  title: "Construction, HVAC, Landscaping, Paving Services | Tri State Enterprise — Flatwoods KY",
+  description: "Construction, HVAC installation & repair, lawn care, landscaping, site work, and paving in Flatwoods, Ashland, and the KY-OH-WV Tri-State area. Licensed, bonded, and insured since 1992. Free estimates. (606) 836-2534.",
+  openGraph: {
+    title: "Our Services | Tri State Enterprise — One Call Does It All",
+    description: "Construction, HVAC, Lawn Care, Landscaping, Site Work, and Paving. Serving the KY-OH-WV Tri-State area since 1992.",
+    url: "https://tsenow.com/services",
+  },
 };
 
 const SERVICES = [

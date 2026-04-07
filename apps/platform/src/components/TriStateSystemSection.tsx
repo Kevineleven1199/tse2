@@ -38,9 +38,15 @@ const HERO_FEATURES = [
 const GRID_FEATURES = [
   {
     icon: Bell,
-    title: "Multi-Channel Alerts",
-    description: "Get notified your way — SMS, email, Telegram, WhatsApp, or Slack. Customize which alerts you receive and how.",
+    title: "Missed Call Text-Back",
+    description: "Miss a call? Our system instantly texts the caller so you never lose a lead. Works 24/7, even after hours and weekends.",
     color: "from-blue-500 to-blue-600",
+  },
+  {
+    icon: Star,
+    title: "5-Star Review Funnel",
+    description: "After every job, our system automatically requests reviews from happy customers. One-click Google reviews build your reputation on autopilot.",
+    color: "from-amber-500 to-amber-600",
   },
   {
     icon: CheckCircle2,
@@ -55,15 +61,9 @@ const GRID_FEATURES = [
     color: "from-purple-500 to-purple-600",
   },
   {
-    icon: Shield,
-    title: "AI Quality Assurance",
-    description: "Our system learns your preferences — service details, scheduling, areas to focus on. Every job gets better because the system remembers.",
-    color: "from-amber-500 to-amber-600",
-  },
-  {
     icon: Repeat,
-    title: "Fully Automated Lifecycle",
-    description: "Book once. We handle scheduling, reminders, crews, photos, invoices, payments, and follow-ups. The entire operation runs seamlessly.",
+    title: "Automated Lead Follow-Up",
+    description: "New leads get instant responses, automated follow-ups, and appointment reminders. No lead falls through the cracks.",
     color: "from-pink-500 to-pink-600",
   },
 ];
