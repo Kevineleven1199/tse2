@@ -82,7 +82,7 @@ const DesktopNavItem = ({ item, close }: DesktopNavItemProps) => {
         onClick={close}
         target={item.external ? "_blank" : undefined}
         rel={item.external ? "noopener noreferrer" : undefined}
-        className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/70 transition-colors duration-200 hover:bg-brand-50 hover:text-accent"
+        className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white"
       >
         {item.label}
       </Link>
@@ -91,7 +91,7 @@ const DesktopNavItem = ({ item, close }: DesktopNavItemProps) => {
 
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="relative">
-      <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-foreground/70 transition-colors duration-200 hover:bg-brand-50 hover:text-accent">
+      <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white">
         {item.label}
         <ChevronDown className="h-4 w-4" />
       </button>
@@ -103,7 +103,7 @@ const DesktopNavItem = ({ item, close }: DesktopNavItemProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.15 }}
-            className="absolute left-0 top-full z-50 mt-1 min-w-max rounded-lg border border-brand-100 bg-white shadow-lg"
+            className="absolute left-0 top-full z-50 mt-1 min-w-max rounded-lg border border-gray-200 bg-white shadow-lg"
           >
             <div className="py-1">
               {item.children.map((child) => (
@@ -116,7 +116,7 @@ const DesktopNavItem = ({ item, close }: DesktopNavItemProps) => {
                   }}
                   target={child.external ? "_blank" : undefined}
                   rel={child.external ? "noopener noreferrer" : undefined}
-                  className="block px-4 py-2 text-sm transition hover:bg-brand-50 hover:text-accent"
+                  className="block px-4 py-2 text-sm text-gray-700 transition hover:bg-brand-50 hover:text-accent"
                 >
                   {child.label}
                 </Link>
@@ -255,7 +255,7 @@ export const NavBar = ({ session }: NavBarProps) => {
       </div>
 
       {/* Main navigation bar */}
-      <header className="sticky top-0 z-50 w-full border-b border-brand-50 bg-white/95 shadow-sm backdrop-blur">
+      <header className="sticky top-0 z-50 w-full border-b border-brand-700 bg-accent shadow-sm">
         <div className="section-wrapper flex h-16 items-center justify-between md:h-[72px]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3" onClick={close}>
@@ -274,16 +274,16 @@ export const NavBar = ({ session }: NavBarProps) => {
             {NAV_ITEMS.map((item) => (
               <DesktopNavItem key={item.label} item={item} close={close} />
             ))}
-            <div className="ml-2 flex items-center gap-2 pl-2 border-l border-brand-100">
+            <div className="ml-2 flex items-center gap-2 pl-2 border-l border-white/20">
               <Link
                 href="/how-to-pay"
-                className="inline-flex min-h-[40px] items-center justify-center rounded-full border-2 border-accent px-5 py-2 text-sm font-semibold text-accent transition hover:bg-accent hover:text-white"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-full border-2 border-white/60 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Pay Your Bill
               </Link>
               <Link
                 href="/get-a-quote"
-                className="inline-flex min-h-[40px] items-center justify-center rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white shadow-brand transition hover:bg-brand-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-200"
+                className="inline-flex min-h-[40px] items-center justify-center rounded-full bg-white px-6 py-2 text-sm font-semibold text-accent shadow-brand transition hover:bg-brand-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-200"
               >
                 Get A Quote
               </Link>
@@ -294,14 +294,14 @@ export const NavBar = ({ session }: NavBarProps) => {
           <div className="flex items-center gap-3 md:hidden">
             <Link
               href="tel:+16068362534"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-accent"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white"
               aria-label="Call us"
             >
               <Phone className="h-4 w-4" />
             </Link>
             <button
               type="button"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-brand-100 bg-white text-accent shadow-sm transition hover:bg-brand-50/60"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white shadow-sm transition hover:bg-white/20"
               onClick={toggle}
               aria-expanded={open}
               aria-controls="mobile-nav"
