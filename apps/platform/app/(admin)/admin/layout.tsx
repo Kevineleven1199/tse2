@@ -39,6 +39,8 @@ const navItems: PortalNavItem[] = [
       { label: "Call Lists", href: "/admin/call-lists" },
       { label: "Import", href: "/admin/import" },
       { label: "Coupons", href: "/admin/coupons" },
+      { label: "Inbox", href: "/admin/inbox" },
+      { label: "Social Media", href: "/admin/social" },
       { label: "Campaigns", href: "/admin/campaigns" },
       { label: "Gift Cards", href: "/admin/gift-cards" },
       { label: "Reviews", href: "/admin/google-reviews" },

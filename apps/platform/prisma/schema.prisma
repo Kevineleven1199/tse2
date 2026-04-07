@@ -1740,7 +1740,7 @@ model BlogPost {
   excerpt     String
   content     String    // Markdown
   category    String
-  author      String    @default("Go Green Organic Clean")
+  author      String    @default("Tri State Enterprise")
   coverImage  String?
   published   Boolean   @default(false)
   publishedAt DateTime?
@@ -1748,6 +1748,8 @@ model BlogPost {
   aiProvider  String?
   wordCount   Int       @default(0)
   metaDescription String?
+  socialPostsGenerated Boolean @default(false)
+  newsletterIncluded   Boolean @default(false)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
@@ -1824,4 +1826,104 @@ model WebhookEndpoint {
   updatedAt       DateTime  @updatedAt
 
   @@index([tenantId])
+}
+
+// ── Unified Lead Inbox ──────────────────────────────────────────────────────
+
+enum MessageChannel {
+  SMS
+  EMAIL
+  WHATSAPP
+  FACEBOOK_MESSENGER
+  INSTAGRAM_DM
+  TWITTER_DM
+  GOOGLE_BUSINESS
+  NEXTDOOR
+  WEB_FORM
+  TELEGRAM
+}
+
+model UnifiedConversation {
+  id                String           @id @default(cuid())
+  tenantId          String
+  contactName       String?
+  contactEmail      String?
+  contactPhone      String?
+  contactIdentifier String           // normalized key (phone, email, or platform ID)
+  channel           MessageChannel
+  externalId        String?          // platform-specific thread ID
+  crmLeadId         String?
+  status            String           @default("open") // open, snoozed, closed
+  assignedTo        String?
+  lastMessageAt     DateTime?
+  lastMessagePreview String?
+  unreadCount       Int              @default(0)
+  metadata          Json?
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+  messages          UnifiedMessage[]
+
+  @@unique([tenantId, channel, contactIdentifier])
+  @@index([tenantId, status, lastMessageAt])
+  @@index([crmLeadId])
+}
+
+model UnifiedMessage {
+  id              String              @id @default(cuid())
+  conversationId  String
+  conversation    UnifiedConversation @relation(fields: [conversationId], references: [id])
+  direction       String              // "inbound" | "outbound"
+  channel         MessageChannel
+  content         String              @db.Text
+  contentType     String              @default("text") // text, image, video, file
+  mediaUrl        String?
+  senderName      String?
+  externalId      String?             // platform message ID for dedup
+  status          String              @default("delivered") // sent, delivered, read, failed
+  metadata        Json?
+  createdAt       DateTime            @default(now())
+
+  @@index([conversationId, createdAt])
+  @@index([externalId])
+}
+
+// ── Social Media Auto-Posting ───────────────────────────────────────────────
+
+enum SocialPlatform {
+  FACEBOOK
+  INSTAGRAM
+  TWITTER_X
+  TIKTOK
+  LINKEDIN
+}
+
+enum SocialPostStatus {
+  DRAFT
+  SCHEDULED
+  PUBLISHING
+  PUBLISHED
+  FAILED
+}
+
+model SocialPost {
+  id              String           @id @default(cuid())
+  tenantId        String
+  platform        SocialPlatform
+  content         String           @db.Text
+  mediaUrls       String[]         @default([])
+  hashtags        String[]         @default([])
+  status          SocialPostStatus @default(DRAFT)
+  scheduledFor    DateTime?
+  publishedAt     DateTime?
+  externalPostId  String?
+  blogPostId      String?
+  engagementData  Json?
+  aiGenerated     Boolean          @default(false)
+  errorMessage    String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([tenantId, status])
+  @@index([tenantId, scheduledFor])
+  @@index([blogPostId])
 }

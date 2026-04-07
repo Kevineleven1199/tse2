@@ -136,7 +136,7 @@ export async function GET(request: Request) {
         title: topic,
         excerpt,
         content,
-        category: "Cleaning Tips",
+        category: "Home Tips",
         aiProvider: process.env.OPENAI_API_KEY ? "openai" : process.env.XAI_API_KEY ? "xai" : "openrouter",
         wordCount,
         readTime: Math.max(Math.ceil(wordCount / 200), 2),
@@ -146,9 +146,18 @@ export async function GET(request: Request) {
       },
     });
 
+    // Trigger content pipeline: generate social posts from this blog
+    try {
+      const { onBlogPostPublished } = await import("@/src/lib/content-pipeline");
+      await onBlogPostPublished(post.id);
+    } catch (pipelineError) {
+      console.error("[cron/auto-blog] Content pipeline error (non-fatal):", pipelineError);
+    }
+
     return NextResponse.json({
       success: true,
       post: { id: post.id, title: post.title, slug: post.slug, wordCount },
+      socialPostsGenerated: true,
     });
   } catch (error) {
     console.error("[cron/auto-blog] Error:", error);
