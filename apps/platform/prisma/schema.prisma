@@ -1895,6 +1895,53 @@ enum SocialPlatform {
   TWITTER_X
   TIKTOK
   LINKEDIN
+  GOOGLE_BUSINESS
+  YOUTUBE
+  PINTEREST
+  NEXTDOOR
+  THREADS
+}
+
+// Content templates for reusable social post patterns
+model ContentTemplate {
+  id              String          @id @default(cuid())
+  tenantId        String
+  name            String
+  description     String?
+  category        String          // e.g., "seasonal", "testimonial", "tip", "promo", "project"
+  platforms       SocialPlatform[]
+  contentPattern  String          @db.Text
+  defaultHashtags String[]        @default([])
+  variables       Json?           // e.g., [{name: "project_type", placeholder: "..."}]
+  usageCount      Int             @default(0)
+  active          Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@index([tenantId, active])
+}
+
+// Media asset library for social posts
+model MediaAsset {
+  id            String   @id @default(cuid())
+  tenantId      String
+  url           String
+  thumbnailUrl  String?
+  mediaType     String   // image, video
+  mimeType      String?
+  width         Int?
+  height        Int?
+  sizeBytes     Int?
+  caption       String?
+  altText       String?
+  tags          String[] @default([])
+  category      String?  // e.g., "before-after", "team", "project", "equipment"
+  usageCount    Int      @default(0)
+  uploadedBy    String?
+  createdAt     DateTime @default(now())
+
+  @@index([tenantId, category])
+  @@index([tenantId, createdAt])
 }
 
 enum SocialPostStatus {

@@ -1,11 +1,17 @@
 /**
  * Social Media Publisher
- * Publishes posts to Facebook, Instagram, and X/Twitter via their APIs.
+ * Publishes posts to all major social platforms via their respective APIs.
  * Reads credentials from Integration table per tenant.
  */
 import { prisma } from "@/lib/prisma";
 import type { SocialPlatform, SocialPost } from "@prisma/client";
 import type { PublishResult } from "./types";
+import { publishToGoogleBusiness } from "./google-business";
+import { publishToLinkedIn } from "./linkedin";
+import { publishToYoutube } from "./youtube";
+import { publishToPinterest } from "./pinterest";
+import { publishToTiktok } from "./tiktok";
+import { publishToThreads } from "./threads";
 
 /**
  * Publish a social post to the target platform.
@@ -15,6 +21,12 @@ export async function publishPost(post: SocialPost): Promise<PublishResult> {
     FACEBOOK: publishToFacebook,
     INSTAGRAM: publishToInstagram,
     TWITTER_X: publishToTwitter,
+    GOOGLE_BUSINESS: publishToGoogleBusiness,
+    LINKEDIN: publishToLinkedIn,
+    YOUTUBE: publishToYoutube,
+    PINTEREST: publishToPinterest,
+    TIKTOK: publishToTiktok,
+    THREADS: publishToThreads,
   };
 
   const publisher = publishers[post.platform];
