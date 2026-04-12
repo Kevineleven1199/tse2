@@ -141,7 +141,7 @@ export async function matchToCrmLead(conversationId: string) {
   // Try phone match
   if (conv.contactPhone) {
     const lead = await prisma.crmLead.findFirst({
-      where: { phone: conv.contactPhone },
+      where: { contactPhone: conv.contactPhone },
       select: { id: true },
     });
     if (lead) {
